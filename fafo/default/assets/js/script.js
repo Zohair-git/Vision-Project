@@ -602,10 +602,10 @@ jQuery(function ($) {
     });
 
     // Buy Now Btn
-	$('body').append("<a href='https://themeforest.net/checkout/from_item/29444190?license=regular&support=bundle_6month&_ga=2.65067182.1095024147.1646685914-918236941.1644836235' target='_blank' class='buy-now-btn'><img src='assets/images/envato.png' alt='envato'/>Buy Now</a>");
+	// $('body').append("<a href='https://themeforest.net/checkout/from_item/29444190?license=regular&support=bundle_6month&_ga=2.65067182.1095024147.1646685914-918236941.1644836235' target='_blank' class='buy-now-btn'><img src='assets/images/envato.png' alt='envato'/>Buy Now</a>");
 
 	// Switch Btn
-	$('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
+	// $('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
 }($));
 
 
