@@ -190,60 +190,46 @@ Deutsch
 <div class="main-nav">
 <div class="container">
 <nav class="navbar navbar-expand-md navbar-light">
-<a class="navbar-brand" href="index.html">
-<img src="assets/images/logo.png" alt="logo" class="logo">
+<a class="navbar-brand" href="index.php">
+<img src="assets/images/PIZZA PALACE.png" alt="logo" class="logo">
 </a>
 
 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
 <ul class="navbar-nav ms-auto">
 <li class="nav-item">
-<a href="index.html" class="nav-link ">HOME</a>
+<a href="index.php" class="nav-link ">HOME</a>
 </li>
 <li class="nav-item">
-<a href="menu.html" class="nav-link">MENU</a>
+<a href="menu.php" class="nav-link">MENU</a>
 </li>
 <li class="nav-item">
 <a href="#" class="nav-link dropdown-toggle">PAGES</a>
 <ul class="dropdown-menu">
 <li class="nav-item">
-<a href="about-us.html" class="nav-link">About Us</a>
+<a href="about-us.php" class="nav-link">About Us</a>
 </li>
 
 
 
 
 <li class="nav-item">
-<a href="#" class="nav-link dropdown-toggle">Restaurent</a>
-<ul class="dropdown-menu">
-<li class="nav-item">
-<a href="careers.html" class="nav-link">Careers</a>
-</li>
-<li class="nav-item">
-<a href="deals.html" class="nav-link">Deals</a>
-</li>
-<li class="nav-item">
-<a href="reservation.html" class="nav-link">Reservation</a>
-</li>
-<li class="nav-item">
-<a href="catering.html" class="nav-link">Catering</a>
-</li>
-</ul>
+<a href="deals.php" class="nav-link ">Deals</a>
 </li>
  <li class="nav-item">
 <a href="#" class="nav-link dropdown-toggle">Shop</a>
 <ul class="dropdown-menu">
 
 <li class="nav-item">
-<a href="cart.html" class="nav-link">Cart</a>
+<a href="cart.php" class="nav-link">Cart</a>
 </li>
 <li class="nav-item">
-<a href="wishlist.html" class="nav-link">Wishlist</a>
+<a href="wishlist.php" class="nav-link">Wishlist</a>
 </li>
 <li class="nav-item">
-<a href="checkout.html" class="nav-link">Checkout</a>
+<a href="checkout.php" class="nav-link">Checkout</a>
 </li>
 <li class="nav-item">
-<a href="tracking-order.html" class="nav-link">Tracking Order</a>
+<a href="tracking-order.php" class="nav-link">Tracking Order</a>
 </li>
 
 </ul>
@@ -258,10 +244,10 @@ Deutsch
 </ul>
 </li>
 <li class="nav-item">
-<a href="blogs-3.html" class="nav-link ">BLOG</a>
+<a href="blogs-3.php" class="nav-link ">BLOG</a>
 </li>
 <li class="nav-item">
-<a href="contact-us.html" class="nav-link">CONTACT US</a>
+<a href="contact-us.php" class="nav-link">CONTACT US</a>
 </li>
 </ul>
 </div>
@@ -285,7 +271,7 @@ Deutsch
 <span class="option-badge">2</span>
 </div>
 <div class="navbar-option-item navbar-option-order">
-<a href="shops-grid.html" class="btn text-nowrap">
+<a href="shops-grid.php" class="btn text-nowrap">
 Order Online <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 </div>
