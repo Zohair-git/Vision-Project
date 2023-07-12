@@ -70,7 +70,7 @@ include('navbar.php');
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-1-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.html" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
  </a>
 <p class="header-product-price color-white">$10.99 <del>$18.99</del></p>
 </div>
@@ -100,7 +100,7 @@ include('navbar.php');
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-2-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.html" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 <p class="header-product-price color-white">$9.99 <del>$15.99</del></p>
 </div>
@@ -130,7 +130,7 @@ include('navbar.php');
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-3-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.html" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 <p class="header-product-price color-white">$20.99 <del>$28.99</del></p>
 </div>
@@ -167,7 +167,7 @@ include('navbar.php');
 <small>Welcome To Fafo</small>
 <h2 class="color-white">We Serve The Best Food Of The Country</h2>
 <p>We are the country's no.1 Fast food retailer with 15+ years of reputation. Country's best burger and pizza are delivered by us. We gain the satisfaction of our customers with our delicate service and extreme high food quality.</p>
-<a href="about-us.html" class="btn">
+<a href="about-us.php" class="btn">
 More About Us
 <i class="flaticon-right-arrow-sketch-1"></i>
 </a>
@@ -712,7 +712,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 <div class="combo-box-content">
 <h3>Combo 1</h3>
 <h4><span>2 Burgers</span> With French Fries</h4>
-<a href="shop-details.html" class="btn">
+<a href="shop-details.php" class="btn">
 Order Now
 <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
@@ -733,7 +733,7 @@ Order Now
 <div class="combo-box-content">
 <h3>Combo 2</h3>
 <h4><span>3 Pizza</span> In 1 Combo Pack</h4>
-<a href="shop-details.html" class="btn">
+<a href="shop-details.php" class="btn">
 Order Now
 <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
@@ -754,7 +754,7 @@ Order Now
 <div class="combo-box-content">
 <h3>Combo 3</h3>
 <h4><span>3 Burgers</span> With Cold Drinks</h4>
-<a href="shop-details.html" class="btn">
+<a href="shop-details.php" class="btn">
 Order Now
 <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
@@ -775,7 +775,7 @@ Order Now
 <div class="combo-box-content">
 <h3>Combo 4</h3>
 <h4><span>3 Burgers</span> With Drinks & Salad</h4>
-<a href="shop-details.html" class="btn">
+<a href="shop-details.php" class="btn">
 Order Now
 <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
@@ -1074,7 +1074,7 @@ Download From
 <div class="col-sm-12 col-md-6 col-lg-4 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
 <div class="blog-card blog-card-white">
 <div class="blog-card-thumb">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <img src="assets/images/blog-1.jpg" alt="blog">
 </a>
 </div>
@@ -1083,7 +1083,7 @@ Download From
 <li><i class="flaticon-calendar-1"></i>20 Oct 2020</li>
 <li><i class="flaticon-man-user"></i>By Admin</li>
 </ul>
-<h3><a href="blog-details.html">Why Burger Made So Tasty In Recent Days</a></h3>
+<h3><a href="blog-details.php">Why Burger Made So Tasty In Recent Days</a></h3>
 <p>This Mexican Style Burger is pumped out with flavor</p>
 </div>
 </div>
@@ -1091,7 +1091,7 @@ Download From
 <div class="col-sm-12 col-md-6 col-lg-4 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.3s">
 <div class="blog-card blog-card-white">
 <div class="blog-card-thumb">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <img src="assets/images/blog-2.jpg" alt="blog">
 </a>
 </div>
@@ -1100,7 +1100,7 @@ Download From
 <li><i class="flaticon-calendar-1"></i>15 Oct 2020</li>
 <li><i class="flaticon-man-user"></i>By Admin</li>
 </ul>
-<h3><a href="blog-details.html">What Is More Convenient? Dine In Or Take Away?</a></h3>
+<h3><a href="blog-details.php">What Is More Convenient? Dine In Or Take Away?</a></h3>
 <p>This Mexican Style Burger is pumped out with flavor</p>
 </div>
 </div>
@@ -1108,7 +1108,7 @@ Download From
 <div class="col-sm-12 col-md-6 col-lg-4 pb-30 offset-md-3 offset-lg-0 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
 <div class="blog-card blog-card-white">
 <div class="blog-card-thumb">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <img src="assets/images/blog-1.jpg" alt="blog">
 </a>
 </div>
@@ -1117,14 +1117,14 @@ Download From
 <li><i class="flaticon-calendar-1"></i>12 Oct 2020</li>
 <li><i class="flaticon-man-user"></i>By Admin</li>
 </ul>
-<h3><a href="blog-details.html">What Is The Most Hived Pizza Among The Teen Agers?</a></h3>
+<h3><a href="blog-details.php">What Is The Most Hived Pizza Among The Teen Agers?</a></h3>
 <p>This Mexican Style Burger is pumped out with flavor</p>
 </div>
 </div>
 </div>
 </div>
 <div class="text-center">
-<a href="blogs-grid-without-sidebar.html" class="btn">Explore Blog <i class="flaticon-right-arrow-2"></i></a>
+<a href="blogs-grid-without-sidebar.php" class="btn">Explore Blog <i class="flaticon-right-arrow-2"></i></a>
 </div>
 </div>
 </section>
@@ -1157,87 +1157,7 @@ Download From
 </section>
 
 
-<footer class="bg-overlay-1 bg-black">
-<div class="footer-upper pt-100 pb-80">
-<div class="container">
-<div class="row">
-<div class="col-sm-12 col-md-6 col-lg-4 order-2 order-lg-1">
-<div class="footer-content-list footer-content-item">
-<div class="footer-content-title">
-<h3>Our Offer</h3>
-</div>
-<div class="d-flex justify-content-between flex-wrap flex-lg-nowrap desk-pad-right-30">
-<ul class="footer-details footer-list">
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="blogs-grid-without-sidebar.html">Blogs</a></li>
-<li><a href="faqs.html">FAQ's</a></li>
-<li><a href="reservation.html">Reservation</a></li>
-<li><a href="contact-us.html">Contact Us</a></li>
-<li><a href="cart.html">Cart</a></li>
-</ul>
-<ul class="footer-details footer-list">
-<li><a href="our-team.html">Teams</a></li>
-<li><a href="wishlist.html">Wishlist</a></li>
-<li><a href="privacy-policy.html">Privacy Policy</a></li>
-<li><a href="terms-conditions.html">Terms & Conditions</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="my-account.html">My Account</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 order-1 order-lg-2">
-<div class="footer-content-item text-start text-lg-center">
-<div class="footer-logo">
-<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-</div>
-<ul class="footer-details footer-address">
-<li>12 Poor Street, New York, USA</li>
-<li><span>Hotline:</span><a href="tel:001-964-565-87652">+1 964 565 87652</a></li>
-<li><span>Email:</span><a href="/cdn-cgi/l/email-protection#8fe7eae3e3e0cfe9eee9e0a1ece0e2"><span class="__cf_email__" data-cfemail="6a020f0606052a0c0b0c0544090507">[email&#160;protected]</span></a></li>
-</ul>
-<div class="footer-follow">
-<p>Follow Us:</p>
- <ul class="social-list social-list-white">
-<li><a href="#"><i class="flaticon-facebook"></i></a></li>
-<li><a href="#"><i class="flaticon-twitter"></i></a></li>
-<li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-<li><a href="#"><i class="flaticon-youtube"></i></a></li>
-<li><a href="#"><i class="flaticon-instagram-1"></i></a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 order-3">
-<div class="footer-content-list footer-content-item desk-pad-left-30">
-<div class="footer-content-title">
-<h3>Open Hours</h3>
-</div>
-<ul class="footer-details footer-time">
-<li>Saturday: <span>08:00 - 23.00</span></li>
-<li>Sunday: <span>08:00 - 23.00</span></li>
-<li>Monday: <span>08:00 - 21.00</span></li>
-<li>Tuesday: <span>09:00 - 23.00</span></li>
-<li>Wednesday: <span>08:00 - 23.00</span></li>
-<li>Thursday: <span>08:00 - 23.00</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer-lower">
-<div class="container">
-<div class="d-flex justify-content-center">
-<div class="footer-lower-item">
-<div class="footer-copyright-text footer-copyright-text-red">
-<p>Copyright @<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Design &amp; Developed By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
+<?php include('footer.php'); ?>
 
 
 <div class="cart-modal-wrapper">
@@ -1252,12 +1172,12 @@ Download From
 <h2 class="color-white">My Order</h2>
 <div class="cart-modal-product">
 <div class="cart-modal-thumb">
-<a href="shop-details.html">
+<a href="shop-details.php">
 <img src="assets/images/product-1.png" alt="product">
 </a>
 </div>
 <div class="cart-modal-content">
-<h4><a href="shop-details.html">Crispy Chicken Burger</a></h4>
+<h4><a href="shop-details.php">Crispy Chicken Burger</a></h4>
 <div class="cart-modal-action">
 <div class="cart-modal-action-item">
 <div class="cart-modal-quantity">
@@ -1276,12 +1196,12 @@ Download From
 </div>
 <div class="cart-modal-product">
 <div class="cart-modal-thumb">
-<a href="shop-details.html">
+<a href="shop-details.php">
 <img src="assets/images/product-2.png" alt="product">
 </a>
 </div>
 <div class="cart-modal-content">
-<h4><a href="shop-details.html">Red Sause Pizza</a></h4>
+<h4><a href="shop-details.php">Red Sause Pizza</a></h4>
 <div class="cart-modal-action">
 <div class="cart-modal-action-item">
 <div class="cart-modal-quantity">
@@ -1303,8 +1223,8 @@ Download From
 <h3>$8.0</h3>
 </div>
 <div class="cart-modal-button">
-<a href="checkout.html" class="btn full-width">Proceed To Checkout</a>
-<a href="cart.html" class="btn btn-yellow full-width">View Shopping Cart</a>
+<a href="checkout.php" class="btn full-width">Proceed To Checkout</a>
+<a href="cart.php" class="btn btn-yellow full-width">View Shopping Cart</a>
 </div>
 
 

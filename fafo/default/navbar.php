@@ -62,7 +62,7 @@ Deutsch
 <div class="navbar-area navbar-dark">
 
 <div class="mobile-nav">
-<a href="index.html" class="mobile-brand">
+<a href="index.php" class="mobile-brand">
 <img src="assets/images/logo.png" alt="logo" class="blue-logo">
 </a>
 
@@ -77,7 +77,7 @@ Deutsch
 <span class="option-badge">2</span>
 </div>
 <div class="navbar-option-item navbar-option-order">
-<a href="shops-grid.html" class="btn">
+<a href="shops-grid.php" class="btn">
 <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 </div>
@@ -107,7 +107,7 @@ Deutsch
 </div>
 <div class="authentication-action mb-20">
 <div class="authentication-action-item">
-<a href="forget-password.html">Forget Password?</a>
+<a href="forget-password.php">Forget Password?</a>
 </div>
 <div class="authentication-action-item">
 <div class="custom-control custom-checkbox">
@@ -148,7 +148,7 @@ Deutsch
 <div class="authentication-action-item">
 <div class="custom-control custom-checkbox">
 <input type="checkbox" class="custom-control-input" id="check4">
-<label class="custom-control-label" for="check4">I agree that my submitted data is being collected and stored. For further details on handling user data, see our <a href="privacy-policy.html">Privacy Policy</a>.</label>
+<label class="custom-control-label" for="check4">I agree that my submitted data is being collected and stored. For further details on handling user data, see our <a href="privacy-policy.php">Privacy Policy</a>.</label>
 </div>
 </div>
 </div>
@@ -180,7 +180,7 @@ Deutsch
 <span class="option-badge">2</span>
 </div>
 <div class="navbar-option-item navbar-option-order mobile-block">
-<a href="shops-grid.html" class="btn">
+<a href="shops-grid.php" class="btn">
 <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 </div>
@@ -236,10 +236,10 @@ Deutsch
 </li>
 
 <li class="nav-item">
-<a href="forget-password.html" class="nav-link ">Forget Password</a>
+<a href="forget-password.php" class="nav-link ">Forget Password</a>
 </li>
  <li class="nav-item">
-<a href="404.html" class="nav-link">404 Error Page</a>
+<a href="404.php" class="nav-link">404 Error Page</a>
 </li>
 </ul>
 </li>

@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="zxx">
+<!DOCTYPE php>
+<php lang="zxx">
 <head>
 <meta charset="utf-8">
 <meta name="description" content="Fafo">
-<meta name="keywords" content="HTML,CSS,JavaScript">
+<meta name="keywords" content="php,CSS,JavaScript">
 <meta name="author" content="HiBootstrap">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-<title>Fafo - Fast Food & Restaurant HTML Template</title>
+<title>Fafo - Fast Food & Restaurant php Template</title>
 <link rel="icon" href="assets/images/tab.png" type="image/png" sizes="16x16">
 
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all" />
@@ -43,7 +43,7 @@
 
 <link rel="stylesheet" href="assets/css/theme-dark.css" type="text/css" media="all" />
 <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <script src="http://php5shiv.googlecode.com/svn/trunk/php5.js"></script>
         <![endif]-->
 </head>
 <body>
@@ -81,7 +81,7 @@
 <h1>Blogs</h1>
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 <li class="breadcrumb-item active" aria-current="page">Blogs</li>
 </ol>
 </nav>
@@ -95,7 +95,7 @@
 <div class="container">
 <div class="blog-carousel owl-carousel owl-theme">
 <div class="item">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <div class="blog-card-slide">
 <div class="blog-card-thumb">
 <img src="assets/images/blog-long-1.jpg" alt="blog">
@@ -112,7 +112,7 @@
 </a>
 </div>
 <div class="item">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <div class="blog-card-slide">
 <div class="blog-card-thumb">
 <img src="assets/images/blog-long-2.jpg" alt="blog">
@@ -129,7 +129,7 @@
 </a>
 </div>
 <div class="item">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <div class="blog-card-slide">
 <div class="blog-card-thumb">
 <img src="assets/images/blog-long-3.jpg" alt="blog">
@@ -146,7 +146,7 @@
 </a>
 </div>
 <div class="item">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <div class="blog-card-slide">
 <div class="blog-card-thumb">
 <img src="assets/images/blog-long-1.jpg" alt="blog">
@@ -163,7 +163,7 @@
 </a>
 </div>
 <div class="item">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <div class="blog-card-slide">
 <div class="blog-card-thumb">
 <img src="assets/images/blog-long-2.jpg" alt="blog">
@@ -180,7 +180,7 @@
 </a>
 </div>
 <div class="item">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <div class="blog-card-slide">
 <div class="blog-card-thumb">
 <img src="assets/images/blog-long-3.jpg" alt="blog">
@@ -261,7 +261,7 @@
 </div>
 <div class="blog-card blog-card-two">
 <div class="blog-card-thumb">
-<a href="blog-details.html">
+<a href="blog-details.php">
 <img src="assets/images/blog-1.jpg" alt="blog">
 </a>
 </div>
@@ -270,7 +270,7 @@
 <li><i class="flaticon-calendar-1"></i>20 Oct 2020</li>
 <li><i class="flaticon-man-user"></i>By Admin</li>
 </ul>
-<h3><a href="blog-details.html">Why Burger Made So Tasty In Recent Days</a></h3>
+<h3><a href="blog-details.php">Why Burger Made So Tasty In Recent Days</a></h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
 </div>
 </div>
@@ -314,87 +314,7 @@
 </section>
 
 
-<footer class="bg-overlay-1 bg-black">
-<div class="footer-upper pt-100 pb-80">
-<div class="container">
-<div class="row">
-<div class="col-sm-12 col-md-6 col-lg-4 order-2 order-lg-1">
-<div class="footer-content-list footer-content-item">
-<div class="footer-content-title">
-<h3>Our Offer</h3>
-</div>
-<div class="d-flex justify-content-between flex-wrap flex-lg-nowrap desk-pad-right-30">
-<ul class="footer-details footer-list">
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="blogs-grid-without-sidebar.html">Blogs</a></li>
-<li><a href="faqs.html">FAQ's</a></li>
-<li><a href="reservation.html">Reservation</a></li>
-<li><a href="contact-us.html">Contact Us</a></li>
-<li><a href="cart.html">Cart</a></li>
-</ul>
-<ul class="footer-details footer-list">
-<li><a href="our-team.html">Teams</a></li>
-<li><a href="wishlist.html">Wishlist</a></li>
-<li><a href="privacy-policy.html">Privacy Policy</a></li>
-<li><a href="terms-conditions.html">Terms & Conditions</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="my-account.html">My Account</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 order-1 order-lg-2">
-<div class="footer-content-item text-start text-lg-center">
-<div class="footer-logo">
-<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-</div>
-<ul class="footer-details footer-address">
-<li>12 Poor Street, New York, USA</li>
-<li><span>Hotline:</span><a href="tel:001-964-565-87652">+1 964 565 87652</a></li>
-<li><span>Email:</span><a href="/cdn-cgi/l/email-protection#29414c454546694f484f46074a4644"><span class="__cf_email__" data-cfemail="cda5a8a1a1a28dabacaba2e3aea2a0">[email&#160;protected]</span></a></li>
-</ul>
-<div class="footer-follow">
-<p>Follow Us:</p>
-<ul class="social-list social-list-white">
-<li><a href="#"><i class="flaticon-facebook"></i></a></li>
-<li><a href="#"><i class="flaticon-twitter"></i></a></li>
-<li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-<li><a href="#"><i class="flaticon-youtube"></i></a></li>
-<li><a href="#"><i class="flaticon-instagram-1"></i></a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 order-3">
-<div class="footer-content-list footer-content-item desk-pad-left-30">
-<div class="footer-content-title">
-<h3>Open Hours</h3>
-</div>
-<ul class="footer-details footer-time">
-<li>Saturday: <span>08:00 - 23.00</span></li>
-<li>Sunday: <span>08:00 - 23.00</span></li>
-<li>Monday: <span>08:00 - 21.00</span></li>
-<li>Tuesday: <span>09:00 - 23.00</span></li>
- <li>Wednesday: <span>08:00 - 23.00</span></li>
-<li>Thursday: <span>08:00 - 23.00</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer-lower">
-<div class="container">
-<div class="d-flex justify-content-center">
-<div class="footer-lower-item">
-<div class="footer-copyright-text footer-copyright-text-red">
-<p>Copyright @<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Design &amp; Developed By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
+<?php include('footer.php'); ?>
 
 
 <div class="cart-modal-wrapper">
@@ -409,12 +329,12 @@
 <h2 class="color-white">My Order</h2>
 <div class="cart-modal-product">
 <div class="cart-modal-thumb">
-<a href="shop-details.html">
+<a href="shop-details.php">
 <img src="assets/images/product-1.png" alt="product">
 </a>
 </div>
 <div class="cart-modal-content">
-<h4><a href="shop-details.html">Crispy Chicken Burger</a></h4>
+<h4><a href="shop-details.php">Crispy Chicken Burger</a></h4>
 <div class="cart-modal-action">
 <div class="cart-modal-action-item">
 <div class="cart-modal-quantity">
@@ -433,12 +353,12 @@
 </div>
 <div class="cart-modal-product">
 <div class="cart-modal-thumb">
-<a href="shop-details.html">
+<a href="shop-details.php">
 <img src="assets/images/product-2.png" alt="product">
 </a>
 </div>
 <div class="cart-modal-content">
-<h4><a href="shop-details.html">Red Sause Pizza</a></h4>
+<h4><a href="shop-details.php">Red Sause Pizza</a></h4>
 <div class="cart-modal-action">
 <div class="cart-modal-action-item">
 <div class="cart-modal-quantity">
@@ -460,8 +380,8 @@
 <h3>$8.0</h3>
 </div>
 <div class="cart-modal-button">
-<a href="checkout.html" class="btn full-width">Proceed To Checkout</a>
-<a href="cart.html" class="btn btn-yellow full-width">View Shopping Cart</a>
+<a href="checkout.php" class="btn full-width">Proceed To Checkout</a>
+<a href="cart.php" class="btn btn-yellow full-width">View Shopping Cart</a>
 </div>
 
 
@@ -515,4 +435,4 @@
 
 <script src="assets/js/script.js"></script>
 </body>
-</html>
+</php>

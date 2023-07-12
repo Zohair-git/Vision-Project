@@ -82,7 +82,7 @@ include('navbar.php');
 <h1>Our Menu</h1>
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li class="breadcrumb-item"><a href="index.php">Home</a></li>
 <li class="breadcrumb-item active" aria-current="page">Our Menu</li>
 </ol>
 </nav>
@@ -147,7 +147,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Pizza</a></h3>
+<h3><a href="shop-details.php">Pepperoni Pizza</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -166,7 +166,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Beefka Pizza</a></h3>
+<h3><a href="shop-details.php">Beefka Pizza</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -185,7 +185,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Chicken Pizza</a></h3>
+<h3><a href="shop-details.php">Chicken Pizza</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -204,7 +204,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Avocado Pizza</a></h3>
+<h3><a href="shop-details.php">Avocado Pizza</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -223,7 +223,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Vegan Pizza</a></h3>
+<h3><a href="shop-details.php">Vegan Pizza</a></h3>
 <h4>$7.45<del>$8.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -242,7 +242,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Meat Pizza</a></h3>
+<h3><a href="shop-details.php">Meat Pizza</a></h3>
 <h4>$8.45<del>$9.24</del></h4>
 </div>
 <div class="receipe-cart">
@@ -261,7 +261,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Ball Pizza</a></h3>
+<h3><a href="shop-details.php">Ball Pizza</a></h3>
 <h4>$9.45<del>$10.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -280,7 +280,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Green Pizza</a></h3>
+<h3><a href="shop-details.php">Green Pizza</a></h3>
 <h4>$8.45<del>$12.01</del></h4>
 </div>
 <div class="receipe-cart">
@@ -299,7 +299,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Pizza</a></h3>
+<h3><a href="shop-details.php">Pepperoni Pizza</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -318,7 +318,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Pizza</a></h3>
+<h3><a href="shop-details.php">Pepperoni Pizza</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -337,7 +337,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Beefka Pizza</a></h3>
+<h3><a href="shop-details.php">Beefka Pizza</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -356,7 +356,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Chicken Pizza</a></h3>
+<h3><a href="shop-details.php">Chicken Pizza</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -385,7 +385,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Burger</a></h3>
+<h3><a href="shop-details.php">Pepperoni Burger</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -404,7 +404,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Beefka Burger</a></h3>
+<h3><a href="shop-details.php">Beefka Burger</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -423,7 +423,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Chicken Burger</a></h3>
+<h3><a href="shop-details.php">Chicken Burger</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -442,7 +442,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Avocado Burger</a></h3>
+<h3><a href="shop-details.php">Avocado Burger</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -461,7 +461,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Vegan Burger</a></h3>
+<h3><a href="shop-details.php">Vegan Burger</a></h3>
 <h4>$7.45<del>$8.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -480,7 +480,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Meat Burger</a></h3>
+<h3><a href="shop-details.php">Meat Burger</a></h3>
 <h4>$8.45<del>$9.24</del></h4>
 </div>
 <div class="receipe-cart">
@@ -499,7 +499,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Ball Burger</a></h3>
+<h3><a href="shop-details.php">Ball Burger</a></h3>
 <h4>$9.45<del>$10.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -518,7 +518,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Green Burger</a></h3>
+<h3><a href="shop-details.php">Green Burger</a></h3>
 <h4>$8.45<del>$12.01</del></h4>
 </div>
 <div class="receipe-cart">
@@ -537,7 +537,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Burger</a></h3>
+<h3><a href="shop-details.php">Pepperoni Burger</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -556,7 +556,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Burger</a></h3>
+<h3><a href="shop-details.php">Pepperoni Burger</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -575,7 +575,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Beefka Burger</a></h3>
+<h3><a href="shop-details.php">Beefka Burger</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -594,7 +594,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Chicken Burger</a></h3>
+<h3><a href="shop-details.php">Chicken Burger</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -623,7 +623,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Sandwitch</a></h3>
+<h3><a href="shop-details.php">Pepperoni Sandwitch</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -642,7 +642,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Beefka Sandwitch</a></h3>
+<h3><a href="shop-details.php">Beefka Sandwitch</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -661,7 +661,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Chicken Sandwitch</a></h3>
+<h3><a href="shop-details.php">Chicken Sandwitch</a></h3>
  <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -680,7 +680,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Avocado Sandwitch</a></h3>
+<h3><a href="shop-details.php">Avocado Sandwitch</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -699,7 +699,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Vegan Sandwitch</a></h3>
+<h3><a href="shop-details.php">Vegan Sandwitch</a></h3>
 <h4>$7.45<del>$8.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -718,7 +718,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Meat Sandwitch</a></h3>
+<h3><a href="shop-details.php">Meat Sandwitch</a></h3>
 <h4>$8.45<del>$9.24</del></h4>
  </div>
 <div class="receipe-cart">
@@ -737,7 +737,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Ball Sandwitch</a></h3>
+<h3><a href="shop-details.php">Ball Sandwitch</a></h3>
 <h4>$9.45<del>$10.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -756,7 +756,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Green Sandwitch</a></h3>
+<h3><a href="shop-details.php">Green Sandwitch</a></h3>
 <h4>$8.45<del>$12.01</del></h4>
 </div>
 <div class="receipe-cart">
@@ -775,7 +775,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Sandwitch</a></h3>
+<h3><a href="shop-details.php">Pepperoni Sandwitch</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
  <div class="receipe-cart">
@@ -794,7 +794,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Pepperoni Sandwitch</a></h3>
+<h3><a href="shop-details.php">Pepperoni Sandwitch</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -813,7 +813,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Beefka Sandwitch</a></h3>
+<h3><a href="shop-details.php">Beefka Sandwitch</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -832,7 +832,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Chicken Sandwitch</a></h3>
+<h3><a href="shop-details.php">Chicken Sandwitch</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -861,7 +861,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Strawberry Shake</a></h3>
+<h3><a href="shop-details.php">Strawberry Shake</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -880,7 +880,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Cream Shake</a></h3>
+<h3><a href="shop-details.php">Cream Shake</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -899,7 +899,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Cherry Venilla</a></h3>
+<h3><a href="shop-details.php">Cherry Venilla</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -918,7 +918,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Fruty Pebble</a></h3>
+<h3><a href="shop-details.php">Fruty Pebble</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -937,7 +937,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Oreo Shake</a></h3>
+<h3><a href="shop-details.php">Oreo Shake</a></h3>
 <h4>$7.45<del>$8.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -956,7 +956,7 @@ include('navbar.php');
 </div>
  <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Banana Shake</a></h3>
+<h3><a href="shop-details.php">Banana Shake</a></h3>
 <h4>$8.45<del>$9.24</del></h4>
 </div>
 <div class="receipe-cart">
@@ -975,7 +975,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Italiano Shake</a></h3>
+<h3><a href="shop-details.php">Italiano Shake</a></h3>
 <h4>$9.45<del>$10.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -994,7 +994,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Green Cream</a></h3>
+<h3><a href="shop-details.php">Green Cream</a></h3>
 <h4>$8.45<del>$12.01</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1013,7 +1013,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
  <div class="receipe-info">
-<h3><a href="shop-details.html">Cappuccino Shake</a></h3>
+<h3><a href="shop-details.php">Cappuccino Shake</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1032,7 +1032,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Cherry Shake</a></h3>
+<h3><a href="shop-details.php">Cherry Shake</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1051,7 +1051,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Strawberry Shake</a></h3>
+<h3><a href="shop-details.php">Strawberry Shake</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1070,7 +1070,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
- <h3><a href="shop-details.html">Cherry Venilla</a></h3>
+ <h3><a href="shop-details.php">Cherry Venilla</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1099,7 +1099,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Italiano Icecream</a></h3>
+<h3><a href="shop-details.php">Italiano Icecream</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1118,7 +1118,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Creamy Icecream</a></h3>
+<h3><a href="shop-details.php">Creamy Icecream</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1137,7 +1137,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Chocolate Layer</a></h3>
+<h3><a href="shop-details.php">Chocolate Layer</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1156,7 +1156,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Regular Cream</a></h3>
+<h3><a href="shop-details.php">Regular Cream</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1175,7 +1175,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Light Flavour</a></h3>
+<h3><a href="shop-details.php">Light Flavour</a></h3>
 <h4>$7.45<del>$8.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1194,7 +1194,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">French Icecream</a></h3>
+<h3><a href="shop-details.php">French Icecream</a></h3>
 <h4>$8.45<del>$9.24</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1213,7 +1213,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Creamy Icecream</a></h3>
+<h3><a href="shop-details.php">Creamy Icecream</a></h3>
 <h4>$9.45<del>$10.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1232,7 +1232,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Milk Flavour</a></h3>
+<h3><a href="shop-details.php">Milk Flavour</a></h3>
 <h4>$8.45<del>$12.01</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1251,7 +1251,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Perfect Pear</a></h3>
+<h3><a href="shop-details.php">Perfect Pear</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1270,7 +1270,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Italiano Icecream</a></h3>
+<h3><a href="shop-details.php">Italiano Icecream</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1289,7 +1289,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">French Icecream</a></h3>
+<h3><a href="shop-details.php">French Icecream</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1308,7 +1308,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Light Icecream</a></h3>
+<h3><a href="shop-details.php">Light Icecream</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1337,7 +1337,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Frozen</a></h3>
+<h3><a href="shop-details.php">Frozen</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1356,7 +1356,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Decadent</a></h3>
+<h3><a href="shop-details.php">Decadent</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1375,7 +1375,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Zesty</a></h3>
+<h3><a href="shop-details.php">Zesty</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1394,7 +1394,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Luscious</a></h3>
+<h3><a href="shop-details.php">Luscious</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1413,7 +1413,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Creamy</a></h3>
+<h3><a href="shop-details.php">Creamy</a></h3>
 <h4>$7.45<del>$8.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1432,7 +1432,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Oreo Mixed</a></h3>
+<h3><a href="shop-details.php">Oreo Mixed</a></h3>
 <h4>$8.45<del>$9.24</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1451,7 +1451,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Zesty</a></h3>
+<h3><a href="shop-details.php">Zesty</a></h3>
 <h4>$9.45<del>$10.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1470,7 +1470,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Luscious</a></h3>
+<h3><a href="shop-details.php">Luscious</a></h3>
 <h4>$8.45<del>$12.01</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1489,7 +1489,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Creamy</a></h3>
+<h3><a href="shop-details.php">Creamy</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1508,7 +1508,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Oreo Mixed</a></h3>
+<h3><a href="shop-details.php">Oreo Mixed</a></h3>
 <h4>$4.59<del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1527,7 +1527,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Frozen</a></h3>
+<h3><a href="shop-details.php">Frozen</a></h3>
 <h4>$5.12<del>$6.59</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1546,7 +1546,7 @@ include('navbar.php');
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.html">Creamy</a></h3>
+<h3><a href="shop-details.php">Creamy</a></h3>
 <h4>$6.57<del>$7.12</del></h4>
 </div>
 <div class="receipe-cart">
@@ -1603,87 +1603,7 @@ include('navbar.php');
 </section>
 
 
-<footer class="bg-overlay-1 bg-black">
-<div class="footer-upper pt-100 pb-80">
-<div class="container">
-<div class="row">
-<div class="col-sm-12 col-md-6 col-lg-4 order-2 order-lg-1">
-<div class="footer-content-list footer-content-item">
-<div class="footer-content-title">
-<h3>Our Offer</h3>
-</div>
-<div class="d-flex justify-content-between flex-wrap flex-lg-nowrap desk-pad-right-30">
-<ul class="footer-details footer-list">
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="blogs-grid-without-sidebar.html">Blogs</a></li>
-<li><a href="faqs.html">FAQ's</a></li>
-<li><a href="reservation.html">Reservation</a></li>
-<li><a href="contact-us.html">Contact Us</a></li>
-<li><a href="cart.html">Cart</a></li>
-</ul>
-<ul class="footer-details footer-list">
-<li><a href="our-team.html">Teams</a></li>
-<li><a href="wishlist.html">Wishlist</a></li>
-<li><a href="privacy-policy.html">Privacy Policy</a></li>
-<li><a href="terms-conditions.html">Terms & Conditions</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="my-account.html">My Account</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 order-1 order-lg-2">
-<div class="footer-content-item text-start text-lg-center">
-<div class="footer-logo">
-<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-</div>
-<ul class="footer-details footer-address">
-<li>12 Poor Street, New York, USA</li>
-<li><span>Hotline:</span><a href="tel:001-964-565-87652">+1 964 565 87652</a></li>
-<li><span>Email:</span><a href="/cdn-cgi/l/email-protection#3f575a5353507f595e5950115c5052"><span class="__cf_email__" data-cfemail="d9b1bcb5b5b699bfb8bfb6f7bab6b4">[email&#160;protected]</span></a></li>
-</ul>
-<div class="footer-follow">
-<p>Follow Us:</p>
-<ul class="social-list social-list-white">
-<li><a href="#"><i class="flaticon-facebook"></i></a></li>
-<li><a href="#"><i class="flaticon-twitter"></i></a></li>
-<li><a href="#"><i class="flaticon-linkedin"></i></a></li>
-<li><a href="#"><i class="flaticon-youtube"></i></a></li>
-<li><a href="#"><i class="flaticon-instagram-1"></i></a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 order-3">
-<div class="footer-content-list footer-content-item desk-pad-left-30">
-<div class="footer-content-title">
-<h3>Open Hours</h3>
-</div>
-<ul class="footer-details footer-time">
-<li>Saturday: <span>08:00 - 23.00</span></li>
-<li>Sunday: <span>08:00 - 23.00</span></li>
-<li>Monday: <span>08:00 - 21.00</span></li>
-<li>Tuesday: <span>09:00 - 23.00</span></li>
-<li>Wednesday: <span>08:00 - 23.00</span></li>
-<li>Thursday: <span>08:00 - 23.00</span></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="footer-lower">
-<div class="container">
-<div class="d-flex justify-content-center">
-<div class="footer-lower-item">
-<div class="footer-copyright-text footer-copyright-text-red">
-<p>Copyright @<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Design &amp; Developed By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
+<?php include('footer.php'); ?>
 
 
 <div class="cart-modal-wrapper">
@@ -1698,12 +1618,12 @@ include('navbar.php');
 <h2 class="color-white">My Order</h2>
 <div class="cart-modal-product">
 <div class="cart-modal-thumb">
-<a href="shop-details.html">
+<a href="shop-details.php">
 <img src="assets/images/product-1.png" alt="product">
 </a>
 </div>
 <div class="cart-modal-content">
-<h4><a href="shop-details.html">Crispy Chicken Burger</a></h4>
+<h4><a href="shop-details.php">Crispy Chicken Burger</a></h4>
 <div class="cart-modal-action">
 <div class="cart-modal-action-item">
 <div class="cart-modal-quantity">
@@ -1722,12 +1642,12 @@ include('navbar.php');
 </div>
 <div class="cart-modal-product">
 <div class="cart-modal-thumb">
-<a href="shop-details.html">
+<a href="shop-details.php">
 <img src="assets/images/product-2.png" alt="product">
 </a>
 </div>
 <div class="cart-modal-content">
-<h4><a href="shop-details.html">Red Sause Pizza</a></h4>
+<h4><a href="shop-details.php">Red Sause Pizza</a></h4>
 <div class="cart-modal-action">
 <div class="cart-modal-action-item">
 <div class="cart-modal-quantity">
@@ -1749,8 +1669,8 @@ include('navbar.php');
 <h3>$8.0</h3>
 </div>
 <div class="cart-modal-button">
-<a href="checkout.html" class="btn full-width">Proceed To Checkout</a>
-<a href="cart.html" class="btn btn-yellow full-width">View Shopping Cart</a>
+<a href="checkout.php" class="btn full-width">Proceed To Checkout</a>
+<a href="cart.php" class="btn btn-yellow full-width">View Shopping Cart</a>
 </div>
 
 
