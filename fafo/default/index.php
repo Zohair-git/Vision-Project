@@ -96,7 +96,7 @@ include('navbar.php');
 
 <div class="tp-caption LandingPage-Title tp-resizeme" id="slide-2-layer-1" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['170','50','70','45']" data-fontsize="['60','60','45','35']" data-lineheight="['85','85','55','40']" data-letterspacing="4" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" data-fontweight="400" style="z-index: 5; white-space: nowrap;">We Ensure That You <br> Will Be Satisfied</div>
 
-<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-2-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Double Layer Garlic Sauce Burger
+<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-2-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Green Spicy Pizza
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-2-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
@@ -105,7 +105,7 @@ include('navbar.php');
 <p class="header-product-price color-white">$9.99 <del>$15.99</del></p>
 </div>
 
-<div class="tp-caption tp-resizeme" id="slide-2-layer-4" data-x="['right','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['87','380','370','270']" data-type="image" data-responsive_offset="on" data-frames='[{"from":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' style="z-index: 8;border-width:0px;"><img src="assets/images/header-carousel-2.png" alt="" data-ww="['550px','550px','550px','550px']" data-hh="['520px','520px','520px','520px']" width="650" height="615" data-no-retina> </div>
+<div class="tp-caption tp-resizeme" id="slide-2-layer-4" data-x="['right','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['87','380','370','270']" data-type="image" data-responsive_offset="on" data-frames='[{"from":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' style="z-index: 8;border-width:0px;"><img src="assets/images/product-4.png" alt="" data-ww="['550px','550px','550px','550px']" data-hh="['520px','520px','520px','520px']" width="650" height="615" data-no-retina> </div>
 
 <div class="tp-caption tp-resizeme" id="slide-2-layer-5" data-x="['left','left','left','left']" data-y="['top','top','top','top']" data-voffset="['30','30','30','30']" data-type="image" data-responsive_offset="on" data-frames='[{"from":"x:-50px;rZ: -120deg;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-1.png" alt="" data-ww="['42px','42px','42px','42px']" data-hh="['43px','43px','43px','43px']" width="42" height="43" data-no-retina> </div>
 
@@ -124,18 +124,18 @@ include('navbar.php');
 
 <li data-index="rs-3" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0" data-saveperformance="off" data-title="Slide">
 
-<div class="tp-caption LandingPage-Title tp-resizeme" id="slide-3-layer-1" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['170','50','70','45']" data-fontsize="['60','60','45','35']" data-lineheight="['85','85','55','40']" data-letterspacing="4" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" data-fontweight="400" style="z-index: 5; white-space: nowrap;">Best Combo Offer <br> For Your Satisfiction</div>
+<div class="tp-caption LandingPage-Title tp-resizeme" id="slide-3-layer-1" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['170','50','70','45']" data-fontsize="['60','60','45','35']" data-lineheight="['85','85','55','40']" data-letterspacing="4" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" data-fontweight="400" style="z-index: 5; white-space: nowrap;">Best Offer <br> For Your Satisfiction</div>
 
-<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-3-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Burger + Chicken + Drinks
+<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-3-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Supreme 
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-3-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
 <a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
-<p class="header-product-price color-white">$20.99 <del>$28.99</del></p>
+<p class="header-product-price color-white">$10.99 <del>$18.99</del></p>
 </div>
 
-<div class="tp-caption tp-resizeme" id="slide-3-layer-4" data-x="['right','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['87','380','370','270']" data-type="image" data-responsive_offset="on" data-frames='[{"from":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' style="z-index: 8;border-width:0px;"><img src="assets/images/header-carousel-3.png" alt="" data-ww="['550px','550px','550px','550px']" data-hh="['520px','520px','520px','520px']" width="650" height="615" data-no-retina> </div>
+<div class="tp-caption tp-resizeme" id="slide-3-layer-4" data-x="['right','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']" data-voffset="['87','380','370','270']" data-type="image" data-responsive_offset="on" data-frames='[{"from":"x:0;y:0;z:0;rX:0;rY:0;rZ:0;sX:0.75;sY:0.75;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' style="z-index: 8;border-width:0px;"><img src="assets/images/product-6.png" alt="" data-ww="['550px','550px','550px','550px']" data-hh="['520px','520px','520px','520px']" width="650" height="615" data-no-retina> </div>
 
 <div class="tp-caption tp-resizeme" id="slide-3-layer-5" data-x="['left','left','left','left']" data-y="['top','top','top','top']" data-voffset="['30','30','30','30']" data-type="image" data-responsive_offset="on" data-frames='[{"from":"x:-50px;rZ: -120deg;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' style="z-index: 8;border-width:0px;"><img src="assets/images/header-shape-1.png" alt="" data-ww="['42px','42px','42px','42px']" data-hh="['43px','43px','43px','43px']" width="42" height="43" data-no-retina> </div>
 
@@ -793,47 +793,6 @@ Order Now
 </section>
 
 
-<section class="download-section building-shape pt-100 pb-70 bg-overlay-2">
-<div class="container position-relative">
-<div class="row align-items-center">
-<div class="col-sm-12 col-lg-7 pb-30">
-<div class="download-image-grid">
-<div class="download-image-mobile wow animate__slideInLeft" data-wow-duration="1.3s" data-wow-delay="0.1s">
-<div class="download-image-mobile-item">
-<img src="assets/images/mobile-shape-1.png" alt="mobile">
-</div>
-<div class="download-image-mobile-item">
-<img src="assets/images/mobile-shape-2.png" alt="mobile">
-</div>
-</div>
-<div class="download-image-rider wow animate__slideInLeft" data-wow-duration="2s" data-wow-delay="0.4s">
-<img src="assets/images/rider.png" alt="rider">
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-lg-5 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-<div class="about-content section-title text-center text-lg-end m-0">
-<h2 class="color-white">Download Our App & Order Online To Get Free Delivery</h2>
-<p>We are the country's no.1 Fast food retailer with 15+ years of reputation. Country's best burger and pizza are delivered by us. We gain the satisfaction of our customers with our delicate service and extreme high food quality.</p>
-<ul class="button-list justify-content-center justify-content-lg-end">
-<li>
-<a href="#" class="btn">
-Download From
-<i class="flaticon-playstore"></i>
-</a>
-</li>
-<li>
-<a href="#" class="btn">
-Download From
-<i class="icofont-brand-appstore"></i>
-</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
 
 
 <section class="testimonial-section p-tb-100 bg-black bg-overlay-1">

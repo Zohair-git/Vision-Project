@@ -30,7 +30,7 @@
 <div class="col-sm-12 col-md-6 col-lg-4 order-1 order-lg-2">
 <div class="footer-content-item text-start text-lg-center">
 <div class="footer-logo">
-<a href="index.php"><img src="assets/images/PIZZA PALACE.png" alt="logo" style = " background-color: #CDCDCD;"></a>
+<a href="index.php"><img src="assets/images/pizzapalace.png" alt="logo" style = ""></a>
 </div>
 <ul class="footer-details footer-address">
 <li>12 Poor Street, New York, USA</li>

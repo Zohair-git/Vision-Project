@@ -63,7 +63,7 @@ Deutsch
 
 <div class="mobile-nav">
 <a href="index.php" class="mobile-brand">
-<img src="assets/images/logo.png" alt="logo" class="blue-logo">
+<img src="assets/images/pizzapalace.png" alt="logo" class="blue-logo">
 </a>
 
 <div class="navbar-option d-flex align-items-center">
@@ -83,85 +83,7 @@ Deutsch
 </div>
 </div>
 </div>
-<div class="navbar-option-item navbar-option-authentication">
-<button class="navbar-authentication-button" type="button" id="auth2" data-bs-toggle="dropdown" aria-haspopup="true"><i class="flaticon-add-user"></i></button>
-<div class="authentication-box dropdown-menu" aria-labelledby="auth2">
-<div class="authentication-close"><i class="flaticon-cancel"></i></div>
-<div class="authentication-body">
-<ul class="authentication-tab">
-<li class="authentication-tab-item active" data-authentication-tab="1">Log In</li>
-<li class="authentication-tab-item" data-authentication-tab="2">Sign Up</li>
-</ul>
-<div class="authentication-details">
-<div class="authentication-details-item active" data-authentication-details="1">
-<form>
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="text" class="form-control" placeholder="User Name" />
-</div>
-</div>
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="password" class="form-control" placeholder="Password" />
-</div>
-</div>
-<div class="authentication-action mb-20">
-<div class="authentication-action-item">
-<a href="forget-password.php">Forget Password?</a>
-</div>
-<div class="authentication-action-item">
-<div class="custom-control custom-checkbox">
- <input type="checkbox" class="custom-control-input" id="check3">
-<label class="custom-control-label" for="check3">Remember Me</label>
-</div>
-</div>
-</div>
-<div class="authentication-btn">
-<button class="btn full-width btn-border mb-20">Log In</button>
-<button class="btn full-width"><i class="icofont-google-plus"></i>Log In With Google</button>
-</div>
-</form>
-</div>
-<div class="authentication-details-item" data-authentication-details="2">
-<form>
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="text" class="form-control" placeholder="User Name" />
-</div>
-</div>
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="text" class="form-control" placeholder="Email" />
-</div>
-</div>
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="password" class="form-control" placeholder="Password" />
-</div>
-</div>
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="password" class="form-control" placeholder="Confirm Password" />
-</div>
-</div>
-<div class="authentication-action mb-20">
-<div class="authentication-action-item">
-<div class="custom-control custom-checkbox">
-<input type="checkbox" class="custom-control-input" id="check4">
-<label class="custom-control-label" for="check4">I agree that my submitted data is being collected and stored. For further details on handling user data, see our <a href="privacy-policy.php">Privacy Policy</a>.</label>
-</div>
-</div>
-</div>
-<div class="authentication-btn">
-<button class="btn full-width btn-border mb-20">Log In</button>
-<button class="btn full-width"><i class="icofont-google-plus"></i>Log In With Google</button>
- </div>
-</form>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 <div class="navbar-option-item navbar-option-search">
 <button class="dropdown-toggle" type="button" id="search2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 <i class="flaticon-loupe"></i>
@@ -191,7 +113,7 @@ Deutsch
 <div class="container">
 <nav class="navbar navbar-expand-md navbar-light">
 <a class="navbar-brand" href="index.php">
-<img src="assets/images/PIZZA PALACE.png" alt="logo" class="logo">
+<img src="assets/images/pizzapalace.png" alt="logo" class="logo">
 </a>
 
 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
@@ -235,9 +157,8 @@ Deutsch
 </ul>
 </li>
 
-<li class="nav-item">
-<a href="forget-password.php" class="nav-link ">Forget Password</a>
-</li>
+
+
  <li class="nav-item">
 <a href="404.php" class="nav-link">404 Error Page</a>
 </li>
