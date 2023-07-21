@@ -137,13 +137,19 @@ include('navbar.php');
 <div class="receipe-grid receipe-grid-three">
 <div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
 <div class="receipe-item-inner">
+<?php include('connection.php');
+$select_query = "SELECT * FROM `tbl_menu` WHERE `menu_id` = 1";
+$select_query_run = mysqli_query($con , $select_query);
+$fetch_query = mysqli_fetch_array($select_query_run);
+if ($fetch_query['menu_id'] == 1) { ?>
 <div class="receipe-image">
-<img src="assets/images/pizza-receipe-1.png" alt="receipe">
+<img src="<?php echo "./admin/items_pictures/" . $fetch_query['food_pic'] ?>" alt="receipe">
 </div>
-<div class="receipe-content">
+
+    <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.php">Pepperoni Pizza</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
+<h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
+<h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
 <a href="#">
@@ -152,215 +158,8 @@ include('navbar.php');
 </a>
 </div>
 </div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-2.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Beefka Pizza</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-3.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Chicken Pizza</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
- </div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-4.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Avocado Pizza</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-5.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Vegan Pizza</a></h3>
-<h4>$7.45<del>$8.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-6.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Meat Pizza</a></h3>
-<h4>$8.45<del>$9.24</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-2.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Ball Pizza</a></h3>
-<h4>$9.45<del>$10.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-1.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Green Pizza</a></h3>
-<h4>$8.45<del>$12.01</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-4.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Pepperoni Pizza</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
- <div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-1.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Pepperoni Pizza</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-2.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Beefka Pizza</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/pizza-receipe-3.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Chicken Pizza</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
+    <?php }?>
+
 </div>
 </div>
 </div>
