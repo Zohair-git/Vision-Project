@@ -203,12 +203,7 @@ More About Us
 </div>
 <div class="menu-main-carousel-area">
 <div class="menu-main-thumb-nav">
-<div class="menu-main-thumb-item">
-<div class="menu-main-thumb-inner">
-<img src="assets/images/menu-1.png" alt="menu">
-<p>Burger</p>
-</div>
-</div>
+
 <div class="menu-main-thumb-item">
 <div class="menu-main-thumb-inner">
 <img src="assets/images/menu-2.png" alt="menu">
@@ -243,79 +238,10 @@ More About Us
 <div class="menu-main-details-for">
 <div class="menu-main-details-item">
 <div class="menu-details-carousel">
-<div class="menu-details-carousel-item menu-details-carousel-black">
-<h3>Chicken Burger</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-<h4 class="menu-price">$12.99</h4>
-<a href="#" class="btn btn-yellow">
-Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-</a>
-<div class="menu-details-carousel-image">
-<img src="assets/images/burger-slider-1.png" alt="menu">
-</div>
-</div>
-<div class="menu-details-carousel-item menu-details-carousel-black">
-<h3>Mexican Burger</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-<h4 class="menu-price">$10.99</h4>
-<a href="#" class="btn btn-yellow">
-Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-</a>
-<div class="menu-details-carousel-image">
-<img src="assets/images/burger-slider-2.png" alt="menu">
-</div>
-</div>
-<div class="menu-details-carousel-item menu-details-carousel-black">
-<h3>Double Dekar</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-<h4 class="menu-price">$20.99</h4>
-<a href="#" class="btn btn-yellow">
-Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-</a>
-<div class="menu-details-carousel-image">
-<img src="assets/images/burger-slider-3.png" alt="menu">
-</div>
-</div>
-<div class="menu-details-carousel-item menu-details-carousel-black">
-<h3>Beefka Burger</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-<h4 class="menu-price">$20.99</h4>
-<a href="#" class="btn btn-yellow">
-Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-</a>
-<div class="menu-details-carousel-image">
-<img src="assets/images/burger-slider-4.png" alt="menu">
-</div>
-</div>
-<div class="menu-details-carousel-item menu-details-carousel-black">
-<h3>Avocado Dekar</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-<h4 class="menu-price">$20.99</h4>
-<a href="#" class="btn btn-yellow">
-Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-</a>
-<div class="menu-details-carousel-image">
-<img src="assets/images/burger-slider-5.png" alt="menu">
-</div>
-</div>
-</div> 
-</div>
-<div class="menu-main-details-item">
-<div class="menu-details-carousel">
-<div class="menu-details-carousel-item menu-details-carousel-black">
-<h3>Cheese Pizza</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
-<h4 class="menu-price">$12.99</h4>
-<a href="#" class="btn btn-yellow">
-Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
-</a>
-<div class="menu-details-carousel-image">
-<img src="assets/images/pizza-slider-1.png" alt="menu">
-</div>
-</div>
+
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Mexican Pizza</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$10.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -326,7 +252,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Italiano Pizza</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -337,7 +263,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Beefka Pizza</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -348,7 +274,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Chicken Pizza</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -363,7 +289,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 <div class="menu-details-carousel">
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Italiano Sandwitch</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$12.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -374,7 +300,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>American Sandwitch</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$10.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -385,7 +311,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Jam Sandwitch</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -396,7 +322,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Avocado Sandwitch</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -407,7 +333,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Egg Sandwitch</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -422,7 +348,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 <div class="menu-details-carousel">
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Cherry Venilla</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$12.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -433,7 +359,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Strawberry Shake</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$10.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -444,7 +370,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Fruty Pebble</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -455,7 +381,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Oreo Shake</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -466,7 +392,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Banana Shake</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -481,7 +407,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 <div class="menu-details-carousel">
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Creamy Cream</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$12.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -492,7 +418,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Regular Chocolate</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$10.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -503,7 +429,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>French Icecream</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -514,7 +440,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Perfect Pear</h3>
- <p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+ <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -525,7 +451,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Light Icecream</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -540,7 +466,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 <div class="menu-details-carousel">
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Decadent</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$12.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -551,7 +477,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Frozen</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$10.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -562,7 +488,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Luscious</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -573,7 +499,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Creamy</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -584,7 +510,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 <div class="menu-details-carousel-item menu-details-carousel-black">
 <h3>Zesty</h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper.</p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, expedita.</p>
 <h4 class="menu-price">$20.99</h4>
 <a href="#" class="btn btn-yellow">
 Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
@@ -632,69 +558,6 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </section>
 
 
-<div class="special-section bg-overlay-2 pt-100 pb-70 bg-black">
-<div class="container">
-<div class="section-title">
-<small>Speciality</small>
-<h2 class="color-white">Our Special Ingridients</h2>
-</div>
-<div class="row align-items-center">
-<div class="col-sm-12 col-md-4 col-lg-4 text-end wow animate__slideInUp" data-wow-duration="1.5s" data-wow-delay="0.1s">
-<div class="info-item info-item-right info-item-white">
-<h3>Fresh <span>Bun</span></h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper. Served on buns topped with lettuce.</p>
-</div>
-<div class="info-item info-item-right info-item-white">
-<h3>Slice <span>Onion</span></h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper. Served on buns topped with lettuce.</p>
-</div>
-<div class="info-item info-item-right info-item-white">
-<h3>Double <span>Chicken</span></h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper. Served on buns topped with lettuce.</p>
-</div>
-</div>
-<div class="col-sm-12 col-md-4 col-lg-4 wow animate__zoomIn" data-wow-duration="1.5s" data-wow-delay="0.3s">
-<div class="info-image">
-<img src="assets/images/special-food.png" alt="special-food">
-<div class="info-shape">
-<div class="info-shape-item">
-<img src="assets/images/arrow-1.png" alt="shape">
-</div>
-<div class="info-shape-item">
-<img src="assets/images/arrow-2.png" alt="shape">
-</div>
-<div class="info-shape-item">
-<img src="assets/images/arrow-3.png" alt="shape">
-</div>
-<div class="info-shape-item">
-<img src="assets/images/arrow-4.png" alt="shape">
-</div>
-<div class="info-shape-item">
-<img src="assets/images/arrow-5.png" alt="shape">
-</div>
-<div class="info-shape-item">
-<img src="assets/images/arrow-6.png" alt="shape">
-</div>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-4 col-lg-4 wow animate__slideInUp" data-wow-duration="1.5s" data-wow-delay="0.2s">
-<div class="info-item info-item-left info-item-white">
-<h3>Pure <span>Butter</span></h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper. Served on buns topped with lettuce.</p>
-</div>
-<div class="info-item info-item-left info-item-white">
-<h3>Fresh <span>Lettuse</span></h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper. Served on buns topped with lettuce.</p>
-</div>
-<div class="info-item info-item-left info-item-white">
-<h3>Pure <span>Cheese</span></h3>
-<p>This Mexican Style Burger is pumped out with flavor from chilli powder, cilantro & jalapeno pepper. Served on buns topped with lettuce.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 
 <section class="combo-section bg-black pt-100 pb-70">
@@ -707,11 +570,11 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 <div class="col-sm-12 col-md-6 col-lg-6 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
 <div class="combo-box">
 <div class="combo-box-image">
-<img src="assets/images/combo-1.jpg" alt="combo">
+<img src="assets/images/combo5.jpg" alt="combo">
 </div>
 <div class="combo-box-content">
 <h3>Combo 1</h3>
-<h4><span>2 Burgers</span> With French Fries</h4>
+<h4><span>Peproni Pizza</span> With Drink</h4>
 <a href="shop-details.php" class="btn">
 Order Now
 <i class="flaticon-shopping-cart-black-shape"></i>
@@ -749,11 +612,11 @@ Order Now
 <div class="col-sm-12 col-md-6 col-lg-6 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
 <div class="combo-box">
 <div class="combo-box-image">
-<img src="assets/images/combo-3.jpg" alt="combo">
+<img src="assets/images/combo8.jpg"  alt="combo">
 </div>
 <div class="combo-box-content">
 <h3>Combo 3</h3>
-<h4><span>3 Burgers</span> With Cold Drinks</h4>
+<h4><span>Sandwitch</span> With Fries</h4>
 <a href="shop-details.php" class="btn">
 Order Now
 <i class="flaticon-shopping-cart-black-shape"></i>
@@ -770,11 +633,11 @@ Order Now
 <div class="col-sm-12 col-md-6 col-lg-6 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.7s">
 <div class="combo-box">
  <div class="combo-box-image">
-<img src="assets/images/combo-4.jpg" alt="combo">
+<img src="assets/images/combo7.jpg"   alt="combo">
 </div>
 <div class="combo-box-content">
 <h3>Combo 4</h3>
-<h4><span>3 Burgers</span> With Drinks & Salad</h4>
+<h4><span>2 Pizza</span> With Drink</h4>
 <a href="shop-details.php" class="btn">
 Order Now
 <i class="flaticon-shopping-cart-black-shape"></i>
@@ -1021,73 +884,6 @@ Order Now
 </div>
 </div>
 </div>
-
-
-<section class="blog-section p-tb-100 bg-overlay-2">
-<div class="container">
-<div class="section-title">
-<small>Blog</small>
-<h2 class="color-white">Read Our Latest Food News</h2>
-</div>
-<div class="row">
-<div class="col-sm-12 col-md-6 col-lg-4 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.1s">
-<div class="blog-card blog-card-white">
-<div class="blog-card-thumb">
-<a href="blog-details.php">
-<img src="assets/images/blog-1.jpg" alt="blog">
-</a>
-</div>
-<div class="blog-card-content">
-<ul class="blog-entry">
-<li><i class="flaticon-calendar-1"></i>20 Oct 2020</li>
-<li><i class="flaticon-man-user"></i>By Admin</li>
-</ul>
-<h3><a href="blog-details.php">Why Burger Made So Tasty In Recent Days</a></h3>
-<p>This Mexican Style Burger is pumped out with flavor</p>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 pb-30 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-<div class="blog-card blog-card-white">
-<div class="blog-card-thumb">
-<a href="blog-details.php">
-<img src="assets/images/blog-2.jpg" alt="blog">
-</a>
-</div>
-<div class="blog-card-content">
-<ul class="blog-entry">
-<li><i class="flaticon-calendar-1"></i>15 Oct 2020</li>
-<li><i class="flaticon-man-user"></i>By Admin</li>
-</ul>
-<h3><a href="blog-details.php">What Is More Convenient? Dine In Or Take Away?</a></h3>
-<p>This Mexican Style Burger is pumped out with flavor</p>
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-4 pb-30 offset-md-3 offset-lg-0 wow animate__slideInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-<div class="blog-card blog-card-white">
-<div class="blog-card-thumb">
-<a href="blog-details.php">
-<img src="assets/images/blog-1.jpg" alt="blog">
-</a>
-</div>
-<div class="blog-card-content">
-<ul class="blog-entry">
-<li><i class="flaticon-calendar-1"></i>12 Oct 2020</li>
-<li><i class="flaticon-man-user"></i>By Admin</li>
-</ul>
-<h3><a href="blog-details.php">What Is The Most Hived Pizza Among The Teen Agers?</a></h3>
-<p>This Mexican Style Burger is pumped out with flavor</p>
-</div>
-</div>
-</div>
-</div>
-<div class="text-center">
-<a href="blogs-grid-without-sidebar.php" class="btn">Explore Blog <i class="flaticon-right-arrow-2"></i></a>
-</div>
-</div>
-</section>
-
 
 <section class="subscribe-section mural-bg pt-100 pb-70 bg-main">
 <div class="container">

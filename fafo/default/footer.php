@@ -9,21 +9,14 @@
 </div>
 <div class="d-flex justify-content-between flex-wrap flex-lg-nowrap desk-pad-right-30">
 <ul class="footer-details footer-list">
-<li><a href="about-us.html">About Us</a></li>
-<li><a href="blogs-grid-without-sidebar.html">Blogs</a></li>
-<li><a href="faqs.html">FAQ's</a></li>
-<li><a href="reservation.html">Reservation</a></li>
-<li><a href="contact-us.html">Contact Us</a></li>
-<li><a href="cart.html">Cart</a></li>
+<li><a href="about-us.php">About Us</a></li>
+<li><a href="blogs-3.php">Blogs</a></li>
+<li><a href="contact-us.php">Contact Us</a></li>
+<li><a href="cart.php">Cart</a></li>
+<li><a href="wishlist.php">Wishlist</a></li>
+
 </ul>
-<ul class="footer-details footer-list">
-<li><a href="our-team.html">Teams</a></li>
-<li><a href="wishlist.html">Wishlist</a></li>
-<li><a href="privacy-policy.html">Privacy Policy</a></li>
-<li><a href="terms-conditions.html">Terms & Conditions</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="my-account.html">My Account</a></li>
-</ul>
+
 </div>
 </div>
 </div>
@@ -72,7 +65,7 @@
 <div class="d-flex justify-content-center">
 <div class="footer-lower-item">
 <div class="footer-copyright-text footer-copyright-text-red">
-<p>Copyright @<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear())</script> Design &amp; Developed By <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+<p>Copyright @ 2023 <a href="INDEX.PHP">WWW.PIZZAPALACE.COM</a></p>
 </div>
 </div>
 </div>
