@@ -7,8 +7,8 @@ if (isset($_POST['submit'])) {
    $item_cat = $_POST['item_cat'];
    $item_picture = $_FILES['picture']['name'];
    $item_picture_tmp = $_FILES['picture']['tmp_name'];
-   $path = "items_pictures" . $item_picture_tmp;
-   move_uploaded_file($path,$item_picture_tmp);
+   $path = 'pictures/' . $item_picture ;
+   move_uploaded_file($item_picture_tmp , $path);
    $query = "INSERT INTO `tbl_menu`(`food_name`, `food_pic`, `menu_price`, `cat_foreign_id` )
     VALUES ('$item_name','$item_picture' ,'$item_price' ,'$item_cat')";
    $query_run = mysqli_query($con ,$query);

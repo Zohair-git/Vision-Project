@@ -135,18 +135,16 @@ include('navbar.php');
 <div class="menu-main-details-for">
 <div class="menu-main-details-item">
 <div class="receipe-grid receipe-grid-three">
+<?php include('connection.php');
+$select_query = "SELECT * FROM `tbl_menu` WhERE cat_foreign_id = 1";
+$select_query_run = mysqli_query($con , $select_query);?>
+<?php while ($fetch_query = mysqli_fetch_array($select_query_run)) { ?>
 <div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
 <div class="receipe-item-inner">
-<?php include('connection.php');
-$select_query = "SELECT * FROM `tbl_menu` WHERE `menu_id` = 1";
-$select_query_run = mysqli_query($con , $select_query);
-$fetch_query = mysqli_fetch_array($select_query_run);
-if ($fetch_query['menu_id'] == 1) { ?>
 <div class="receipe-image">
-<img src="<?php echo "./admin/items_pictures/" . $fetch_query['food_pic'] ?>" alt="receipe">
+<img src="<?php echo "./admin/pictures/".$fetch_query['food_pic'] ?>" alt="receipe">
 </div>
-
-    <div class="receipe-content">
+<div class="receipe-content">
 <div class="receipe-info">
 <h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
 <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
@@ -158,10 +156,9 @@ if ($fetch_query['menu_id'] == 1) { ?>
 </a>
 </div>
 </div>
-    <?php }?>
-
 </div>
 </div>
+<?php }?>
 </div>
 <div class="text-center">
 <a href="pro" class="btn load-more-btn">
@@ -173,15 +170,19 @@ if ($fetch_query['menu_id'] == 1) { ?>
 
 <div class="menu-main-details-item">
 <div class="receipe-grid receipe-grid-three">
+<?php include('connection.php');
+$select_query = "SELECT * FROM `tbl_menu` WhERE cat_foreign_id = 2";
+$select_query_run = mysqli_query($con , $select_query);?>
+<?php while ($fetch_query = mysqli_fetch_array($select_query_run)) { ?>    
 <div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
 <div class="receipe-item-inner">
 <div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-1.png" alt="receipe">
+<img src="<?php echo "./admin/pictures/".$fetch_query['food_pic'] ?>" alt="receipe">
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.php">Pepperoni Sandwitch</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
+<h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
+<h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
 <a href="#">
@@ -192,15 +193,33 @@ if ($fetch_query['menu_id'] == 1) { ?>
 </div>
 </div>
 </div>
+<?php }?>
+
+</div>
+<div class="text-center">
+<a href="pro" class="btn load-more-btn">
+<span class="load-more-text">Load More</span>
+<span class="load-more-icon"><i class="icofont-refresh"></i></span>
+</a>
+</div>
+</div>
+
+
+<div class="menu-main-details-item">
+<div class="receipe-grid receipe-grid-three">
+<?php include('connection.php');
+$select_query = "SELECT * FROM `tbl_menu` WhERE cat_foreign_id = 3";
+$select_query_run = mysqli_query($con , $select_query);?>
+<?php while ($fetch_query = mysqli_fetch_array($select_query_run)) { ?>    
 <div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
 <div class="receipe-item-inner">
 <div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-2.png" alt="receipe">
+<img src="<?php echo "./admin/pictures/".$fetch_query['food_pic'] ?>" alt="receipe">
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.php">Beefka Sandwitch</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
+<h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
+<h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
 <a href="#">
@@ -211,196 +230,7 @@ if ($fetch_query['menu_id'] == 1) { ?>
 </div>
 </div>
 </div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-3.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Chicken Sandwitch</a></h3>
- <h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-4.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Avocado Sandwitch</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-5.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Vegan Sandwitch</a></h3>
-<h4>$7.45<del>$8.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-6.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Meat Sandwitch</a></h3>
-<h4>$8.45<del>$9.24</del></h4>
- </div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-7.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Ball Sandwitch</a></h3>
-<h4>$9.45<del>$10.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-8.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Green Sandwitch</a></h3>
-<h4>$8.45<del>$12.01</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-9.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Pepperoni Sandwitch</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
- <div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-3.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Pepperoni Sandwitch</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-6.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Beefka Sandwitch</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/sandwitch-receipe-1.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Chicken Sandwitch</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
- <a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
+<?php } ?>
 </div>
 <div class="text-center">
 <a href="pro" class="btn load-more-btn">
@@ -411,15 +241,19 @@ if ($fetch_query['menu_id'] == 1) { ?>
 </div>
 <div class="menu-main-details-item">
 <div class="receipe-grid receipe-grid-three">
+<?php include('connection.php');
+$select_query = "SELECT * FROM `tbl_menu` WhERE cat_foreign_id = 4";
+$select_query_run = mysqli_query($con , $select_query);?>
+<?php while ($fetch_query = mysqli_fetch_array($select_query_run)) { ?>  
 <div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
 <div class="receipe-item-inner">
 <div class="receipe-image">
-<img src="assets/images/shake-receipe-1.png" alt="receipe">
+<img src="<?php echo "./admin/pictures/".$fetch_query['food_pic'] ?>" alt="receipe">
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.php">Strawberry Shake</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
+<h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
+<h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
 <a href="#">
@@ -430,215 +264,7 @@ if ($fetch_query['menu_id'] == 1) { ?>
 </div>
 </div>
 </div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-2.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Cream Shake</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-3.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Cherry Venilla</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-4.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Fruty Pebble</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-5.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Oreo Shake</a></h3>
-<h4>$7.45<del>$8.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-6.png" alt="receipe">
-</div>
- <div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Banana Shake</a></h3>
-<h4>$8.45<del>$9.24</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-7.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Italiano Shake</a></h3>
-<h4>$9.45<del>$10.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-8.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Green Cream</a></h3>
-<h4>$8.45<del>$12.01</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-9.png" alt="receipe">
-</div>
-<div class="receipe-content">
- <div class="receipe-info">
-<h3><a href="shop-details.php">Cappuccino Shake</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-4.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Cherry Shake</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-1.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Strawberry Shake</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/shake-receipe-7.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
- <h3><a href="shop-details.php">Cherry Venilla</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
+<?php } ?>
 </div>
 <div class="text-center">
 <a href="pro" class="btn load-more-btn">
@@ -649,15 +275,19 @@ if ($fetch_query['menu_id'] == 1) { ?>
 </div>
 <div class="menu-main-details-item">
 <div class="receipe-grid receipe-grid-three">
+<?php include('connection.php');
+$select_query = "SELECT * FROM `tbl_menu` WhERE cat_foreign_id = 5";
+$select_query_run = mysqli_query($con , $select_query);?>
+<?php while ($fetch_query = mysqli_fetch_array($select_query_run)) { ?> 
 <div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
 <div class="receipe-item-inner">
 <div class="receipe-image">
-<img src="assets/images/icecream-receipe-1.png" alt="receipe">
+<img src="<?php echo "./admin/pictures/".$fetch_query['food_pic'] ?>" alt="receipe">
 </div>
 <div class="receipe-content">
 <div class="receipe-info">
-<h3><a href="shop-details.php">Italiano Icecream</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
+<h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
+<h4>$$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
 <div class="receipe-cart">
 <a href="#">
@@ -668,453 +298,7 @@ if ($fetch_query['menu_id'] == 1) { ?>
 </div>
 </div>
 </div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-2.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Creamy Icecream</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
- <div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-3.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Chocolate Layer</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-4.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Regular Cream</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-5.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Light Flavour</a></h3>
-<h4>$7.45<del>$8.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-6.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">French Icecream</a></h3>
-<h4>$8.45<del>$9.24</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-7.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Creamy Icecream</a></h3>
-<h4>$9.45<del>$10.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-8.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Milk Flavour</a></h3>
-<h4>$8.45<del>$12.01</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-9.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Perfect Pear</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-5.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Italiano Icecream</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/icecream-receipe-2.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">French Icecream</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
- <div class="receipe-image">
-<img src="assets/images/icecream-receipe-6.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Light Icecream</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="text-center">
-<a href="pro" class="btn load-more-btn">
-<span class="load-more-text">Load More</span>
-<span class="load-more-icon"><i class="icofont-refresh"></i></span>
-</a>
-</div>
-</div>
-<div class="menu-main-details-item">
-<div class="receipe-grid receipe-grid-three">
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-1.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Frozen</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-2.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Decadent</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
- <i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-3.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Zesty</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-4.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Luscious</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-5.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Creamy</a></h3>
-<h4>$7.45<del>$8.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
- </a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-6.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Oreo Mixed</a></h3>
-<h4>$8.45<del>$9.24</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-7.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Zesty</a></h3>
-<h4>$9.45<del>$10.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-8.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Luscious</a></h3>
-<h4>$8.45<del>$12.01</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
- </div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-9.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Creamy</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-3.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Oreo Mixed</a></h3>
-<h4>$4.59<del>$7.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-6.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Frozen</a></h3>
-<h4>$5.12<del>$6.59</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
-<div class="receipe-item receipe-item-black pb-30 receipe-grid-item">
-<div class="receipe-item-inner">
-<div class="receipe-image">
-<img src="assets/images/dessert-receipe-8.png" alt="receipe">
-</div>
-<div class="receipe-content">
-<div class="receipe-info">
-<h3><a href="shop-details.php">Creamy</a></h3>
-<h4>$6.57<del>$7.12</del></h4>
-</div>
-<div class="receipe-cart">
-<a href="#">
-<i class="flaticon-supermarket-basket"></i>
-<i class="flaticon-supermarket-basket"></i>
-</a>
-</div>
-</div>
-</div>
-</div>
+<?php } ?>
 </div>
 <div class="text-center">
 <a href="pro" class="btn load-more-btn">
