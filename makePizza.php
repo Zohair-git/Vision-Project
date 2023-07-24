@@ -1,3 +1,7 @@
+<?php 
+include('connection.php');
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -48,9 +52,21 @@
 </head>
 <body>
 <?php
-include('navbar.php');
-
+// include('navbar.php');
+if ($_SERVER["REQUEST_METHOD"] == "post") {
+    if ($_POST['add_to_cart']) {
+       if (isset($_SESSION['items'])) {
+        # code...
+       }
+       else {
+        $_SESSION['items'][0] = array('item_name' => $_POST['item_name'] , 'item_price' => $_POST['item_price'] , 'item_pic' => $_POST['item_pic'] );
+        print_r($_SESSION['items']);
+       }
+    } 
+  
+}
 ?>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 

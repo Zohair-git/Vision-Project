@@ -1,3 +1,7 @@
+<?php 
+session_start();
+include('connection.php');
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -135,7 +139,7 @@ include('navbar.php');
 <div class="menu-main-details-for">
 <div class="menu-main-details-item">
 <div class="receipe-grid receipe-grid-three">
-<?php include('connection.php');
+<?php 
 $select_query = "SELECT * FROM `tbl_menu` WhERE cat_foreign_id = 1";
 $select_query_run = mysqli_query($con , $select_query);?>
 <?php while ($fetch_query = mysqli_fetch_array($select_query_run)) { ?>
@@ -149,16 +153,24 @@ $select_query_run = mysqli_query($con , $select_query);?>
 <h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
 <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
+<form method = "post" action="menu.php">
 <div class="receipe-cart">
-<a href="#">
+
+<input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name']  ?>">
+    <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price']  ?>">
+    <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic']  ?>">
+    <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
 <i class="flaticon-supermarket-basket"></i>
 <i class="flaticon-supermarket-basket"></i>
-</a>
+</button>
+
+</div>
+</form>
 </div>
 </div>
 </div>
-</div>
-<?php }?>
+<?php } 
+?>
 </div>
 <div class="text-center">
 <a href="pro" class="btn load-more-btn">
@@ -184,12 +196,19 @@ $select_query_run = mysqli_query($con , $select_query);?>
 <h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
 <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
+<form method = "post">
 <div class="receipe-cart">
-<a href="#">
+<a>
+<input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name']  ?>">
+    <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price']  ?>">
+    <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic']  ?>">
+    <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
 <i class="flaticon-supermarket-basket"></i>
 <i class="flaticon-supermarket-basket"></i>
+</button>
 </a>
 </div>
+</form>
 </div>
 </div>
 </div>
@@ -221,12 +240,19 @@ $select_query_run = mysqli_query($con , $select_query);?>
 <h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
 <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
+<form method = "post">
 <div class="receipe-cart">
-<a href="#">
+<a>
+<input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name']  ?>">
+    <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price']  ?>">
+    <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic']  ?>">
+    <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
 <i class="flaticon-supermarket-basket"></i>
 <i class="flaticon-supermarket-basket"></i>
+</button>
 </a>
 </div>
+</form>
 </div>
 </div>
 </div>
@@ -255,12 +281,19 @@ $select_query_run = mysqli_query($con , $select_query);?>
 <h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
 <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
+<form method ="post">
 <div class="receipe-cart">
-<a href="#">
+<a>
+<input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name']  ?>">
+    <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price']  ?>">
+    <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic']  ?>">
+    <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
 <i class="flaticon-supermarket-basket"></i>
 <i class="flaticon-supermarket-basket"></i>
+</button>
 </a>
 </div>
+</form>
 </div>
 </div>
 </div>
@@ -289,12 +322,19 @@ $select_query_run = mysqli_query($con , $select_query);?>
 <h3><a href="shop-details.php"><?php echo $fetch_query['food_name']?></a></h3>
 <h4>$$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
 </div>
+<form method="post">
 <div class="receipe-cart">
-<a href="#">
+<a>
+<input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name']  ?>">
+    <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price']  ?>">
+    <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic']  ?>">
+    <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
 <i class="flaticon-supermarket-basket"></i>
 <i class="flaticon-supermarket-basket"></i>
+</button>
 </a>
 </div>
+</form>
 </div>
 </div>
 </div>
@@ -311,6 +351,25 @@ $select_query_run = mysqli_query($con , $select_query);?>
 </div>
 </div>
 </section>
+
+<?php
+    if (isset($_POST['add_to_cart'])) {
+       if (isset($_SESSION['items'])) {
+        $myitems = array_column($_SESSION['items'], 'item_name');
+        if (in_array($_POST['item_name'] , $myitems)) {
+           echo "<script>alert('item already added');
+           window.location.href = menu.php;</script>
+           ";
+        }
+       }
+       else{
+        $_SESSION['items'][0] = array('item_name' => $_POST['item_name'] , 'item_price' => $_POST['item_price'] , 'item_pic' => $_POST['item_pic'] );
+        print_r($_SESSION['items']);
+       }
+    } 
+  
+
+?>
 
 
 <section class="step-section p-tb-100 bg-black">
@@ -357,14 +416,15 @@ $select_query_run = mysqli_query($con , $select_query);?>
 </div>
 <div class="cart-modal-body">
 <h2 class="color-white">My Order</h2>
+<?php fo ?>
 <div class="cart-modal-product">
 <div class="cart-modal-thumb">
 <a href="shop-details.php">
-<img src="assets/images/product-1.png" alt="product">
+<img src="./admin/pictures/<?php print_r($_SESSION['items'][0]['item_pic']) ?>" alt="product">
 </a>
 </div>
 <div class="cart-modal-content">
-<h4><a href="shop-details.php">Crispy Chicken Burger</a></h4>
+<h4><a href="shop-details.php"><?php  print_r($_SESSION['items'][0]['item_name']) ?></a></h4>
 <div class="cart-modal-action">
 <div class="cart-modal-action-item">
 <div class="cart-modal-quantity">
@@ -381,30 +441,7 @@ $select_query_run = mysqli_query($con , $select_query);?>
 </div>
 </div>
 </div>
-<div class="cart-modal-product">
-<div class="cart-modal-thumb">
-<a href="shop-details.php">
-<img src="assets/images/product-2.png" alt="product">
-</a>
-</div>
-<div class="cart-modal-content">
-<h4><a href="shop-details.php">Red Sause Pizza</a></h4>
-<div class="cart-modal-action">
-<div class="cart-modal-action-item">
-<div class="cart-modal-quantity">
-<p>1</p>
-<p>x</p>
-<p class="cart-quantity-price">$ 3.50</p>
-</div>
-</div>
-<div class="cart-modal-action-item">
-<div class="cart-modal-delete">
-<a href="#"><i class="icofont-ui-delete"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 <div class="cart-modal-total">
  <p>Total</p>
 <h3>$8.0</h3>
