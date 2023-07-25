@@ -1,3 +1,5 @@
+<?php session_start();
+include('connection.php'); ?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -90,38 +92,44 @@
 </div>
 </div>
 
-
 <div class="product-details-section pt-100 pb-70 bg-black">
 <div class="container">
+<?php 
+$menu_id = $_GET['id'];
+$select_query = "SELECT * FROM `tbl_menu` WHERE `menu_id` = '$menu_id'";
+$select_query_run = mysqli_query($con , $select_query);
+while ($details = mysqli_fetch_array($select_query_run)) {
+
+?>
 <div class="row align-items-center">
 <div class="col-sm-12 col-md-12 col-lg-5 pb-30">
 <div class="product-details-item">
 <div class="product-details-slider">
 <div class="product-details-for popup-gallery">
 <div class="product-for-item">
-<a href="assets/images/product-1.png"><img src="assets/images/product-1.png" alt="product"></a>
+<a href="assets/images/product-1.png"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?>" alt="product"></a>
 </div>
 <div class="product-for-item">
-<a href="assets/images/product-1.png"><img src="assets/images/product-1.png" alt="product"></a>
+<a href="assets/images/product-1.png"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?> alt="product"></a>
 </div>
 <div class="product-for-item">
-<a href="assets/images/product-1.png"><img src="assets/images/product-1.png" alt="product"></a>
+<a href="assets/images/product-1.png"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?> alt="product"></a>
 </div>
 </div>
 <div class="product-details-nav">
 <div class="product-nav-item">
 <div class="product-nav-item-inner">
-<img src="assets/images/product-1.png" alt="product">
+<img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?>" alt="product">
 </div>
 </div>
 <div class="product-nav-item">
 <div class="product-nav-item-inner">
-<img src="assets/images/product-1.png" alt="product">
+<img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?>" alt="product">
 </div>
 </div>
 <div class="product-nav-item">
 <div class="product-nav-item-inner">
-<img src="assets/images/product-1.png" alt="product">
+<img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?>" alt="product">
 </div>
 </div>
 </div>
@@ -134,8 +142,8 @@
 <div class="product-status product-status-danger mb-20">
 New
 </div>
-<h3 class="mb-20 color-white">Crispy Chicken Burger</h3>
-<h4 class="mb-20 product-id">Id: FA-001-002</h4>
+<h3 class="mb-20 color-white"><?php echo $details['food_name'] ?></h3>
+<h4 class="mb-20 product-id">Id: FA-001- <?php echo $details['menu_id'] ?> </h4>
 <div class="review-star mb-20">
 <ul>
 <li class="full-star"><i class="flaticon-star-1"></i></li>
@@ -147,18 +155,23 @@ New
 <p>(4 Reviews)</p>
 </div>
 <div class="product-details-price mb-20">
-<h4>$ 4.50</h4>
+<h4>$ <?php echo $details['menu_price'] ?></h4>
 </div>
 <div class="product-details-para mb-20">
 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy hendrerit vitae. Vivamus vel erat tortor. Nulla facili hendr erit vitae. Vivamus vel erat tortor.</p>
 </div>
 <div class="product-action-info mb-20">
 <h4>Sizes:</h4>
-<ul class="product-size-list">
+<!-- <ul class="product-size-list">
 <li class="active">Small</li>
 <li>Medium</li>
 <li>Large</li>
-</ul>
+</ul> -->
+<select class="product-size-list dropdown-menu ms-5 bg-dark text-white"   name="" id="">
+    <option class="active" value="small">Small</option>
+    <option  value="medium">Medium</option>
+    <option  value="large">large</option>
+</select>
 </div>
 <div class="product-action-info mb-20">
 <div class="d-flex flex-wrap align-items-center
@@ -183,6 +196,7 @@ Add To Cart
 </div>
 </div>
 </div>
+<?php }?>
 <div class="product-details-tab below-border">
 <ul class="product-details-tab-list">
 <li class="active" data-product-tab-list="1">Description</li>
@@ -476,77 +490,8 @@ Add To Cart
 <?php include('footer.php'); ?>
 
 
-<div class="cart-modal-wrapper">
-<div class="cart-modal modal-item">
-<div class="cart-modal-header">
-<h3 class="color-white">Cart 2</h3>
-<div class="cart-modal-close">
-<i class="flaticon-cancel"></i>
-</div>
-</div>
-<div class="cart-modal-body">
-<h2 class="color-white">My Order</h2>
-<div class="cart-modal-product">
-<div class="cart-modal-thumb">
-<a href="shop-details.php">
-<img src="assets/images/product-1.png" alt="product">
-</a>
-</div>
-<div class="cart-modal-content">
-<h4><a href="shop-details.php">Crispy Chicken Burger</a></h4>
-<div class="cart-modal-action">
-<div class="cart-modal-action-item">
-<div class="cart-modal-quantity">
-<p>1</p>
-<p>x</p>
-<p class="cart-quantity-price">$ 4.50</p>
-</div>
-</div>
-<div class="cart-modal-action-item">
-<div class="cart-modal-delete">
-<a href="#"><i class="icofont-ui-delete"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cart-modal-product">
-<div class="cart-modal-thumb">
-<a href="shop-details.php">
-<img src="assets/images/product-2.png" alt="product">
-</a>
-</div>
-<div class="cart-modal-content">
-<h4><a href="shop-details.php">Red Sause Pizza</a></h4>
-<div class="cart-modal-action">
-<div class="cart-modal-action-item">
-<div class="cart-modal-quantity">
-<p>1</p>
-<p>x</p>
-<p class="cart-quantity-price">$ 3.50</p>
-</div>
-</div>
-<div class="cart-modal-action-item">
-<div class="cart-modal-delete">
- <a href="#"><i class="icofont-ui-delete"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="cart-modal-total">
-<p>Total</p>
-<h3>$8.0</h3>
-</div>
-<div class="cart-modal-button">
-<a href="checkout.php" class="btn full-width">Proceed To Checkout</a>
-<a href="cart.php" class="btn btn-yellow full-width">View Shopping Cart</a>
-</div>
-
-
-</div>
-</div>
-</div>
+<?php  
+ include ('modal.php'); ?>
 
 
 <div class="scroll-top" id="scrolltop">
