@@ -161,9 +161,10 @@ $select_query_run = mysqli_query($con, $select_query); ?>
         <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
         <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price'] ?>">
         <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic'] ?>">
-        <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
-    <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i>
+        <button class="ms-2" type="submit" style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" name="add_to_cart" >
+    <!-- <i class="flaticon-supermarket-basket"></i>
+    <i class="flaticon-supermarket-basket"></i> -->
+    <img  width="30px" src="./assets\images\basket.png" alt="">
     </button>
 
     </div>
@@ -353,26 +354,6 @@ $select_query_run = mysqli_query($con, $select_query); ?>
 </div>
 </section>
 
-<?php
-// if (isset($_POST['add_to_cart'])) {
-//     if (isset($_SESSION['items'])) {
-//         $myitems = array_column($_SESSION['items'], 'item_name');
-//         if (in_array($_POST['item_name'], $myitems)) {
-//             echo "<script>alert('item already added');
-//            </script>
-//            ";
-//         } else {
-//             $count = count($_SESSION['items']);
-//             $_SESSION['items'][$count] = array('item_name' => $_POST['item_name'], 'item_price' => $_POST['item_price'], 'item_pic' => $_POST['item_pic']);
-//         }
-//     } else {
-//         $_SESSION['items'][0] = array('item_name' => $_POST['item_name'], 'item_price' => $_POST['item_price'], 'item_pic' => $_POST['item_pic']);
-//         print_r($_SESSION['items']);
-//     }
-// }
-
-
-?>
 
 
 <section class="step-section p-tb-100 bg-black">

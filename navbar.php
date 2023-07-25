@@ -189,7 +189,7 @@ Deutsch
 </div>
 <div class="navbar-option-item navbar-option-cart">
 <a href="#" class="productCart"><i class="flaticon-supermarket-basket"></i></a>
-<span class="option-badge">2</span>
+<span class="option-badge"><?php $count = count($_SESSION['items']); echo $count; ?></span>
 </div>
 <div class="navbar-option-item navbar-option-order">
 <a href="shops-grid.php" class="btn text-nowrap">

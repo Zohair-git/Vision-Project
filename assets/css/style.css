@@ -8593,7 +8593,7 @@ textarea.form-control {
   margin-bottom: 0;
 }
 
-.cart-modal-delete a {
+.cart-modal-delete button {
   font-size: 17px;
   display: block;
 }
