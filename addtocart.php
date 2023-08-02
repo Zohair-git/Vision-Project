@@ -1,6 +1,7 @@
 <?php 
 include('connection.php');
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -62,14 +63,16 @@ session_start();
         }
         else{
        $count  = count($_SESSION['items']);
-       $_SESSION['items'][$count] = array('item_name' => $_POST['item_name'] , 'item_price' => $_POST['item_price'] , 'item_pic' => $_POST['item_pic'] ); 
+       $_SESSION['items'][$count] = array('item_name' => $_POST['item_name'] , 'item_price' => $_POST['item_price'] , 'item_pic' => $_POST['item_pic']  ); 
        echo "<script>
+       alert('item added to cart');
        window.location.href = 'menu.php';</script>
        ";   
         }
     }
        else{
-        $_SESSION['items'][0] = array('item_name' => $_POST['item_name'] , 'item_price' => $_POST['item_price'] , 'item_pic' => $_POST['item_pic'] );
+        $_SESSION['items'][0] = array('item_name' => $_POST['item_name'] , 'item_price' => $_POST['item_price'] , 'item_pic' => $_POST['item_pic']  );
+        header("location:menu.php");
          
        }
     } 

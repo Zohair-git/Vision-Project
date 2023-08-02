@@ -1,5 +1,6 @@
-<?php session_start() ?>
-
+<?php 
+// session_destroy();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +23,10 @@
 <div class="cart-modal-body">
 <h2 class="color-white">My Order</h2>
 <?php
-foreach($_SESSION['items'] as $key => $value) { 
+if (!empty($_SESSION['items'])) {
+    
+    foreach($_SESSION['items'] as $key => $value) { 
+
      
 ?>
 <div class="cart-modal-product">
@@ -43,18 +47,29 @@ echo $value['item_pic']; ?>" alt="product">
 <div class="cart-modal-action-item">
 <div class="cart-modal-delete">
     
-<button id="delete_btn" type="button" onclick="btn_delete('<?php echo $value['item_name']?>')" name="btn_delete" ><i class="icofont-ui-delete"></i></button>
+<input type="hidden" class="delete_btn_val" value="<?php echo $value['item_name'] ?>" >
+<a href="cart.php"> <button class="delete_btn" type="button"  ><i class="icofont-ui-delete"></i></button> </a>
+
 </div>
 </div>
 </div>
 </div>
 
 </div>
-<?php } ?>
+    <?php } }?>
 <div class="cart-modal-total">
  <p>Total</p>
- 
-<h3>$ </h3>
+  
+<h3>$ <?php
+if (empty($_SESSION['items'])) {
+    echo "0";
+}
+else{
+    $myitems = array_column($_SESSION['items'], 'item_price'); 
+     $sum = array_sum($myitems) ;
+     print_r($sum);
+}
+  ?></h3>
 </div>
 <div class="cart-modal-button">
 <a href="checkout.php" class="btn full-width">Proceed To Checkout</a>
@@ -65,22 +80,28 @@ echo $value['item_pic']; ?>" alt="product">
 </div>
 </div>
 </div>
+<!-- <script src="./js/jquery.min.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./assets/js/jquery3.6.1.min.js"></script>
+
 
 <script>
-    function btn_delete(params) {
-        var item_name = params;
-    }
-    $(document).ready(function() {
-    $("#btn_delete").click(){
-        var item_namess = item_name;
-        alert(item_namess);
+    //   function btn_delete(params) {
+    //       var item_name = params;
+    //     // alert(params);
+    // }
+ 
+    // $(document).ready(function() {
+        $('.delete_btn').click(function(){
+        var abc = $('.delete_btn_val').val();
+        // alert(item_namess);
         $.ajax({
     url:'delete.php',
     type:'post',
     data:{
         click:1,
-        item_name_ajax: item_namess,
+        item_name_ajax: abc,
     },
     success:function(data){
       alert("dataLoad")
@@ -88,9 +109,10 @@ echo $value['item_pic']; ?>" alt="product">
     }
 
    }) 
-}
-});
-    
+        });
+
+
 </script>
+    
 </body>
 </html>

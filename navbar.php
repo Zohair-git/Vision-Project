@@ -189,7 +189,10 @@ Deutsch
 </div>
 <div class="navbar-option-item navbar-option-cart">
 <a href="#" class="productCart"><i class="flaticon-supermarket-basket"></i></a>
-<span class="option-badge"><?php $count = count($_SESSION['items']); echo $count; ?></span>
+<span class="option-badge"><?php if (empty($_SESSION['items'])) {
+    echo "0";
+}else{
+ $count = count($_SESSION['items']); echo $count;} ?></span>
 </div>
 <div class="navbar-option-item navbar-option-order">
 <a href="shops-grid.php" class="btn text-nowrap">

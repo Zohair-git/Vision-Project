@@ -2,7 +2,7 @@
 session_start();
 include('connection.php');
 // session_destroy();
-print_r($_SESSION['items']);
+// print_r($_SESSION['items']);
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -48,9 +48,9 @@ print_r($_SESSION['items']);
 <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all" />
 
 <link rel="stylesheet" href="assets/css/theme-dark.css" type="text/css" media="all" />
-<!--[if IE]>
+<!-- [if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <![endif] -->
 </head>
 <body>
 
@@ -164,7 +164,7 @@ $select_query_run = mysqli_query($con, $select_query); ?>
         <button class="ms-2" type="submit" style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" name="add_to_cart" >
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
-    <img  width="30px" src="./assets\images\basket.png" alt="">
+    <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
 
     </div>
@@ -198,15 +198,16 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h3><a href="shop-details.php?id=<?php echo $fetch_query['menu_id'] ?>"><?php echo $fetch_query['food_name'] ?></a></h3>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
-    <form method = "post" action = "addtocart.php" >
+    <form method = "post" action = "addtocart.php">
     <div class="receipe-cart">
 
-    <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
+        <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
         <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price'] ?>">
         <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic'] ?>">
-        <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
-    <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i>
+        <button class="ms-2" type="submit" style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" name="add_to_cart" >
+    <!-- <i class="flaticon-supermarket-basket"></i>
+    <i class="flaticon-supermarket-basket"></i> -->
+    <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
 
     </div>
@@ -242,17 +243,18 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h3><a href="shop-details.php?id=<?php echo $fetch_query['menu_id'] ?>"><?php echo $fetch_query['food_name'] ?></a></h3>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
-    <form method = "post" action = "addtocart.php" >
+    <form method = "post" action = "addtocart.php">
     <div class="receipe-cart">
-    <a>
-    <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
+
+        <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
         <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price'] ?>">
         <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic'] ?>">
-        <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
-    <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i>
+        <button class="ms-2" type="submit" style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" name="add_to_cart" >
+    <!-- <i class="flaticon-supermarket-basket"></i>
+    <i class="flaticon-supermarket-basket"></i> -->
+    <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-    </a>
+
     </div>
     </form>
     </div>
@@ -283,17 +285,18 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h3><a href="shop-details.php?id=<?php echo $fetch_query['menu_id'] ?>"><?php echo $fetch_query['food_name'] ?></a></h3>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
-    <form method ="post" action = "addtocart.php">
+    <form method = "post" action = "addtocart.php">
     <div class="receipe-cart">
-    <a>
-    <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
+
+        <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
         <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price'] ?>">
         <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic'] ?>">
-        <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
-    <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i>
+        <button class="ms-2" type="submit" style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" name="add_to_cart" >
+    <!-- <i class="flaticon-supermarket-basket"></i>
+    <i class="flaticon-supermarket-basket"></i> -->
+    <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-    </a>
+
     </div>
     </form>
     </div>
@@ -322,19 +325,20 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <div class="receipe-content">
     <div class="receipe-info">
     <h3><a href="shop-details.php?id=<?php echo $fetch_query['menu_id'] ?>"><?php echo $fetch_query['food_name'] ?></a></h3>
-    <h4>$$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
+    <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
-    <form method="post" action = "addtocart.php">
+    <form method = "post" action = "addtocart.php">
     <div class="receipe-cart">
-    <a>
-    <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
+
+        <input type="hidden" name="item_name" value="<?php echo $fetch_query['food_name'] ?>">
         <input type="hidden" name="item_price" value="<?php echo $fetch_query['menu_price'] ?>">
         <input type="hidden" name="item_pic" value="<?php echo $fetch_query['food_pic'] ?>">
-        <button type="submit" style="background-color:#FFCC00; border-radius:20px;" name="add_to_cart" >
-    <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i>
+        <button class="ms-2" type="submit" style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" name="add_to_cart" >
+    <!-- <i class="flaticon-supermarket-basket"></i>
+    <i class="flaticon-supermarket-basket"></i> -->
+    <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-    </a>
+
     </div>
     </form>
     </div>

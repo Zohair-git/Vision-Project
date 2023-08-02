@@ -1,4 +1,5 @@
-<?php session_start() ?>
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -109,47 +110,38 @@
 </tr>
 </thead>
 <tbody>
+  
+<?php if (empty($_SESSION['items'])) {
+    echo "Please add or buy somethig";
+}
+foreach ($_SESSION['items'] as $key => $value) {
+    
+
+?>
 <tr>
 <td class="cancel"><a href="#"><i class='flaticon-cancel'></i></a></td>
 <td>
 <div class="product-table-info">
 <div class="product-table-thumb">
-<img src="assets/images/product-1.png" alt="product">
+<img src="./assets/images/<?php echo $value['item_pic'] ?>" alt="product">
 </div>
 </div>
 </td>
-<td class="td-product-name">Crispy Chicken Burger</td>
-<td>FA-001-001</td>
-<td>$4.50</td>
+<td class="td-product-name"><?php echo $value['item_name'] ?></td>
+<td>FA-001-<?php echo $key ?></td>
+<td>$ <?php echo $value['item_price'] ?></td>
 <td>
 <div class="cart-quantity">
-<button class="qu-btn dec">-</button>
-<input type="text" class="qu-input" value="2">
-<button class="qu-btn inc">+</button>
+<!-- <button class="qu-btn dec">-</button>
+<input type="text" class="qu-input" value="">
+<button class="qu-btn inc">+</button> -->
+<input style="background-color:black;" type="number" name="" min="1" max="5" id="">
 </div>
 </td>
 <td class="td-total-price">$9.00</td>
 </tr>
-<tr>
-<td class="cancel"><a href="#"><i class='flaticon-cancel'></i></a></td>
-<td>
-<div class="product-table-info">
-<div class="product-table-thumb">
-<img src="assets/images/product-4.png" alt="product">
-</div>
- </div>
-</td>
-<td class="td-product-name">Red Sause Pizza</td>
-<td>FA-001-002</td>
-<td>$8.00</td>
-<td>
-<div class="cart-quantity">
-<button class="qu-btn dec">-</button>
-<input type="text" class="qu-input" value="1">
-<button class="qu-btn inc">+</button>
-</div>
-</td>
-<td class="td-total-price">$8.00</td>
+<?php } ?>
+
 </tr>
 </tbody>
 </table>
