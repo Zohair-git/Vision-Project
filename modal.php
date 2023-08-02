@@ -48,7 +48,7 @@ echo $value['item_pic']; ?>" alt="product">
 <div class="cart-modal-delete">
     
 <input type="hidden" class="delete_btn_val" value="<?php echo $value['item_name'] ?>" >
-<a href="cart.php"> <button class="delete_btn" type="button"  ><i class="icofont-ui-delete"></i></button> </a>
+<a href="menu.php"> <button class="delete_btn" type="button"  ><i class="icofont-ui-delete"></i></button> </a>
 
 </div>
 </div>
@@ -104,7 +104,7 @@ else{
         item_name_ajax: abc,
     },
     success:function(data){
-      alert("dataLoad")
+    //   alert("dataLoad")
      dataLoad()
     }
 

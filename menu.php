@@ -98,7 +98,7 @@ include('navbar.php');
 </div>
 
 
-<section class="menu-section bg-black p-tb-100">
+<section id ="menoo" class="menu-section bg-black p-tb-100">
 <div class="container position-relative">
 <div class="section-title">
 <small>Menu</small>

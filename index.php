@@ -197,7 +197,7 @@ More About Us
 </section>
 
 
-<section class="menu-section menu-section-bg pt-100 pb-70 bg-black">
+<!-- <section class="menu-section menu-section-bg pt-100 pb-70 bg-black">
 <div class="container position-relative">
 <div class="section-title">
 <small>Menu</small>
@@ -526,7 +526,7 @@ Add To Cart <i class="flaticon-shopping-cart-black-shape"></i>
 </div>
 </div>
 </div>
-</section>
+</section> -->
 
 
 <section class="step-section p-tb-100 bg-black">
