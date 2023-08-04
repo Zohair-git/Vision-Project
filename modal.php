@@ -46,10 +46,10 @@ echo $value['item_pic']; ?>" alt="product">
 </div>
 <div class="cart-modal-action-item">
 <div class="cart-modal-delete">
-    
-<input type="hidden" class="delete_btn_val" value="<?php echo $value['item_name'] ?>" >
-<a href="menu.php"> <button class="delete_btn" type="button"  ><i class="icofont-ui-delete"></i></button> </a>
-
+<form action="" method="post">
+<input type="hidden" class="delete_btn_val" value="" >
+<button  type="button" onclick="abc('<?php echo $value['item_name'] ?>')"  ><img class="" width="20px" src="./assets/images/dustbin.png" alt=""></button>
+</form>
 </div>
 </div>
 </div>
@@ -85,32 +85,37 @@ else{
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="./assets/js/jquery3.6.1.min.js"></script>
 
+<?php 
 
+ $abc = ?> 
+ <?php 
+ echo "<script>alert('$abc')</script>";
+?>
 <script>
-    //   function btn_delete(params) {
-    //       var item_name = params;
-    //     // alert(params);
-    // }
+
+        // alert(item_name);
+ 
  
     // $(document).ready(function() {
-        $('.delete_btn').click(function(){
-        var abc = $('.delete_btn_val').val();
-        // alert(item_namess);
-        $.ajax({
-    url:'delete.php',
-    type:'post',
-    data:{
-        click:1,
-        item_name_ajax: abc,
-    },
-    success:function(data){
-    //   alert("dataLoad")
-     dataLoad()
-    }
 
-   }) 
-        });
+        // var abc = $('.delete_btn_val').val();
+        
+        // alert(item_name);
+//         $.ajax({
+//     url:'delete.php',
+//     type:'post',
+//     data:{
+//         click:1,
+//         item_name_ajax: item_name,
+//     },
+//     success:function(data){
+//     //   alert("dataLoad")
+//      dataLoad()
+//     }
 
+//    }) ;
+        
+    // }
 
 </script>
     

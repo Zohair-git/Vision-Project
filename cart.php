@@ -114,6 +114,7 @@
 <?php if (empty($_SESSION['items'])) {
     echo "Please add or buy somethig";
 }
+else{
 foreach ($_SESSION['items'] as $key => $value) {
     
 
@@ -132,15 +133,17 @@ foreach ($_SESSION['items'] as $key => $value) {
 <td>$ <?php echo $value['item_price'] ?></td>
 <td>
 <div class="cart-quantity">
-<!-- <button class="qu-btn dec">-</button>
-<input type="text" class="qu-input" value="">
-<button class="qu-btn inc">+</button> -->
-<input style="background-color:black;" type="number" name="" min="1" max="5" id="">
+<button class="qu-btn dec">-</button>
+<input type="text" class="qu-input" value="1">
+<button class="qu-btn inc">+</button>
+<!-- <input style="background-color:black;color:white; " type="number" name="" min="1" max="5" id="input_no.">
+<script>document.getElementById("input_no.").placeholder = "1";
+</script> -->
 </div>
 </td>
 <td class="td-total-price">$9.00</td>
 </tr>
-<?php } ?>
+<?php }} ?>
 
 </tr>
 </tbody>

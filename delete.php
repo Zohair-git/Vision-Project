@@ -6,8 +6,7 @@ include('connection.php');
            if ($value['item_name'] == $_POST['item_name_ajax']) {
               unset($_SESSION['items'][$key]);
               $_SESSION['items'] = array_values($_SESSION['items']);
-              echo "<script>alert('items removed');</script>";
-              header("location:menu.php");
+              
            }
         }
       }
