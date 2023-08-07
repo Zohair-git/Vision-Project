@@ -1,9 +1,9 @@
 <?php
-session_start();
+// session_start();
 include('connection.php');
 // unset($_SESSION['items'][4]);
 // session_destroy();
-print_r($_SESSION['items']);
+// print_r($_SESSION['items']);
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -158,7 +158,7 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-        <button class="ms-2" type="submit" onclick = "ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+        <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
@@ -196,7 +196,7 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-    <button class="ms-2" type="submit" onclick = "ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+    <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
 
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
@@ -237,7 +237,7 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-    <button class="ms-2" type="submit" onclick = "ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+    <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
 
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
@@ -275,7 +275,7 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-    <button class="ms-2" type="submit" onclick = "ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+    <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
 
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
@@ -313,7 +313,7 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-    <button class="ms-2" type="submit" onclick = "ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+    <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
 
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
@@ -375,7 +375,9 @@ $select_query_run = mysqli_query($con, $select_query); ?>
 
 
 <?php  
- include ('modal.php'); ?>
+ include ('modal.php'); 
+ ?>
+   <!-- <div id="ID_table"></div> -->
 
 
 <div class="scroll-top" id="scrolltop">
@@ -383,8 +385,9 @@ $select_query_run = mysqli_query($con, $select_query); ?>
 <span><i class="flaticon-up-arrow"></i></span>
 </div>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-<script src="/assets/js/jquery.min.js"></script>
+<!-- <script src="/assets/js/jquery.min.js"></script> -->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
 <script src="assets/js/jquery-ui.js"></script>
@@ -424,21 +427,23 @@ $select_query_run = mysqli_query($con, $select_query); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 <script>
-function ajax(params) {
-
+function add_to_cart(params) {
+    debugger
 
 alert(params);
 // alert(item_name);
 // alert(item_price);
 $.ajax({
-    url: "modal.php",
+    url: "addtocart.php",
     method: 'POST',
     data: {
         item_id: params
 
     }, 
  success :function(data){
+    
     if (data == 1) {
+        // $('#ID_table').html(data);
         dataLoad();
     }
  }
@@ -448,12 +453,17 @@ $.ajax({
 }
 
 function dataLoad() {
-
+    alert("working");
+debugger
 $.ajax({
-    url: 'modal.php',
-    type: 'POST',
+    url: 'addtocart.php',
+    type: 'GET',
     success: function(data) {
+        if( data == 1){
+// document.getElementById("ID_table").innerHTML = data;
         $('#ID_table').html(data);
+    }
+
     }
 })
 }
