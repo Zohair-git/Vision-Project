@@ -1,5 +1,7 @@
-<?php 
+<?php
+session_start(); 
 include("connection.php");
+
 
 // if (isset($_POST['item_id'])) {
 //    $id = $_POST['item_id'];
@@ -69,8 +71,7 @@ if (!empty($_SESSION['items'])) {
                 <div class="cart-modal-product">
                     <div class="cart-modal-thumb">
                         <a href="shop-details.php">
-                            <img src="./admin/pictures/<?php
-echo $value['item_pic']; ?>" alt="product">
+                            <img src="./admin/pictures/<?php echo $value['item_pic']; ?>" alt="product">
                         </a>
                     </div>
                     <div class="cart-modal-content">
@@ -83,12 +84,7 @@ echo $value['item_pic']; ?>" alt="product">
                             </div>
                             <div class="cart-modal-action-item">
                                 <div class="cart-modal-delete">
-                                    <form action="" method="post">
-                                        <input type="hidden" class="delete_btn_val" value="">
-                                        <button type="button"
-                                            onclick="delete_array_element('<?php echo $value['item_name'] ?>')"><img
-                                                class="" width="20px" src="./assets/images/dustbin.png" alt=""></button>
-                                    </form>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -127,41 +123,6 @@ else{
 
 
 
-    <script>
-    // alert(item_name);
-    function dataLoad() {
-        alert("working");
-        debugger
-        $.ajax({
-            url: 'modal.php',
-            type: 'POST',
-            success: function(data) {
-
-                $('#ID_table').html(data);
-            }
-        })
-    }
-
-
-    function delete_array_element(params) {
-
-        // alert(params);
-        $.ajax({
-            url: 'delete.php',
-            type: 'post',
-            data: {
-                click: 1,
-                item_name_ajax: params,
-            },
-            success: function(data) {
-                //   alert("dataLoad")
-                //  dataLoad()
-            }
-
-        });
-
-    }
-    </script>
 
 </body>
 

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -95,7 +96,7 @@ session_start();
 </div>
 
 
-<section class="cart-section pt-100 pb-70 bg-black">
+<section class=" cart-section pt-100 pb-70 bg-black">
 <div class="container">
 <div class="cart-table cart-table-dark">
 <table>
@@ -121,7 +122,10 @@ foreach ($_SESSION['items'] as $key => $value) {
 
 ?>
 <tr>
-<td class="cancel"><a href="#"><i class='flaticon-cancel'></i></a></td>
+    <form action="delete.php" method="post">
+<td class="cancel"><button class = "bg-transparent text-white" type = "submit" ><i class='flaticon-cancel'></i></button></td>
+<input type="hidden" name="item_name_ajax" value = "<?php echo $value['item_name'] ?>">
+</form>
 <td>
 <div class="product-table-info">
 <div class="product-table-thumb">
@@ -131,31 +135,40 @@ foreach ($_SESSION['items'] as $key => $value) {
 </td>
 <td class="td-product-name"><?php echo $value['item_name'] ?></td>
 <td>FA-001-<?php echo $key ?></td>
-<td>$ <?php echo $value['item_price'] ?></td>
+<td class ="">$ <?php echo $value['item_price'] ?>
+<input type="hidden" class="get_price" value="<?php echo $value['item_price'] ?>" >
+</td>
+
 <td>
 <div class="cart-quantity">
-<button class="qu-btn dec">-</button>
-<input type="text" class="qu-input" value="1">
-<button class="qu-btn inc">+</button>
+<!-- <button class="qu-btn dec">-</button>
+<input type="text" class="qu-input" onchange="btnchange()" value="1">
+<button class="qu-btn inc">+</button> -->
+<!-- <input type="number" name="hh" class="quantity_get" onchange="btnchange()"> -->
+<input class="input-group text-center get_quantity me-3 bg-white" type="number" min="1" max="10" onchange="subtotal()"
+                                                                value="1" >
 <!-- <input style="background-color:black;color:white; " type="number" name="" min="1" max="5" id="input_no.">
 <script>document.getElementById("input_no.").placeholder = "1";
 </script> -->
 </div>
 </td>
-<td class="td-total-price">$9.00</td>
+<td  class="total"><?php echo $value['item_price'] ?></td>
 </tr>
 <?php }} ?>
 
 </tr>
 </tbody>
 </table>
+
+
+
 </div>
 <div class="row justify-content-between align-items-center mt-30">
 <div class="col-sm-12 col-md-7 col-lg-5">
 <div class="cart-coupon cart-info-item">
 <form>
-<div class="form-group">
-<input type="email" class="form-control" placeholder="Enter Coupon Code">
+    <div class="form-group">
+        <input type="email" class="form-control" placeholder="Enter Coupon Code">
 <button class="btn">Apply Coupon</button>
 </div>
 </form>
@@ -169,6 +182,7 @@ Update Cart
 </div>
 </div>
 </div>
+<form action="" method="post">
 <div class="row">
 <div class="col-sm-12 col-md-8 col-lg-6 pb-30 offset-lg-3 offset-md-2">
 <div class="cart-details mt-20">
@@ -176,29 +190,32 @@ Update Cart
 <div class="cart-total-box">
 <div class="cart-total-item">
 <h4>Sub Total</h4>
-<p>$ 45</p>
+
+<p id ="g_total"></p>
 </div>
 <div class="cart-total-item">
-<h4>Shipping</h4>
+<h4>Extra Charges</h4>
 <div class="cart-total-checkarea">
 <div class="cart-checkarea-item">
 <div class="cart-check-box">
-<input type="radio" name="ship" id="cart1">
-<label for="cart1">Flat Rate</label>
+<label for="cart1">Delivery Fee</label>
+
 </div>
-</div>
-<div class="cart-checkarea-item">
-<div class="cart-check-box">
-<input type="radio" name="ship" id="cart2">
-<label for="cart2">Express Delivery</label>
-</div>
-<p>$ 15</p>
+<p>Rs 150</p>
+
 </div>
 <div class="cart-checkarea-item">
 <div class="cart-check-box">
-<input type="radio" name="ship" id="cart3">
-<label for="cart3">In-Stock Pick up</label>
+<label for="cart2">Sale Tax </label>
 </div>
+<p>Rs 20</p>
+</div>
+<div class="cart-checkarea-item">
+<div class="cart-check-box">
+<label for="cart3">Discount</label>
+</div>
+<p>Rs 10</p>
+
 </div>
 </div>
 </div>
@@ -207,7 +224,8 @@ Update Cart
 <p>$ 45</p>
 </div>
 </div>
-<a href="checkout.php" class="btn">Proceed To Checkout</a>
+<button name = "btncheckout" id="btncheck" onclick="btncheck()" >Proceed To Checkout</button>
+</form>
 </div>
 </div>
 </div>
@@ -231,7 +249,7 @@ Update Cart
 <div class="input-group">
 <input type="email" id="emails" class="form-control" placeholder="Enter Email Address*" name="EMAIL" required autocomplete="off">
 </div>
-<button class="btn btn-yellow" type="submit">Subscribe <i class="flaticon-right-arrow-sketch-1"></i></button>
+<button class="btn btn-yellow" type="submit" >Subscribe <i class="flaticon-right-arrow-sketch-1"></i></button>
 </div>
 <div id="validator-newsletter" class="form-result color-white"></div>
 </form>
@@ -293,5 +311,33 @@ Update Cart
 <script src="assets/js/jquery.meanmenu.min.js"></script>
 
 <script src="assets/js/script.js"></script>
+    <script>
+        
+        var price_get = document.getElementsByClassName('get_price');
+        var quantity_get = document.getElementsByClassName('get_quantity');
+        var total = document.getElementsByClassName('total');
+        this.gr_total = document.getElementById('g_total');
+    // var discount_display = document.getElementByClassName('discount');
+    // var discount_mail = document.getElementByClassName('for_mail');
+     
+    
+    
+             function subtotal() {
+         grand_total=0;
+         for (let index = 0; index < price_get.length; index++) {
+             total[index].innerText = "Rs." + (price_get[index].value)*(quantity_get[index].value);
+             grand_total = grand_total + (price_get[index].value)*(quantity_get[index].value);
+         }
+         gr_total.innerText ='Rs.'+ grand_total;
+        }
+         function btncheck() {
+     var url = "facebook.com"; //get your base url how ever you're doing it.
+     var queryString = "?total=123456789";
+     var fullUrl = url + queryString;
+     window.location.href = fullUrl ;
+};
+         subtotal();
+    
+    </script>
 </body>
 </html>

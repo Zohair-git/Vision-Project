@@ -8328,8 +8328,8 @@ textarea.form-control {
 
 .cart-check-box label:before {
   content: "";
-  width: 25px;
-  height: 25px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: #D1D1D1;
   position: absolute;
@@ -8340,10 +8340,10 @@ textarea.form-control {
 
 .cart-check-box label:after {
   content: "";
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: #222222;
+  width: 0px;
+  height: 0px;
+  border-radius: 25%;
+  background-color: #000;
   position: absolute;
   left: 5px;
   -webkit-transition: all 0.3s linear;

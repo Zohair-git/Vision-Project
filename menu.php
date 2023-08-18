@@ -157,13 +157,17 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
     <div class="receipe-cart">
-
-        <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+<form action="addtocart.php" method="post">
+        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
+        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
+        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
+       
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-
+    </form>
     </div>
     </div>
     </div>
@@ -196,13 +200,18 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-    <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+    <form action="addtocart.php" method="post">
+        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
+        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
+        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
+
 
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-
+    </form>
     </div>
     </div>
     </div>
@@ -237,12 +246,17 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-    <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+    <form action="addtocart.php" method="post">
+        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
+        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
+        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
 
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
+    </form>
 
     </div>
     </div>
@@ -275,12 +289,19 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-    <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+    <form action="addtocart.php" method="post">
+        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
+        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
+        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
+
+        
 
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
+    </form>
 
     </div>
     </div>
@@ -313,12 +334,18 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     </div>
     <div class="receipe-cart">
 
-    <button class="ms-2" type="submit" onclick = "add_to_cart(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+    <form action="addtocart.php" method="post">
+        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
+        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
+        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
+
 
     <!-- <i class="flaticon-supermarket-basket"></i>
     <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
+    </form>
 
     </div>
     </div>
@@ -426,48 +453,6 @@ $select_query_run = mysqli_query($con, $select_query); ?>
 <script src="assets/js/script.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-<script>
-function add_to_cart(params) {
-    debugger
-
-alert(params);
-// alert(item_name);
-// alert(item_price);
-$.ajax({
-    url: "addtocart.php",
-    method: 'POST',
-    data: {
-        item_id: params
-
-    }, 
- success :function(data){
-    
-    if (data == 1) {
-        // $('#ID_table').html(data);
-        dataLoad();
-    }
- }
-
-
-});
-}
-
-function dataLoad() {
-    alert("working");
-debugger
-$.ajax({
-    url: 'addtocart.php',
-    type: 'GET',
-    success: function(data) {
-        if( data == 1){
-// document.getElementById("ID_table").innerHTML = data;
-        $('#ID_table').html(data);
-    }
-
-    }
-})
-}
-</script>
 
 </body>
 </html>

@@ -7,6 +7,8 @@ include('connection.php');
               unset($_SESSION['items'][$key]);
               $_SESSION['items'] = array_values($_SESSION['items']);
               
+              header("location:cart.php");
+              
            }
         }
       }
