@@ -224,7 +224,8 @@ Update Cart
 <p>$ 45</p>
 </div>
 </div>
-<button name = "btncheckout" id="btncheck" onclick="btncheck()" >Proceed To Checkout</button>
+<!-- <button name = "btncheckout" id="btncheck" onclick="btncheck()" >Proceed To Checkout</button> -->
+<a class="btn" href="checkout.php">Proceed To Checkout</a>
 </form>
 </div>
 </div>
@@ -330,12 +331,12 @@ Update Cart
          }
          gr_total.innerText ='Rs.'+ grand_total;
         }
-         function btncheck() {
-     var url = "facebook.com"; //get your base url how ever you're doing it.
-     var queryString = "?total=123456789";
-     var fullUrl = url + queryString;
-     window.location.href = fullUrl ;
-};
+//          function btncheck() {
+//      var url = "facebook.com"; //get your base url how ever you're doing it.
+//      var queryString = "?total=123456789";
+//      var fullUrl = url + queryString;
+//      window.location.href = fullUrl ;
+// };
          subtotal();
     
     </script>
