@@ -166,20 +166,20 @@ foreach ($_SESSION['items'] as $key => $value) {
 <div class="row justify-content-between align-items-center mt-30">
 <div class="col-sm-12 col-md-7 col-lg-5">
 <div class="cart-coupon cart-info-item">
-<form>
+<!-- <form>
     <div class="form-group">
         <input type="email" class="form-control" placeholder="Enter Coupon Code">
 <button class="btn">Apply Coupon</button>
 </div>
-</form>
+</form> -->
 </div>
 </div>
 <div class="col-sm-12 col-md-4 col-lg-3">
-<div class="cart-update cart-info-item">
+<!-- <div class="cart-update cart-info-item">
 <a href="#" class="btn full-width">
 Update Cart
 </a>
-</div>
+</div> -->
 </div>
 </div>
 <form action="" method="post">
@@ -201,31 +201,33 @@ Update Cart
 <label for="cart1">Delivery Fee</label>
 
 </div>
-<p>Rs 150</p>
+<p id="delivery_fees" >Rs 150</p>
 
 </div>
 <div class="cart-checkarea-item">
 <div class="cart-check-box">
 <label for="cart2">Sale Tax </label>
 </div>
-<p>Rs 20</p>
+<p id="sale_tax_fees">Rs 20</p>
 </div>
 <div class="cart-checkarea-item">
 <div class="cart-check-box">
 <label for="cart3">Discount</label>
 </div>
-<p>Rs 10</p>
+<p id="Discount">Rs 50</p>
 
 </div>
 </div>
 </div>
 <div class="cart-total-item cart-total-bold">
 <h4 class="color-white">Total</h4>
-<p>$ 45</p>
+<p id="totalll" > 45</p>
 </div>
 </div>
-<!-- <button name = "btncheckout" id="btncheck" onclick="btncheck()" >Proceed To Checkout</button> -->
-<a class="btn" href="checkout.php">Proceed To Checkout</a>
+
+<button type="button" class="btn" onclick="btn_send()">
+      Proceed To Checkout
+    </button>
 </form>
 </div>
 </div>
@@ -317,26 +319,29 @@ Update Cart
         var price_get = document.getElementsByClassName('get_price');
         var quantity_get = document.getElementsByClassName('get_quantity');
         var total = document.getElementsByClassName('total');
-        this.gr_total = document.getElementById('g_total');
+        var gr_total = document.getElementById('g_total');
+        // var sale_tax_fees = document.getElementById("sale_tax_fees");
+        var totalll = document.getElementById("totalll");
     // var discount_display = document.getElementByClassName('discount');
     // var discount_mail = document.getElementByClassName('for_mail');
      
     
     
              function subtotal() {
-         grand_total=0;
+            grand_total=0;
          for (let index = 0; index < price_get.length; index++) {
              total[index].innerText = "Rs." + (price_get[index].value)*(quantity_get[index].value);
              grand_total = grand_total + (price_get[index].value)*(quantity_get[index].value);
          }
          gr_total.innerText ='Rs.'+ grand_total;
+         this.sales = (grand_total)+(20)+(150)+(50);
+         totalll.innerText = "Rs "+ sales;
         }
-//          function btncheck() {
-//      var url = "facebook.com"; //get your base url how ever you're doing it.
-//      var queryString = "?total=123456789";
-//      var fullUrl = url + queryString;
-//      window.location.href = fullUrl ;
-// };
+        function btn_send(){
+        let loc = "checkout.php?total="+ this.sales;
+        // alert(loc);
+           window.location.href= loc;
+        }
          subtotal();
     
     </script>

@@ -1,6 +1,102 @@
 <?php
- session_start() 
- ?>
+ session_start();
+ include('connection.php');
+ use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+
+$mail = new PHPMailer(true);
+
+//  if(isset($_GET['total'])){
+//     $total = $_GET['total'];
+//     // echo "<script>alert('". $_GET['total'] ."')</script>";
+    
+// }
+if (isset($_POST['btn_checkout'])) {
+    $f_name = $_POST['f_name'];
+    $l_name = $_POST['l_name'];
+    $country = $_POST['country'];
+    $town = $_POST['town'];
+    $street = $_POST['street'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $order = $_POST['order'];
+
+    
+    $date = date("Y-m-d-H-s");
+    $query_i_order = "    INSERT INTO `tbl_order`( `order_time`, `f_name`, `l_name`, `country`, `town`, `street`, `phone`, `email`, `order_note`) VALUES ('$date','$f_name','$l_name','$country','$town','$street','$phone','$email','$order')";
+    $query_i_order_run = mysqli_query($con,$query_i_order);
+$last_row = mysqli_insert_id($con);
+    //   echo $last_row;
+    foreach($_SESSION['items'] as $value){
+     $p_name =   $value['item_name'];
+     $p_price =   $value['item_price'];
+    
+
+    $query_i_items = "INSERT INTO `checkout`( `p_name`, `p_price`, `order_id`) VALUES ('$p_name','$p_price','$last_row')";
+    $query_i_items_run = mysqli_query($con,$query_i_items);
+    if ($query_i_items_run) {
+        session_destroy();
+    }
+   
+    
+}
+try {
+    //Server settings
+    // $mail->SMTPDebug = 2; //Enable verbose debug output
+    $mail->isSMTP(); //Send using SMTP
+    // $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
+    $mail->Host = 'mail.worldoftech.co'; //Set the SMTP server to send through
+    $mail->SMTPAuth = true; //Enable SMTP authentication
+    $mail->Username = 'sarim@worldoftech.co'; //SMTP username
+    // $mail->Password = 'eyffwjbomaknwdjy'; //SMTP password
+    $mail->Password = 'admin_sarim_786$$$@';
+    $mail->SMTPSecure = 'ssl'; //Enable implicit TLS encryption
+    $mail->Port = 465; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+
+
+    //Recipients
+    $mail->setFrom('sarim@worldoftech.co', 'PIZZA PALACE');
+    $mail->addAddress($email , $l_name); //Add a recipient
+
+    
+
+    $body = "<p>Hello <b>" . $l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Total Amount Of Order:  Rs ". $_GET['total'] ."</h4><br><br><p>Best Regards,<br>
+     <b>Pizza Palace</b></p><h1>Thanks For Shopping</h1>";
+
+    //Content
+    $mail->isHTML(true);
+    $mail->Subject = 'Order Details | Pizza Palace';
+    $mail->Body = $body;
+    $mail->AltBody = strip_tags($body);
+
+    $mail->send();
+  
+
+    echo 'Message has been sent';
+    echo "<script>alert('Form submitted successfuly')</script>";
+    header('location:index.php');
+    exit();
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+    }
+
+    // if(isset($_POST['btn_checkout'])){
+    // $user_name = $_POST['user_name'];
+    // $user_email = $_POST['user_email'];
+    // $amount_mail = $_POST['amount_mail'];
+    // $discount = "<script>var abc = document.getElementById('value').value; document.write(abc)</script>";
+    
+    
+    // }
+    
+    
+ ?> 
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -104,19 +200,19 @@
 <h3 class="color-white">Billing Details</h3>
 </div>
 <div class="checkout-form">
-<form>
+<form method="post">
 <div class="row">
 <div class="col-sm-12 col-md-6">
 <div class="form-group mb-20">
 <div class="input-group">
-<input type="text" name="name" class="form-control" required placeholder="First Name*" />
+<input type="text" name="f_name" class="form-control" required placeholder="First Name*" />
 </div>
 </div>
 </div>
 <div class="col-sm-12 col-md-6">
 <div class="form-group mb-20">
 <div class="input-group">
-<input type="text" name="name" class="form-control" required placeholder="Last Name*" />
+<input type="text" name="l_name" class="form-control" required placeholder="Last Name*" />
 </div>
 </div>
 </div>
@@ -135,14 +231,7 @@
 <div class="col-sm-12">
 <div class="form-group mb-20">
 <div class="input-group">
-<input type="email" name="street" class="form-control" placeholder="Street" />
-</div>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="form-group mb-20">
-<div class="input-group">
-<select name="country" class="form-control">
+<select name="town" class="form-control">
 <option value="1">Town*</option>
 <option value="2">New York</option>
 <option value="3">Florida</option>
@@ -153,25 +242,16 @@
 <div class="col-sm-12">
 <div class="form-group mb-20">
 <div class="input-group">
-<select name="country" class="form-control">
-<option value="1">State*</option>
-<option value="2">NY</option>
-<option value="3">FL</option>
-</select>
+<input type="text" name="street" class="form-control" placeholder="Street" />
 </div>
 </div>
 </div>
+
+
 <div class="col-sm-12">
 <div class="form-group mb-20">
 <div class="input-group">
-<input type="email" name="address" class="form-control" required placeholder="Address With Zip Code*" />
-</div>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="email" name="phone" class="form-control" required placeholder="Phone No*" />
+<input type="tel" name="phone" class="form-control" required placeholder="Phone No*" />
 </div>
 </div>
 </div>
@@ -190,7 +270,7 @@
 </div>
 </div>
 </div>
-<button class="btn full-width">Place Order</button>
+<button type="submit" name="btn_checkout"   class="btn full-width">Place Order</button>
 </form>
 </div>
 </div>
@@ -214,11 +294,18 @@
 </div>
 <div class="cart-total-item cart-total-bold">
 <h4 class="color-white">Total</h4>
-<p>$ 45</p>
+<p><?php
+if (!empty($_GET['total'])) {
+    echo "Rs " . $_GET['total'];
+}
+else{
+    echo "Rs 0";
+}
+?></p>
 </div>
 </div>
 </div>
-<div class="checkout-payment-area">
+<!-- <div class="checkout-payment-area">
 <h3 class="color-white cart-details-title">Payment Method</h3>
 <div class="checkout-form">
 <form>
@@ -251,7 +338,7 @@
 </div>
 </form>
 </div>
-</div>
+</div> -->
 </div>
 </div>
 </div>
