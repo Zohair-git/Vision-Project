@@ -1,6 +1,8 @@
 <?php
 include('connection.php');
 
+// session_unset();
+// session_destroy();
 session_start();
 $fetch_cat = "SELECT * FROM `pizza_components`";
 $fetch_pizza_com = "SELECT * FROM `components_category`";
