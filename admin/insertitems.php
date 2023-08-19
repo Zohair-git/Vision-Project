@@ -43,6 +43,9 @@ if (isset($_POST['submit'])) {
   
 </head>
 <body>
+ <?php include('navtopbar.php') ?>
+
+ <div class="content-wrapper">
     <div class="container">
 
     <div class="row mt-3">

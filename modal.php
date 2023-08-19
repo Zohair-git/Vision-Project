@@ -79,7 +79,7 @@ if (!empty($_SESSION['items'])) {
                         <div class="cart-modal-action">
                             <div class="cart-modal-action-item">
                                 <div class="cart-modal-quantity">
-                                    <p class="cart-quantity-price">$ <?php echo $value['item_price']; ?></p>
+                                    <p class="cart-quantity-price">Rs <?php echo $value['item_price']; ?></p>
                                 </div>
                             </div>
                             <div class="cart-modal-action-item">
@@ -95,7 +95,7 @@ if (!empty($_SESSION['items'])) {
                 <div class="cart-modal-total">
                     <p>Total</p>
 
-                    <h3>$ <?php
+                    <h3>Rs <?php
 if (empty($_SESSION['items'])) {
     echo "0";
 }

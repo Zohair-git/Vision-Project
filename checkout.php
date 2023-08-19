@@ -194,7 +194,7 @@ try {
 <div class="checkout-section pt-100 pb-70 bg-black">
 <div class="container">
 <div class="row">
-<div class="col-sm-12 col-md-7 col-lg-8 pb-30">
+<!-- <div class="col-sm-12 col-md-7 col-lg-8 pb-30"> -->
 <div class="checkout-item">
 <div class="sub-section-title">
 <h3 class="color-white">Billing Details</h3>
