@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 18, 2023 at 09:27 PM
+-- Generation Time: Aug 19, 2023 at 01:49 PM
 -- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -66,6 +66,29 @@ INSERT INTO `checkout` (`p_name`, `p_price`, `order_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `components_category`
+--
+
+CREATE TABLE `components_category` (
+  `cc_id` int(11) NOT NULL,
+  `cc_cat` int(11) NOT NULL,
+  `cc_name` varchar(100) NOT NULL,
+  `cc_pic` varchar(100) NOT NULL,
+  `cc_price` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `components_category`
+--
+
+INSERT INTO `components_category` (`cc_id`, `cc_cat`, `cc_name`, `cc_pic`, `cc_price`) VALUES
+(1, 1, 'cheese', 'image/black-olives.png', 300),
+(2, 2, 'black-olives', 'image/black-olives.png', 200),
+(3, 2, 'black-olives', 'image/black-olives.png', 200);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `food_categories`
 --
 
@@ -84,6 +107,27 @@ INSERT INTO `food_categories` (`category_id`, `category_name`) VALUES
 (3, 'Shakes'),
 (4, 'Icecream'),
 (5, 'Dessert');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pizza_components`
+--
+
+CREATE TABLE `pizza_components` (
+  `c_id` int(11) NOT NULL,
+  `c_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pizza_components`
+--
+
+INSERT INTO `pizza_components` (`c_id`, `c_name`) VALUES
+(1, 'crust'),
+(2, 'sauce'),
+(3, 'topping'),
+(4, 'top sauce');
 
 -- --------------------------------------------------------
 
@@ -159,10 +203,22 @@ ALTER TABLE `checkout`
   ADD KEY `order_id` (`order_id`);
 
 --
+-- Indexes for table `components_category`
+--
+ALTER TABLE `components_category`
+  ADD PRIMARY KEY (`cc_id`);
+
+--
 -- Indexes for table `food_categories`
 --
 ALTER TABLE `food_categories`
   ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `pizza_components`
+--
+ALTER TABLE `pizza_components`
+  ADD PRIMARY KEY (`c_id`);
 
 --
 -- Indexes for table `tbl_menu`
@@ -182,10 +238,22 @@ ALTER TABLE `tbl_order`
 --
 
 --
+-- AUTO_INCREMENT for table `components_category`
+--
+ALTER TABLE `components_category`
+  MODIFY `cc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `food_categories`
 --
 ALTER TABLE `food_categories`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `pizza_components`
+--
+ALTER TABLE `pizza_components`
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_menu`
