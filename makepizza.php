@@ -4,7 +4,7 @@ include('connection.php');
 // session_unset();
 // session_destroy();
 session_start();
-$fetch_cat = "SELECT * FROM `pizza_components`";
+$fetch_cat = "SELECT * FROM `pizza_components` LIMIT 4";
 $fetch_pizza_com = "SELECT * FROM `components_category`";
 
 $query_fetch = mysqli_query($con,$fetch_cat);
@@ -85,198 +85,18 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
   <div class="checkout-section pt-100 pb-70 bg-black">
     <div class="container">
       <div class="row">
-        <!-- <div class="col-sm-12 col-md-7 col-lg-8 pb-30">
-          <h4 class=" text-white mb-3"> Crust:</h4>
-          <div class="row align-items-start">
-            <div class="col">
-              <button type="button" class="btn">primary</button>
-            </div>
-            <div class="col">
-              <button type="button" class="btn ">primary</button>
-            </div>
-            <div class="col">
-              <button type="button" class="btn">primary</button>
-            </div>
-          </div>
-
-
-          <h4 class=" mt-5 text-white mb-3"> Sauce:</h4>
-          <div class="row align-items-start main-carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-            <div class="col carousel-cell  p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-
-
-
-          <h4 class=" mt-5 text-white mb-3">Sauce Topping:</h4>
-          <div class="row align-items-start main-carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-            <div class="col carousel-cell  p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-
-          <h4 class=" mt-5 text-white mb-3"> Sauce:</h4>
-          <div class="row align-items-start main-carousel" data-flickity='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
-            <div class="col carousel-cell  p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-            <div class="col carousel-cell p-3">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-
-
-        </div>
- -->
+      
   <div class="col-lg-7 " >
+  <button type="button" class="btn" onclick="cat_func_default(5)">Dough </button>
     <?php while ($row = mysqli_fetch_array($query_fetch)) { ?>
   
-      <button type="button" class="btn" id="<?php echo $row['c_id'] ?>"><?php echo $row['c_name'] ?> </button>
+      <button type="button" class="btn" onclick="cat_func(<?php echo $row['c_id'] ?>)"><?php echo $row['c_name'] ?> </button>
      
       <?php  } ?>
 <div>
   <br>
-  <div class="row">
-  <?php while ($row = mysqli_fetch_array($query_fetch_pizza)) { ?>
+  <div class="row" id="fetch_cat">
 
-    <div class="col-lg-3">
-       <div class="card">
-    <img src="<?php echo $row['cc_pic'] ?>" style="width: 50px;height:50px;border-radius:100px" alt="">
-    <h5><?php echo $row['cc_name'] ?></h5>
-    <button type="button" onclick="btnAddToList(<?php echo $row['cc_id'] ?>)" class="">ADD</button>
-  </div>
-    </div>
-    <?php  } ?>
 
   </div>
  
@@ -310,9 +130,56 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
 
   <script src="assets/js/jquery-ui.js"></script>
   <script>
+    cat_func_default(5);
     FetchData();
+
+
+//for default category dough
+function cat_func_default(id) {
+   
+   $.ajax({
+     url : 'default_cat.php',
+     type : 'POST',
+     data : {
+      
+      abc: id
+     },
+     success : function (data){
+       // console.log(data);
+       $('#fetch_cat').html(data);
+     }
+   })
+   
+ }
+
+//for default category dough
+
+// for category wise fetch
+
+function cat_func(catid) {
+   
+      $.ajax({
+        url : 'category_custom.php',
+        type : 'POST',
+        data : {
+         
+          catid : catid
+        },
+        success : function (data){
+          // console.log(data);
+          $('#fetch_cat').html(data);
+        }
+      })
+      
+    }
+
+// for category wise fetch
+
+
+
+
     function btnAddToList(id) {
-      debugger
+
       $.ajax({
         url : 'custom_cart.php',
         type : 'POST',
@@ -328,6 +195,7 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
       
     }
     function FetchData(){
+    
       $.ajax({
         url : 'custom_cart.php',
         type : 'POST',

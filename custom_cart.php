@@ -13,17 +13,37 @@ session_start();
 
     if (isset($_SESSION['customlist'])) {
       $myitems = array_column($_SESSION['customlist'], 'c_name');
+      $myitems_cat = array_column($_SESSION['customlist'], 'c_cat');
+
       if (in_array($row['cc_name'], $myitems)) {
         echo "<script>alert('item already added')</script>";
-        //  session_unset();
-        //  session_destroy();
-      } else {
+            //  session_unset();
+            //  session_destroy();
+      } 
+      elseif(in_array($row['cc_cat'],$myitems_cat)){
+        echo "<script>alert('Item Replaced')</script>";
+        foreach ($_SESSION["customlist"] as $key => $val) {
+
+          if ($val["c_cat"] == $row['cc_cat']) {
+              // $val["product_qty"] += $val["product_qty"];
+              $_SESSION["customlist"][$key] = array(
+                'c_id' => $row['cc_id'],
+                'c_name' => $row['cc_name'],
+                'c_price' => $row['cc_price'],
+                'c_cat' => $row['cc_cat'],
+             
+              ); // Add this
+          }
+   
+       }
+      } 
+      else {
         $_SESSION['customlist'][] = array(
           'c_id' => $row['cc_id'],
           'c_name' => $row['cc_name'],
           'c_price' => $row['cc_price'],
-          'c_pic' => $row['cc_pic'],
-
+          'c_cat' => $row['cc_cat'],
+       
         );
 
         // print_r($_SESSION['customlist']);
@@ -32,22 +52,21 @@ session_start();
         <?php
 
       }
-    } else {
-
+    } 
+    else {
       $_SESSION['customlist'][] = array(
         'c_id' => $row['cc_id'],
         'c_name' => $row['cc_name'],
         'c_price' => $row['cc_price'],
-        'c_pic' => $row['cc_pic'],
-
+        'c_cat' => $row['cc_cat'],
+     
       );
 
       // print_r($_SESSION['customlist']);
       ?>
 
-     
-
       <?php
+
     }
   }
  
