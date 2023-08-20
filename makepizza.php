@@ -88,7 +88,9 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
       
   <div class="col-lg-7 " >
   <button type="button" class="btn" onclick="cat_func_default(5)">Dough </button>
-    <?php while ($row = mysqli_fetch_array($query_fetch)) { ?>
+    <?php
+
+    while ($row = mysqli_fetch_array($query_fetch)) { ?>
   
       <button type="button" class="btn" onclick="cat_func(<?php echo $row['c_id'] ?>)"><?php echo $row['c_name'] ?> </button>
      

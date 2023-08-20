@@ -195,8 +195,9 @@ Deutsch
  $count = count($_SESSION['items']); echo $count;} ?></span>
 </div>
 <div class="navbar-option-item navbar-option-order">
-<a href="makepizza.php" class="btn text-nowrap">
-Make your Pizza 
+<a href="makePizza.php" class="btn text-nowrap">
+Make Your Own Pizza &nbsp;<img width="25px" src="./admin/pictures/pizza.png" alt="">
+
 </a>
 </div>
 </div>

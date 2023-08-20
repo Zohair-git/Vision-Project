@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 19, 2023 at 01:49 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Aug 20, 2023 at 06:58 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -82,9 +82,13 @@ CREATE TABLE `components_category` (
 --
 
 INSERT INTO `components_category` (`cc_id`, `cc_cat`, `cc_name`, `cc_pic`, `cc_price`) VALUES
-(1, 1, 'cheese', 'image/black-olives.png', 300),
-(2, 2, 'black-olives', 'image/black-olives.png', 200),
-(3, 2, 'black-olives', 'image/black-olives.png', 200);
+(1, 1, 'cheese', 'black-olives.png', 300),
+(2, 2, 'black-olives', 'black-olives.png', 200),
+(3, 1, '-olives', 'black-olives.png', 200),
+(4, 5, 'Small', 'pizza-hut-crust.png', 499),
+(5, 5, 'Medium', 'pizza-hut-crust.png', 899),
+(6, 5, 'Large', 'pizza-hut-crust.png', 1299),
+(8, 3, 'peproni', 'epperoni-transparent-single-pepperoni-11562915199mfbla9n7e4-removebg-preview.png', 260);
 
 -- --------------------------------------------------------
 
@@ -127,7 +131,8 @@ INSERT INTO `pizza_components` (`c_id`, `c_name`) VALUES
 (1, 'crust'),
 (2, 'sauce'),
 (3, 'topping'),
-(4, 'top sauce');
+(4, 'top sauce'),
+(5, 'Dough');
 
 -- --------------------------------------------------------
 
@@ -206,7 +211,8 @@ ALTER TABLE `checkout`
 -- Indexes for table `components_category`
 --
 ALTER TABLE `components_category`
-  ADD PRIMARY KEY (`cc_id`);
+  ADD PRIMARY KEY (`cc_id`),
+  ADD KEY `cc_cat` (`cc_cat`);
 
 --
 -- Indexes for table `food_categories`
@@ -241,7 +247,7 @@ ALTER TABLE `tbl_order`
 -- AUTO_INCREMENT for table `components_category`
 --
 ALTER TABLE `components_category`
-  MODIFY `cc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `food_categories`
@@ -253,7 +259,7 @@ ALTER TABLE `food_categories`
 -- AUTO_INCREMENT for table `pizza_components`
 --
 ALTER TABLE `pizza_components`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_menu`
@@ -276,6 +282,12 @@ ALTER TABLE `tbl_order`
 --
 ALTER TABLE `checkout`
   ADD CONSTRAINT `checkout_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `tbl_order` (`order_id`);
+
+--
+-- Constraints for table `components_category`
+--
+ALTER TABLE `components_category`
+  ADD CONSTRAINT `components_category_ibfk_1` FOREIGN KEY (`cc_cat`) REFERENCES `pizza_components` (`c_id`);
 
 --
 -- Constraints for table `tbl_menu`
