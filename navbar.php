@@ -195,8 +195,8 @@ Deutsch
  $count = count($_SESSION['items']); echo $count;} ?></span>
 </div>
 <div class="navbar-option-item navbar-option-order">
-<a href="shops-grid.php" class="btn text-nowrap">
-Order Online <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="makepizza.php" class="btn text-nowrap">
+Make your Pizza 
 </a>
 </div>
 </div>

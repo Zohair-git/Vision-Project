@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
    $path = 'pictures/' . $item_picture ;
    move_uploaded_file($item_picture_tmp , $path);
    $query = "INSERT INTO `components_category`(`cc_cat`, `cc_name`, `cc_pic`, `cc_price`)
-    VALUES ('$item_name','$item_picture' ,'$item_price' ,'$item_cat')";
+    VALUES ('$item_cat','$item_name' ,'$item_picture' ,'$item_price')";
    $query_run = mysqli_query($con ,$query);
 }
 

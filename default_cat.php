@@ -9,7 +9,7 @@
 
 <div class="col-lg-3">
    <div class="card">
-<img src="<?php echo $row['cc_pic'] ?>" style="width: 50px;height:50px;border-radius:100px" alt="">
+<img src="./admin/pictures/<?php echo $row['cc_pic'] ?>" style="width: 50px;height:50px;border-radius:100px" alt="">
 <h5><?php echo $row['cc_name'] ?></h5>
 <button type="button" onclick="btnAddToList(<?php echo $row['cc_id'] ?>)" class="">ADD</button>
 </div>

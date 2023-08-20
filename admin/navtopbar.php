@@ -30,6 +30,12 @@
        </a>
      </li>
 
+     <li>
+       <a href="Allmenu.php">
+         <i class="zmdi zmdi-format-list-bulleted"></i> <span>Menu Update Delete</span>
+       </a>
+     </li>
+
 
 
 
