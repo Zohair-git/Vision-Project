@@ -97,7 +97,7 @@ body {
       <div class="row">
       
   <div class="col-lg-8" >
-  <button type="button" class="p-3 me-2 ms-2 ps-4 pe-4 rounded-start text-white hover_btn" style="background-color:red;" onclick="cat_func_default(5)">Dough </button>
+  <button type="button" class="p-3 me-2 ms-2 ps-4 pe-4 rounded-start text-white hover_btn" style="background-color:red;" onclick="cat_func_default(6)">Dough </button>
     <?php
 
     while ($row = mysqli_fetch_array($query_fetch)) { ?>
@@ -139,8 +139,6 @@ body {
 
 
 
-  <?php
-  include('modal.php') ?>
 
   <script src="assets/js/jquery-ui.js"></script>
   <script>
@@ -150,7 +148,7 @@ body {
 
 //for default category dough
 function cat_func_default(id) {
-   
+
    $.ajax({
      url : 'default_cat.php',
      type : 'POST',

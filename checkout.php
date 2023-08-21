@@ -63,10 +63,8 @@ try {
     $mail->setFrom('sarim@worldoftech.co', 'PIZZA PALACE');
     $mail->addAddress($email , $l_name); //Add a recipient
 
-    
-
-    $body = "<p>Hello <b>" . $f_name .$l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Total Amount Of Order:  Rs ". $_GET['total'] ."</h4><br><br><p>Best Regards,<br>
-     <b>Pizza Palace</b></p><h1>Thanks For Shopping</h1>";
+    if(isset($_GET['total'])){
+        $body = "<p>Hello <b>" . $f_name .$l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Total Amount Of Order:  Rs " .$_GET['totall']. "</h4><br><br><p>Best Regards,<br> <b>Pizza Palace</b></p><h1>Thanks For Shopping</h1>";
 
     //Content
     $mail->isHTML(true);
@@ -81,6 +79,24 @@ try {
     echo "<script>alert('Form submitted successfuly')</script>";
     header('location:index.php');
     exit();
+    }else{ 
+        $body = "<p>Hello <b>" . $f_name .$l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Total Amount Of Order:  Rs " .$_GET['totall']. "</h4><br><br><p>Best Regards,<br> <b>Pizza Palace</b></p><h1>Thanks For Shopping</h1>";
+
+        //Content
+        $mail->isHTML(true);
+        $mail->Subject = 'Order Details | Pizza Palace';
+        $mail->Body = $body;
+        $mail->AltBody = strip_tags($body);
+    
+        $mail->send();
+      
+    
+        echo 'Message has been sent';
+        echo "<script>alert('Form submitted successfuly')</script>";
+        header('location:index.php');
+        exit(); }
+
+    
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
@@ -509,22 +525,7 @@ else{ ?>
 </div>
 <?php  } ?>
 
-<div class="cart-total-item">
-<h4>Sub Total</h4>
-<p><?php
-if (!empty($_GET['validation'])) {
-  
-      $myitems = array_column($_SESSION['items'], 'item_price');
-      $sum = array_sum($myitems);
-      echo "Rs " . $sum;
 
-     
-}
-else{
-    echo "Rs 0";
-}
-?></p>
-</div>
 <div class="cart-total-item cart-total-bold">
 <h4 class="color-white">Total</h4>
 <p><?php
@@ -532,7 +533,7 @@ if (!empty($_GET['validation'])) {
   
       $myitems = array_column($_SESSION['items'], 'item_price');
       $sum = array_sum($myitems);
-      echo "Rs " . $sum - 10;
+      echo "Rs " . $sum;
 
      
 }

@@ -77,7 +77,7 @@ else{
                 </div>
                 <?php if(isset($_SESSION['items'])){?>
                 <div class="cart-modal-button">
-                    <a href="checkout.php?validation=validation&&total=<?php if (empty($_SESSION['items'])) {
+                    <a href="checkout.php?validation=validation&&totall=<?php if (empty($_SESSION['items'])) {
     echo "0";
 }
 else{

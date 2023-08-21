@@ -2,7 +2,7 @@
  include('connection.php');
  
    $cat_id = $_POST['abc'];
-   $select_query = "SELECT * FROM `components_category` WHERE `cc_cat` = '6'";
+   $select_query = "SELECT * FROM `components_category` WHERE `cc_cat` = '$cat_id'";
    $select_query_run = mysqli_query($con , $select_query); ?>
    
    <?php while ($row = mysqli_fetch_array($select_query_run)) { ?>
