@@ -4,7 +4,7 @@ include('connection.php');
 // session_unset();
 // session_destroy();
 session_start();
-$fetch_cat = "SELECT * FROM `pizza_components` LIMIT 4";
+$fetch_cat = "SELECT * FROM `pizza_components` LIMIT 5";
 $fetch_pizza_com = "SELECT * FROM `components_category`";
 
 $query_fetch = mysqli_query($con,$fetch_cat);
@@ -53,7 +53,17 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
   <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all" />
 
   <link rel="stylesheet" href="assets/css/theme-dark.css" type="text/css" media="all" />
-
+<style>
+body {
+  background-color: #000000;
+}
+.hover_btn{
+  transition:.2s ease-out;
+}
+.hover_btn:hover{
+  transform:scale(1.2);
+}
+</style>
 </head>
 
 <body>
@@ -86,18 +96,20 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
     <div class="container">
       <div class="row">
       
-  <div class="col-lg-7 " >
-  <button type="button" class="btn" onclick="cat_func_default(5)">Dough </button>
+  <div class="col-lg-8" >
+  <button type="button" class="p-3 me-2 ms-2 ps-4 pe-4 rounded-start text-white hover_btn" style="background-color:red;" onclick="cat_func_default(5)">Dough </button>
     <?php
 
     while ($row = mysqli_fetch_array($query_fetch)) { ?>
   
-      <button type="button" class="btn" onclick="cat_func(<?php echo $row['c_id'] ?>)"><?php echo $row['c_name'] ?> </button>
+      <button type="button" class="p-3 me-2 ms-2 ps-4 pe-4 rounded-start text-white hover_btn" style="background-color:red;" onclick="cat_func(<?php echo $row['c_id'] ?>)"><?php echo $row['c_name'] ?> </button>
      
+
+      
       <?php  } ?>
 <div>
   <br>
-  <div class="row" id="fetch_cat">
+  <div class="row me-4" id="fetch_cat">
 
 
   </div>
@@ -108,7 +120,7 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
 
 
 
-        <div class="col-sm-12 col-md-5 col-lg-4 pb-30">
+        <div class="col-sm-12 col-md-5 col-lg-4 pb-30 ">
           <div class="checkout-item">
             <div class="checkout-details cart-details mb-30">
               <h3 class="cart-details-title color-white">Cart Totals</h3>
@@ -128,11 +140,11 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
 
 
   <?php
-  include('modal.php'); ?>
+  include('modal.php') ?>
 
   <script src="assets/js/jquery-ui.js"></script>
   <script>
-    cat_func_default(5);
+    cat_func_default(6);
     FetchData();
 
 
@@ -252,3 +264,6 @@ function cat_func(catid) {
 </body>
 
 </html>
+
+
+

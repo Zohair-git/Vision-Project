@@ -39,7 +39,7 @@ $last_row = mysqli_insert_id($con);
     $query_i_items = "INSERT INTO `checkout`( `p_name`, `p_price`, `order_id`) VALUES ('$p_name','$p_price','$last_row')";
     $query_i_items_run = mysqli_query($con,$query_i_items);
     if ($query_i_items_run) {
-        session_destroy();
+        unset($_SESSION['items']);
     }
    
     
@@ -65,7 +65,7 @@ try {
 
     
 
-    $body = "<p>Hello <b>" . $l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Total Amount Of Order:  Rs ". $_GET['total'] ."</h4><br><br><p>Best Regards,<br>
+    $body = "<p>Hello <b>" . $f_name .$l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Total Amount Of Order:  Rs ". $_GET['total'] ."</h4><br><br><p>Best Regards,<br>
      <b>Pizza Palace</b></p><h1>Thanks For Shopping</h1>";
 
     //Content
@@ -86,15 +86,80 @@ try {
 }
     }
 
-    // if(isset($_POST['btn_checkout'])){
-    // $user_name = $_POST['user_name'];
-    // $user_email = $_POST['user_email'];
-    // $amount_mail = $_POST['amount_mail'];
-    // $discount = "<script>var abc = document.getElementById('value').value; document.write(abc)</script>";
+   
+  // for make pizza
+  if (isset($_POST['btn_checkout_components'])) {
+    $f_name = $_POST['f_name'];
+    $l_name = $_POST['l_name'];
+    $country = $_POST['country'];
+    $town = $_POST['town'];
+    $street = $_POST['street'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $order = $_POST['order'];
+
     
+    $date = date("Y-m-d-H-s");
+    $query_i_order = "    INSERT INTO `tbl_order_components`( `order_time`, `f_name`, `l_name`, `country`, `town`, `street`, `phone`, `email`, `order_note`) VALUES ('$date','$f_name','$l_name','$country','$town','$street','$phone','$email','$order')";
+    $query_i_order_run = mysqli_query($con,$query_i_order);
+$last_row = mysqli_insert_id($con);
+    //   echo $last_row;
+    foreach($_SESSION['customlist'] as $value){
+     $p_name =   $value['c_name'];
+     $p_price =   $value['c_price'];
     
-    // }
+
+    $query_i_items = "INSERT INTO `checkout_components`( `c_name`, `c_price`, `order_id_comp`) VALUES ('$p_name','$p_price','$last_row')";
+    $query_i_items_run = mysqli_query($con,$query_i_items);
+    if ($query_i_items_run) {
+        unset($_SESSION['customlist']);
+    }
+   
     
+}
+try {
+    //Server settings
+    // $mail->SMTPDebug = 2; //Enable verbose debug output
+    $mail->isSMTP(); //Send using SMTP
+    // $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
+    $mail->Host = 'mail.worldoftech.co'; //Set the SMTP server to send through
+    $mail->SMTPAuth = true; //Enable SMTP authentication
+    $mail->Username = 'sarim@worldoftech.co'; //SMTP username
+    // $mail->Password = 'eyffwjbomaknwdjy'; //SMTP password
+    $mail->Password = 'admin_sarim_786$$$@';
+    $mail->SMTPSecure = 'ssl'; //Enable implicit TLS encryption
+    $mail->Port = 465; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+
+
+    //Recipients
+    $mail->setFrom('sarim@worldoftech.co', 'PIZZA PALACE');
+    $mail->addAddress($email , $l_name); //Add a recipient
+
+    
+
+    $body = "<p>Hello <b>" . $f_name .$l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Pizza Will Start baking In Few Moments</h4><br><br><p>Best Regards,<br>
+     <b>Pizza Palace</b></p><h1>Thanks For Shopping</h1>";
+
+    //Content
+    $mail->isHTML(true);
+    $mail->Subject = 'Order Details | Pizza Palace';
+    $mail->Body = $body;
+    $mail->AltBody = strip_tags($body);
+
+    $mail->send();
+  
+
+    echo 'Message has been sent';
+    echo "<script>alert('Form submitted successfuly')</script>";
+    header('location:index.php');
+    exit();
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+}
+    }
+
+     
     
  ?> 
 <!DOCTYPE html>
@@ -200,6 +265,9 @@ try {
 <h3 class="color-white">Billing Details</h3>
 </div>
 <div class="checkout-form">
+
+
+<?php if(isset($_GET['total']) || isset($_GET['validation'] )){ ?>
 <form method="post">
 <div class="row">
 <div class="col-sm-12 col-md-6">
@@ -272,27 +340,93 @@ try {
 </div>
 <button type="submit" name="btn_checkout"   class="btn full-width">Place Order</button>
 </form>
+<?php }else{ ?>
+    <form method="post">
+<div class="row">
+<div class="col-sm-12 col-md-6">
+<div class="form-group mb-20">
+<div class="input-group">
+<input type="text" name="f_name" class="form-control" required placeholder="First Name*" />
+</div>
+</div>
+</div>
+<div class="col-sm-12 col-md-6">
+<div class="form-group mb-20">
+<div class="input-group">
+<input type="text" name="l_name" class="form-control" required placeholder="Last Name*" />
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group mb-20">
+<div class="input-group">
+<select name="country" class="form-control">
+<option value="1">Your Country*</option>
+<option value="2">USA</option>
+<option value="3">UK</option>
+<option value="4">Germany</option>
+</select>
+</div>
+ </div>
+</div>
+<div class="col-sm-12">
+<div class="form-group mb-20">
+<div class="input-group">
+<select name="town" class="form-control">
+<option value="1">Town*</option>
+<option value="2">New York</option>
+<option value="3">Florida</option>
+</select>
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group mb-20">
+<div class="input-group">
+<input type="text" name="street" class="form-control" placeholder="Street" />
 </div>
 </div>
 </div>
 
 
+<div class="col-sm-12">
+<div class="form-group mb-20">
+<div class="input-group">
+<input type="tel" name="phone" class="form-control" required placeholder="Phone No*" />
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group mb-20">
+<div class="input-group">
+<input type="email" name="email" class="form-control" required placeholder="Email*" />
+</div>
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group mb-20">
+<div class="input-group input-group-textarea">
+<textarea name="order" class="form-control" rows="5" placeholder="Order Notes*"></textarea>
+</div>
+</div>
+</div>
+</div>
+<button type="submit" name="btn_checkout_components"   class="btn full-width">Place Order For Make Your Pizza</button>
+</form>
+<?php } ?>
+</div>
+</div>
+</div>
+
+<?php
+if(isset($_GET['total'])){
+?>
 <div class="col-sm-12 col-md-5 col-lg-4 pb-30">
 <div class="checkout-item">
 <div class="checkout-details cart-details mb-30">
 <h3 class="cart-details-title color-white">Cart Totals</h3>
 <div class="cart-total-box">
-<div class="cart-total-item pt-0">
-<h4 class="color-main">Crispy Chicken Burger</h4>
-<p>$ 9.00</p>
-</div>
-<div class="cart-total-item">
-<h4 class="color-main">Red Sauce Pizza</h4>
-<p>$ 8.00</p>
-</div>
-<div class="cart-total-item">
-<h4>Sub Total</h4>
-<p>$ 45</p>
+
 </div>
 <div class="cart-total-item cart-total-bold">
 <h4 class="color-white">Total</h4>
@@ -307,6 +441,109 @@ else{
 </div>
 </div>
 </div>
+<?php }elseif(isset($_GET['from']) == "makepizza"){ ?>
+
+<div class="col-sm-12 col-md-5 col-lg-4 pb-30">
+<div class="checkout-item">
+<div class="checkout-details cart-details mb-30">
+<h3 class="cart-details-title color-white">Cart Totals</h3>
+<div class="cart-total-box">
+    <?php foreach ($_SESSION['customlist'] as $key => $value) { ?>
+<div class="cart-total-item pt-0">
+       
+  
+<h4 class="color-main"><?php echo $value['c_name'] ?></h4>
+<p><?php echo "Rs. " . $value['c_price'] ?></p>
+</div>
+<?php  } ?>
+
+<div class="cart-total-item">
+<h4>Sub Total</h4>
+<p><?php
+if (!empty($_GET['from'])) {
+  
+      $myitems = array_column($_SESSION['customlist'], 'c_price');
+      $sum = array_sum($myitems);
+      echo "Rs " . $sum;
+
+     
+}
+else{
+    echo "Rs 0";
+}
+?></p>
+</div>
+<div class="cart-total-item cart-total-bold">
+<h4 class="color-white">Total</h4>
+<p><?php
+if (!empty($_GET['from'])) {
+  
+      $myitems = array_column($_SESSION['customlist'], 'c_price');
+      $sum = array_sum($myitems);
+      echo "Rs " . $sum - 30;
+
+     
+}
+else{
+    echo "Rs 0";
+}
+?></p>
+</div>
+</div>
+</div>
+
+<?php }
+
+else{ ?>
+    <div class="col-sm-12 col-md-5 col-lg-4 pb-30">
+<div class="checkout-item">
+<div class="checkout-details cart-details mb-30">
+<h3 class="cart-details-title color-white">Cart Totals</h3>
+<div class="cart-total-box">
+    <?php foreach ($_SESSION['items'] as $key => $value) { ?>
+<div class="cart-total-item pt-0">
+       
+  
+<h4 class="color-main"><?php echo $value['item_name'] ?></h4>
+<p><?php echo "Rs. " . $value['item_price'] ?></p>
+</div>
+<?php  } ?>
+
+<div class="cart-total-item">
+<h4>Sub Total</h4>
+<p><?php
+if (!empty($_GET['validation'])) {
+  
+      $myitems = array_column($_SESSION['items'], 'item_price');
+      $sum = array_sum($myitems);
+      echo "Rs " . $sum;
+
+     
+}
+else{
+    echo "Rs 0";
+}
+?></p>
+</div>
+<div class="cart-total-item cart-total-bold">
+<h4 class="color-white">Total</h4>
+<p><?php
+if (!empty($_GET['validation'])) {
+  
+      $myitems = array_column($_SESSION['items'], 'item_price');
+      $sum = array_sum($myitems);
+      echo "Rs " . $sum - 10;
+
+     
+}
+else{
+    echo "Rs 0";
+}
+?></p>
+</div>
+</div>
+</div>
+    <?php } ?>
 <!-- <div class="checkout-payment-area">
 <h3 class="color-white cart-details-title">Payment Method</h3>
 <div class="checkout-form">

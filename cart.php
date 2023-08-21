@@ -95,9 +95,14 @@ session_start();
 </div>
 </div>
 
+  
 
 <section class=" cart-section pt-100 pb-70 bg-black">
 <div class="container">
+<?php if (empty($_SESSION['items'])) {
+    echo "<h2 class='text-center text-white'>Please add or buy somethig</h2>";
+}
+else{ ?>
 <div class="cart-table cart-table-dark">
 <table>
 <thead>
@@ -112,11 +117,7 @@ session_start();
 </tr>
 </thead>
 <tbody>
-  
-<?php if (empty($_SESSION['items'])) {
-    echo "Please add or buy somethig";
-}
-else{
+<?php
 foreach ($_SESSION['items'] as $key => $value) {
     
 
@@ -183,6 +184,7 @@ Update Cart
 </div>
 </div>
 <form action="" method="post">
+    <?php if(isset($_SESSION['items'])){?>
 <div class="row">
 <div class="col-sm-12 col-md-8 col-lg-6 pb-30 offset-lg-3 offset-md-2">
 <div class="cart-details mt-20">
@@ -258,6 +260,7 @@ Update Cart
 </form>
 </div>
 </div>
+<?php }?>
 </div>
 </div>
 </section>

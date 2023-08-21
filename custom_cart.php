@@ -88,7 +88,7 @@ if (isset($_SESSION['customlist'])) {
 
       ?>
     </p>
-    <a href="" class="btn">Proceed To Checkout</a>
+    <a href="checkout.php?from=makepizza" class="btn">Proceed To Checkout</a>
   </div>
 
   <?php

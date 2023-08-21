@@ -165,7 +165,7 @@ Deutsch
 </ul>
 </li>
 <li class="nav-item">
-<a href="blogs-3.php" class="nav-link ">BLOG</a>
+<a href="cart.php" class="nav-link ">View Cart</a>
 </li>
 <li class="nav-item">
 <a href="contact-us.php" class="nav-link">CONTACT US</a>
