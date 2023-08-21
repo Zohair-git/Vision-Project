@@ -138,7 +138,8 @@ body {
   </div>
 
 
-
+<?php include('modal.php') ?>
+<?php include('footer.php') ?>
 
   <script src="assets/js/jquery-ui.js"></script>
   <script>
