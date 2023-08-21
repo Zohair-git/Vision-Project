@@ -120,19 +120,15 @@ body {
 
 
 
-        <div class="col-sm-12 col-md-5 col-lg-4 pb-30 ">
-          <div class="checkout-item">
-            <div class="checkout-details cart-details mb-30">
-              <h3 class="cart-details-title color-white">Cart Totals</h3>
-              <div class="cart-total-box" id="ID_cartList">
+        <div class="col-sm-12 col-md-5 col-lg-4 pb-30 " id="ID_cartList">
+        
+            
               <!-- here php cart code -->
 
               <!-- end  -->
-  </div>
-            </div>
+ 
 
-          </div>
-        </div>
+         
       </div>
     </div>
   </div>
@@ -145,6 +141,25 @@ body {
   <script>
     cat_func_default(6);
     FetchData();
+
+
+
+//for delete custom cart
+function delete_custom() {
+  $.ajax({
+     url : 'custom_cart.php',
+     type : 'POST',
+     data : {
+      
+      delete: set
+     }
+   })
+   
+ }
+
+//for delete custom cart
+
+
 
 
 //for default category dough

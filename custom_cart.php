@@ -69,30 +69,55 @@ if (isset($_POST['cart'])) {
 
 
 if (isset($_SESSION['customlist'])) {
-
+  
   ?>
-  <?php foreach ($_SESSION['customlist'] as $key => $value) { ?>
-    <div class="cart-total-item pt-0">
-      <h4 class="color-main"><?php echo $value['c_name'] ?></h4>
-      <p><?php echo "Rs. " . $value['c_price'] ?></p>
+  <div class="checkout-item">
+    <div class="checkout-details cart-details mb-30">
+      <h3 class="cart-details-title color-white">Cart Totals</h3>
+      <div class="cart-total-box">
+        <?php foreach ($_SESSION['customlist'] as $key => $value) { ?>
+          <div class="cart-total-item pt-0">
+            <h4 class="color-main">
+              <?php echo $value['c_name'] ?>
+            </h4>
+            <p>
+              <?php echo "Rs. " . $value['c_price'] ?>
+            </p>
+          </div>
+
+        <?php } ?>
+        <div class="cart-total-item">
+          <h4>Sub Total</h4>
+          <p>
+            <?php
+            $myitems = array_column($_SESSION['customlist'], 'c_price');
+            $sum = array_sum($myitems);
+            echo "Rs " . $sum;
+
+            ?>
+          </p>
+          <a href="checkout.php?from=makepizza" class="btn">Proceed To Checkout</a>
+        </div>
+
+      </div>
     </div>
-
-  <?php } ?>
-  <div class="cart-total-item">
-    <h4>Sub Total</h4>
-    <p>
-      <?php
-      $myitems = array_column($_SESSION['customlist'], 'c_price');
-      $sum = array_sum($myitems);
-      echo "Rs " . $sum;
-
-      ?>
-    </p>
-    <a href="checkout.php?from=makepizza" class="btn">Proceed To Checkout</a>
   </div>
+  
+      <?php }else{ ?>
 
-  <?php
+        <div class="checkout-item">
+    <div class="checkout-details cart-details mb-30">
+      <h3 class="cart-details-title color-white">Cart Totals</h3>
+      <div class="cart-total-box">
+       
+        <div class="cart-total-item">
+          <h4>Sub Total</h4>
+          <p>
+           Rs 0
+          </p>
+        </div>
 
-}
-
-?>
+      </div>
+    </div>
+  </div>
+        <?php } ?>

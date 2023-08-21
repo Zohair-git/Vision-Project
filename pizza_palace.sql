@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 20, 2023 at 06:58 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Generation Time: Aug 21, 2023 at 11:39 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,7 +61,61 @@ INSERT INTO `checkout` (`p_name`, `p_price`, `order_id`) VALUES
 ('Fajita Pizza', 20, 7),
 ('peproni pizza', 21, 7),
 ('afghani tikka ', 14, 7),
-('Club Sandwich', 12, 7);
+('Club Sandwich', 12, 7),
+('Fajita Pizza', 20, 2),
+('peproni pizza', 21, 2),
+('afghani tikka ', 14, 2),
+('Club Sandwich', 12, 2),
+('Fajita Pizza', 20, 3),
+('peproni pizza', 21, 3),
+('afghani tikka ', 14, 3),
+('Club Sandwich', 12, 3),
+('Fajita Pizza', 20, 4),
+('peproni pizza', 21, 4),
+('afghani tikka ', 14, 4),
+('Club Sandwich', 12, 4),
+('Fajita Pizza', 20, 5),
+('peproni pizza', 21, 5),
+('afghani tikka ', 14, 5),
+('Club Sandwich', 12, 5),
+('Fajita Pizza', 20, 6),
+('peproni pizza', 21, 6),
+('afghani tikka ', 14, 6),
+('Club Sandwich', 12, 6),
+('Fajita Pizza', 20, 7),
+('peproni pizza', 21, 7),
+('afghani tikka ', 14, 7),
+('Club Sandwich', 12, 7),
+('Fajita Pizza', 20, 8),
+('malai boti', 14, 9),
+('peproni pizza', 21, 9),
+('Fajita Pizza', 20, 10),
+('Fajita Pizza', 20, 11),
+('Fajita Pizza', 20, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `checkout_components`
+--
+
+CREATE TABLE `checkout_components` (
+  `c_name` varchar(200) NOT NULL,
+  `c_price` int(200) NOT NULL,
+  `order_id_comp` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `checkout_components`
+--
+
+INSERT INTO `checkout_components` (`c_name`, `c_price`, `order_id_comp`) VALUES
+('olives', 200, 2),
+('Original crust', 0, 2),
+('Large', 1299, 2),
+('Mild & Spicy', 200, 2),
+('Chicken', 200, 2),
+('cheesy sauce', 220, 2);
 
 -- --------------------------------------------------------
 
@@ -82,13 +136,22 @@ CREATE TABLE `components_category` (
 --
 
 INSERT INTO `components_category` (`cc_id`, `cc_cat`, `cc_name`, `cc_pic`, `cc_price`) VALUES
-(1, 1, 'cheese', 'black-olives.png', 300),
-(2, 2, 'black-olives', 'black-olives.png', 200),
-(3, 1, '-olives', 'black-olives.png', 200),
-(4, 5, 'Small', 'pizza-hut-crust.png', 499),
-(5, 5, 'Medium', 'pizza-hut-crust.png', 899),
-(6, 5, 'Large', 'pizza-hut-crust.png', 1299),
-(8, 3, 'peproni', 'epperoni-transparent-single-pepperoni-11562915199mfbla9n7e4-removebg-preview.png', 260);
+(1, 5, 'corn', 'corn.png', 300),
+(2, 5, 'olives', 'olives.webp', 200),
+(3, 3, 'Chicken', 'chicken (2).png', 200),
+(4, 6, 'Small', 'pizza-hut-crust.png', 499),
+(5, 6, 'Medium', 'pizza-hut-crust.png', 899),
+(6, 6, 'Large', 'pizza-hut-crust.png', 1299),
+(8, 3, 'peproni', 'epperoni-transparent-single-pepperoni-11562915199mfbla9n7e4-removebg-preview.png', 260),
+(9, 4, 'Ketchup', 'ketchup.png', 120),
+(10, 4, 'Mayo Sauce', 'mayo.png', 130),
+(11, 4, 'cheesy sauce', 'cheese sauce.png', 220),
+(12, 1, 'Stuffed crust', 'stuffed.png', 100),
+(13, 1, 'Thin crust', 'thin.png', 50),
+(14, 1, 'Original crust', 'origna.png', 0),
+(15, 2, 'Mild & Spicy', 'mildandspice.png', 200),
+(16, 2, 'Tomato sauce', 'tomato.png', 180),
+(17, 2, 'Mayo Sauce', 'cheesesauce.png', 0);
 
 -- --------------------------------------------------------
 
@@ -129,10 +192,11 @@ CREATE TABLE `pizza_components` (
 
 INSERT INTO `pizza_components` (`c_id`, `c_name`) VALUES
 (1, 'crust'),
-(2, 'sauce'),
+(2, 'dough sauce'),
 (3, 'topping'),
 (4, 'top sauce'),
-(5, 'Dough');
+(5, 'Extra'),
+(6, 'Dough');
 
 -- --------------------------------------------------------
 
@@ -195,7 +259,39 @@ INSERT INTO `tbl_order` (`order_id`, `order_time`, `f_name`, `l_name`, `country`
 (4, '2023-08-18-21-44', 'sasas', 'Mesum', '4', '2', 'street no 1234 ', 123456, 'masumbinshaukat@gmail.com', 'wzaesxcrdtfvgybuhnjimko,waxescrdtfvygbuhnijmko,'),
 (5, '2023-08-18-21-58', 'sasas', 'sarim khan', '3', '2', 'street no 1234 ', 123456, 'sarimsaleem515@gmail.com', 'gavcqvcwbcbwbcw8cbw8cbw8cbwbcbwcbwycbw8yvrcbw8rybcwbv8ybwcn9wvb8yebvw9v3b'),
 (6, '2023-08-18-21-42', 'sasas', 'Huzaifa ', '4', '1', 'street no 1234 ', 123456, 'sarimsaleem515@gmail.com', 'bbhhdhhbbvwbqvvbruvqbyvbq8evbqbvebvry8eqvbervbqevqbev9eru0qnv'),
-(7, '2023-08-18-21-48', 'sasas', 'sarim khan', '2', '1', 'street no 1234 ', 123456, 'sarimsaleem515@gmail.com', 'zwxertyhnujmik');
+(7, '2023-08-18-21-48', 'sasas', 'sarim khan', '2', '1', 'street no 1234 ', 123456, 'sarimsaleem515@gmail.com', 'zwxertyhnujmik'),
+(8, '2023-08-21-10-56', 'sarim', 'khan', '2', '3', 'heloo 123', 2147483647, 'sarimsaleem515@gmail.com', 'fuck you'),
+(9, '2023-08-21-10-08', 'sarim', 'khan', '3', '3', 'rff', 454356345, 'sarimsaleem515@gmail.com', 'fff'),
+(10, '2023-08-21-11-11', 'sarim', 'khan', '3', '2', 'xvxv 123', 123456, 'sarimsaleem515@gmail.com', 'cvcvwvcuscshcbscbshcuscbscubsubcuscsucsucs'),
+(11, '2023-08-21-11-08', 'sarim', 'khna', '2', '2', '23fffg', 234567, 'sarimsaleem515@gmail.com', 'sdfvhhjdjhjhjfdjjfjgjghjhjjhjjhjjhjjhjjhjjhjjh'),
+(12, '2023-08-21-11-07', 'sarim', 'khan', '2', '3', 'fyuyi5155', 123455, 'sarimsaleem515@gmail.com', 'vagyygdaygdgydgyhyuduyhauyauyauyauyaygygyuyauyua');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_order_components`
+--
+
+CREATE TABLE `tbl_order_components` (
+  `order_id_comp` int(11) NOT NULL,
+  `order_time` varchar(200) NOT NULL,
+  `f_name` varchar(200) NOT NULL,
+  `l_name` varchar(200) NOT NULL,
+  `country` varchar(100) NOT NULL,
+  `town` varchar(200) NOT NULL,
+  `street` text NOT NULL,
+  `phone` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `order_note` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_order_components`
+--
+
+INSERT INTO `tbl_order_components` (`order_id_comp`, `order_time`, `f_name`, `l_name`, `country`, `town`, `street`, `phone`, `email`, `order_note`) VALUES
+(1, '2023-08-21-10-24', 'sarim', 'khan', '2', '2', '123 no street', 567234567, 'sarimsaleem515@gmail.com', 'zawwwwwwwwwwwwwwwwwwwwwwwwwwwwexsdrctfvgybunhjim'),
+(2, '2023-08-21-10-18', 'sarim', 'khan', '2', '2', '123 no street', 567234567, 'sarimsaleem515@gmail.com', 'zawwwwwwwwwwwwwwwwwwwwwwwwwwwwexsdrctfvgybunhjim');
 
 --
 -- Indexes for dumped tables
@@ -206,6 +302,12 @@ INSERT INTO `tbl_order` (`order_id`, `order_time`, `f_name`, `l_name`, `country`
 --
 ALTER TABLE `checkout`
   ADD KEY `order_id` (`order_id`);
+
+--
+-- Indexes for table `checkout_components`
+--
+ALTER TABLE `checkout_components`
+  ADD KEY `order_id_comp` (`order_id_comp`);
 
 --
 -- Indexes for table `components_category`
@@ -240,6 +342,12 @@ ALTER TABLE `tbl_order`
   ADD PRIMARY KEY (`order_id`);
 
 --
+-- Indexes for table `tbl_order_components`
+--
+ALTER TABLE `tbl_order_components`
+  ADD PRIMARY KEY (`order_id_comp`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -247,7 +355,7 @@ ALTER TABLE `tbl_order`
 -- AUTO_INCREMENT for table `components_category`
 --
 ALTER TABLE `components_category`
-  MODIFY `cc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `cc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `food_categories`
@@ -259,7 +367,7 @@ ALTER TABLE `food_categories`
 -- AUTO_INCREMENT for table `pizza_components`
 --
 ALTER TABLE `pizza_components`
-  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `c_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_menu`
@@ -271,7 +379,13 @@ ALTER TABLE `tbl_menu`
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `tbl_order_components`
+--
+ALTER TABLE `tbl_order_components`
+  MODIFY `order_id_comp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -282,6 +396,12 @@ ALTER TABLE `tbl_order`
 --
 ALTER TABLE `checkout`
   ADD CONSTRAINT `checkout_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `tbl_order` (`order_id`);
+
+--
+-- Constraints for table `checkout_components`
+--
+ALTER TABLE `checkout_components`
+  ADD CONSTRAINT `checkout_components_ibfk_1` FOREIGN KEY (`order_id_comp`) REFERENCES `tbl_order_components` (`order_id_comp`);
 
 --
 -- Constraints for table `components_category`
