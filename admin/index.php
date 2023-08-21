@@ -1,3 +1,19 @@
+<?php
+include('../connection.php');
+
+session_start();
+if (isset($_SESSION['aemail']) || isset($_SESSION['apass'] )) {
+
+} else {
+    header('location:adminlogin.php');
+    exit();
+}
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,10 +49,70 @@
  
 <?php include('navtopbar.php') ?>
 
+
+
+
+<?php
+
+$sq = "SELECT COUNT(*) AS `count` FROM `tbl_menu`  " ;
+$run = mysqli_query($con , $sq);
+$fetchdata = mysqli_fetch_array($run);
+
+$sq1 = "SELECT COUNT(*) AS `count` FROM `food_categories` " ;
+$run1 = mysqli_query($con , $sq1);
+$fetchdata1 = mysqli_fetch_array($run1);
+
+$sq2 = "SELECT COUNT(*) AS `count` FROM `checkout` " ;
+$run2 = mysqli_query($con , $sq2);
+$fetchdata2 = mysqli_fetch_array($run2);
+
+
+
+
+    
+
+     ?>
+
+
+
+
 <div class="clearfix"></div>
 	
   <div class="content-wrapper">
     <div class="container-fluid">
+
+
+
+    <div class="card-group mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class = "mb-3 counter"><?php echo $fetchdata['count']?></h2>
+      <h5 class="card-title">Total Menu Item</h5>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 5 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    
+    <div class="card-body">
+    <h2 class = "mb-3"><?php echo $fetchdata1['count'] ?></h2>
+      <h5 class="card-title">Food Category</h5>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 1 mins ago</small>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+    <h2 class = "mb-3"><?php echo $fetchdata2['count'] ?></h2>
+      <h5 class="card-title">Total Checkouts</h5>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 2 mins ago</small>
+    </div>
+  </div>
+</div>
 
 
 

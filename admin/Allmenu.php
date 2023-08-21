@@ -1,6 +1,15 @@
 <?php
 include('../connection.php');
 
+session_start();
+if (isset($_SESSION['aemail']) || isset($_SESSION['apass'] )) {
+
+} else {
+    header('location:adminlogin.php');
+    exit();
+}
+
+
 $select_query = "SELECT * FROM `tbl_menu` ";
 $s_q = mysqli_query($con , $select_query);
 

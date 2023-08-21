@@ -1,6 +1,15 @@
 <?php
 include('../connection.php');
 
+session_start();
+if (isset($_SESSION['aemail']) || isset($_SESSION['apass'] )) {
+
+} else {
+    header('location:adminlogin.php');
+    exit();
+}
+
+
 if (isset($_POST['submit'])) {
    $item_name = $_POST['name'];
    $item_price = $_POST['price'];
