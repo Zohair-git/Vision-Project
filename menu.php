@@ -157,17 +157,11 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
     <div class="receipe-cart">
-<form action="addtocart.php" method="post">
-        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
-        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
-        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
-        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
-       
-    <!-- <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i> -->
+        <button class="ms-2" type="button"  onclick="function_ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
+
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-    </form>
+ 
     </div>
     </div>
     </div>
@@ -199,19 +193,11 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
     <div class="receipe-cart">
+        <button class="ms-2" type="button"  onclick="function_ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
 
-    <form action="addtocart.php" method="post">
-        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
-        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
-        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
-        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
-
-
-    <!-- <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-    </form>
+ 
     </div>
     </div>
     </div>
@@ -245,19 +231,11 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
     <div class="receipe-cart">
+        <button class="ms-2" type="button"  onclick="function_ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
 
-    <form action="addtocart.php" method="post">
-        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
-        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
-        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
-        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
-
-    <!-- <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-    </form>
-
+ 
     </div>
     </div>
     </div>
@@ -288,21 +266,11 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
     <div class="receipe-cart">
+        <button class="ms-2" type="button"  onclick="function_ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
 
-    <form action="addtocart.php" method="post">
-        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
-        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
-        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
-        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
-
-        
-
-    <!-- <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-    </form>
-
+ 
     </div>
     </div>
     </div>
@@ -333,20 +301,11 @@ $select_query_run = mysqli_query($con, $select_query); ?>
     <h4>$<?php echo $fetch_query['menu_price'] ?><del>$7.59</del></h4>
     </div>
     <div class="receipe-cart">
+        <button class="ms-2" type="button"  onclick="function_ajax(<?php echo $fetch_query['menu_id'] ?>)"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
 
-    <form action="addtocart.php" method="post">
-        <button class="ms-2" type="submit"  name = "btn_insert"  style="background-color:#FFCC00; border-radius:20px;margin-top:12px;" >
-        <input type="hidden" name="item_name" value = "<?php echo $fetch_query['food_name'] ?>">
-        <input type="hidden" name="item_pic" value = "<?php echo $fetch_query['food_pic'] ?>">
-        <input type="hidden" name="item_price" value = "<?php echo $fetch_query['menu_price'] ?>">
-
-
-    <!-- <i class="flaticon-supermarket-basket"></i>
-    <i class="flaticon-supermarket-basket"></i> -->
     <img  width="30px" src="./assets/images/basket.png" alt="">
     </button>
-    </form>
-
+ 
     </div>
     </div>
     </div>
@@ -454,5 +413,65 @@ $select_query_run = mysqli_query($con, $select_query); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 
+<script>
+
+FetchData();
+
+       function function_ajax(id) {
+
+$.ajax({
+  url: 'addtocart.php',
+  type: 'POST',
+  data: {
+    cart: 'cart',
+    id: id
+  },
+  success: function (data) {
+    console.log(data);
+    $('#cart').html(data);
+  }
+})
+
+
+//for count navbar
+
+$.ajax({
+  url: 'count.php',
+  type: 'POST',
+ 
+  success: function (dataa) {
+    $('#nav').html(dataa);
+  }
+})
+//for count navbar
+
+
+}
+
+
+
+function FetchData() {
+
+$.ajax({
+  url: 'addtocart.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#cart').html(data);
+  }
+})
+//for navbar count
+$.ajax({
+  url: 'count.php',
+  type: 'POST',
+
+  success: function (dataa) {
+   
+    $('#nav').html(dataa);
+  }
+})
+}
+</script>
 </body>
 </html>

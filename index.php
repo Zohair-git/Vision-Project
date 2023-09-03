@@ -68,11 +68,11 @@ include('navbar.php');
 
 <div class="tp-caption LandingPage-Title tp-resizeme" id="slide-1-layer-1" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['170','50','70','45']" data-fontsize="['60','60','45','35']" data-lineheight="['85','85','55','40']" data-letterspacing="4" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" data-fontweight="400" style="z-index: 5; white-space: nowrap;">The Best Place To <br> Satisfy Your Tummy</div>
 
-<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-1-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Special Mashroom Fry Pizza Only At
+<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-1-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Special Fajita Pizza Only At
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-1-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="shop-details.php?id=1" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
  </a>
 <p class="header-product-price color-white">$10.99 <del>$18.99</del></p>
 </div>
@@ -98,11 +98,11 @@ include('navbar.php');
 
 <div class="tp-caption LandingPage-Title tp-resizeme" id="slide-2-layer-1" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['170','50','70','45']" data-fontsize="['60','60','45','35']" data-lineheight="['85','85','55','40']" data-letterspacing="4" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" data-fontweight="400" style="z-index: 5; white-space: nowrap;">We Ensure That You <br> Will Be Satisfied</div>
 
-<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-2-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Green Spicy Pizza
+<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-2-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Afghani Tikka Pizza
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-2-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="shop-details.php?id=3" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 <p class="header-product-price color-white">$9.99 <del>$15.99</del></p>
 </div>
@@ -128,11 +128,11 @@ include('navbar.php');
 
 <div class="tp-caption LandingPage-Title tp-resizeme" id="slide-3-layer-1" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['170','50','70','45']" data-fontsize="['60','60','45','35']" data-lineheight="['85','85','55','40']" data-letterspacing="4" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":500,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" data-fontweight="400" style="z-index: 5; white-space: nowrap;">Best Offer <br> For Your Satisfiction</div>
 
-<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-3-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Supreme 
+<div class="tp-caption LandingPage-SubTitle   tp-resizeme" id="slide-3-layer-2" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['355','240','215','140']" data-fontsize="['25','25','17','17']" data-lineheight="['30','30','25','25']" data-width="['450','450','450','450']" data-fontweight="500" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','left','center','center']" style="z-index: 7;white-space: normal;font-style:normal;">Peproni Pizza 
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-3-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="shop-details.php?id=2" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 <p class="header-product-price color-white">$10.99 <del>$18.99</del></p>
 </div>
@@ -964,5 +964,30 @@ Order Now
 <script src="assets/js/jquery.meanmenu.min.js"></script>
 
 <script src="assets/js/script.js"></script>
+<script>
+    FetchData();
+    function FetchData() {
+
+$.ajax({
+  url: 'addtocart.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#cart').html(data);
+  }
+})
+//for navbar count
+$.ajax({
+  url: 'count.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#nav').html(data);
+  }
+})
+}
+</script>
 </body>
 </html>

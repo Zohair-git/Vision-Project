@@ -49,6 +49,11 @@ session_start();
 <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+        <style>
+            body{
+                overflow-x: hidden;
+            }
+        </style>
 </head>
 <body>
 
@@ -184,7 +189,7 @@ Update Cart
 </div>
 </div>
 <form action="" method="post">
-    <?php if(isset($_SESSION['items'])){?>
+    <?php if(!empty($_SESSION['items'])){?>
 <div class="row">
 <div class="col-sm-12 col-md-8 col-lg-6 pb-30 offset-lg-3 offset-md-2">
 <div class="cart-details mt-20">
@@ -348,5 +353,30 @@ Update Cart
          subtotal();
     
     </script>
+    <script>
+    FetchData();
+    function FetchData() {
+
+$.ajax({
+  url: 'addtocart.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#cart').html(data);
+  }
+})
+//for navbar count
+$.ajax({
+  url: 'count.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#nav').html(data);
+  }
+})
+}
+</script>
 </body>
 </html>

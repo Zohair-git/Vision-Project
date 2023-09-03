@@ -100,20 +100,20 @@ $select_query = "SELECT * FROM `tbl_menu` WHERE `menu_id` = '$menu_id'";
 $select_query_run = mysqli_query($con , $select_query);
 while ($details = mysqli_fetch_array($select_query_run)) {
 
-?>
+?> 
 <div class="row align-items-center">
 <div class="col-sm-12 col-md-12 col-lg-5 pb-30">
 <div class="product-details-item">
 <div class="product-details-slider">
 <div class="product-details-for popup-gallery">
 <div class="product-for-item">
-<a href="assets/images/product-1.png"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?>" alt="product"></a>
+<a href="./admin/pictures/<?php echo $details['food_pic'] ?>"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?>" alt="product"></a>
 </div>
 <div class="product-for-item">
-<a href="assets/images/product-1.png"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?> alt="product"></a>
+<a href="./admin/pictures/<?php echo $details['food_pic'] ?>"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?>" alt="product"></a>
 </div>
 <div class="product-for-item">
-<a href="assets/images/product-1.png"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?> alt="product"></a>
+<a href="./admin/pictures/<?php echo $details['food_pic'] ?>"><img width="300" src="./admin/pictures/<?php echo $details['food_pic'] ?>" alt="product"></a>
 </div>
 </div>
 <div class="product-details-nav">
@@ -158,183 +158,26 @@ New
 <h4>$ <?php echo $details['menu_price'] ?></h4>
 </div>
 <div class="product-details-para mb-20">
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy hendrerit vitae. Vivamus vel erat tortor. Nulla facili hendr erit vitae. Vivamus vel erat tortor.</p>
+<p>After one hour pat the dough and roll into a big circle. Leave for 15 minute then bake for 15 minute at 180c or until dough starts changing color, take out from oven,spread pizza sauce & top with cheddar, mozzarella, onion, tomatoes, coriander leaves, capsicum and ChickenTikka.</p>
 </div>
-<div class="product-action-info mb-20">
-<h4>Sizes:</h4>
-<!-- <ul class="product-size-list">
-<li class="active">Small</li>
-<li>Medium</li>
-<li>Large</li>
-</ul> -->
-<select class="product-size-list dropdown-menu ms-5 bg-dark text-white"   name="" id="">
-    <option class="active" value="small">Small</option>
-    <option  value="medium">Medium</option>
-    <option  value="large">large</option>
-</select>
-</div>
+
 <div class="product-action-info mb-20">
 <div class="d-flex flex-wrap align-items-center
                                     product-quantity">
-<button class="btn btn-icon product-quantity-item">
+<button class="btn btn-icon product-quantity-item" type="button"  onclick="function_ajax(<?php echo $details['menu_id'] ?>)">
 Add To Cart
 <i class="flaticon-shopping-cart-black-shape"></i>
 </button>
-<div class="cart-quantity product-quantity-item">
-<button class="qu-btn dec">-</button>
-<input type="text" class="qu-input" value="1">
-<button class="qu-btn inc">+</button>
+
 </div>
 </div>
-</div>
-<div class="product-action-info">
-<div class="product-add-wishlist">
-<a href="#"><i class="flaticon-heart"></i>Add To Wishlist</a>
-</div>
-</div>
+
 </div>
 </div>
 </div>
 </div>
 <?php }?>
-<div class="product-details-tab below-border">
-<ul class="product-details-tab-list">
-<li class="active" data-product-tab-list="1">Description</li>
-<li data-product-tab-list="2">Reviews <span>(2)</span></li>
-</ul>
-<div class="product-tab-information">
-<div class="product-tab-information-item active" data-product-details-tab="1">
- <div class="product-description mb-30">
-<p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed purus augue, eu euism od tellus. Nam mattis eros nec mi sag ittis sagittis. Vestibulum suscipit cursus bibendum. Integer at justo eget sem auctor auctor eget vitae arcu. Nam tempor mal esuada portti tor. Nulla quis dignissim ipsum. Aliquam pulvinar iaculis justo, sit amet interdum sem hendrerit vitae. Vivamus vel erat tortor. Nulla facilisi. In nulla quam, lacinia eu aliquam ac, aliquam in nisl.</p>
-<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.</p>
-</div>
-</div>
-<div class="product-tab-information-item" data-product-details-tab="2">
-<div class="product-review-list">
-<div class="testimonial-carousel-item bg-main product-review-item">
-<p class="carousel-para">The Taste is still in my mouth and I can feel the depth of the taste of the every ingr edients used in the food. I really Love Fafo.</p>
-<div class="carousel-info-grid">
-<div class="carousel-thumb">
-<img src="assets/images/client-1.jpg" alt="client">
-</div>
-<div class="carousel-info text-end">
-<div class="review-star">
-<ul class="justify-content-end">
-<li class="full-star"><i class="flaticon-star-1"></i></li>
-<li class="full-star"><i class="flaticon-star-1"></i></li>
-<li class="full-star"><i class="flaticon-star-1"></i></li>
-<li class="full-star"><i class="flaticon-star-1"></i></li>
-<li class="full-star"><i class="flaticon-star-1"></i></li>
-</ul>
-</div>
-<h3 class="carousel-name">Angela Carter</h3>
-<h4 class="carousel-designation">CEO of Rockings</h4>
-</div>
-</div>
-</div>
-<div class="testimonial-carousel-item bg-main product-review-item">
-<p class="carousel-para">The Taste is still in my mouth and I can feel the depth of the taste of the every ingr edients used in the food. I really Love Fafo.</p>
-<div class="carousel-info-grid">
-<div class="carousel-thumb">
-<img src="assets/images/client-2.jpg" alt="client">
-</div>
-<div class="carousel-info text-end">
-<div class="review-star">
-<ul class="justify-content-end">
-<li class="full-star"><i class="flaticon-star-1"></i></li>
-<li class="full-star"><i class="flaticon-star-1"></i></li>
-<li class="full-star"><i class="flaticon-star-1"></i></li>
- <li class="full-star"><i class="flaticon-star-1"></i></li>
-<li class="full-star"><i class="flaticon-star-1"></i></li>
-</ul>
-</div>
-<h3 class="carousel-name">John Karahan</h3>
-<h4 class="carousel-designation">Food Bloger</h4>
-</div>
-</div>
-</div>
-</div>
-<div class="product-review-area">
-<div class="sub-section-title">
-<h3 class="color-white">Add Your Reviews</h3>
-</div>
-<form>
-<div class="form-review mb-20">
-<fieldset class="rating">
-<ul>
-<li>
-<input type="radio" id="star5" name="rating" value="5" />
-<label class="full" for="star5"></label>
-<input type="radio" id="star4half" name="rating" value="4 and a half" />
-<label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
-</li>
-<li>
-<input type="radio" id="star4" name="rating" value="4" />
-<label class="full" for="star4"></label>
-<input type="radio" id="star3half" name="rating" value="3 and a half" />
-<label class="half" for="star3half"></label>
-</li>
-<li>
-<input type="radio" id="star3" name="rating" value="3" />
-<label class="full" for="star3"></label>
-<input type="radio" id="star2half" name="rating" value="2 and a half" />
-<label class="half" for="star2half"></label>
-</li>
-<li>
-<input type="radio" id="star2" name="rating" value="2" />
-<label class="full" for="star2"></label>
-<input type="radio" id="star1half" name="rating" value="1 and a half" />
-<label class="half" for="star1half"></label>
-</li>
-<li>
-<input type="radio" id="star1" name="rating" value="1" />
-<label class="full" for="star1"></label>
-<input type="radio" id="starhalf" name="rating" value="half" />
-<label class="half" for="starhalf"></label>
-</li>
-</ul>
-</fieldset>
-<h4>Add Ratings</h4>
-</div>
- <div class="comment-input-area">
-<div class="row">
-<div class="col-sm-12 col-md-6 col-lg-6">
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="text" name="name" id="name" class="form-control" placeholder="Name*">
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-6 col-lg-6">
-<div class="form-group mb-20">
-<div class="input-group">
-<input type="text" name="emal" id="emal" class="form-control" placeholder="Email*">
-</div>
-</div>
-</div>
-<div class="col-sm-12 col-md-12 col-lg-12">
-<div class="form-group mb-20">
-<div class="input-group">
-<textarea name="message" class="form-control" id="message" rows="5" placeholder="Your Comment*"></textarea>
-</div>
-</div>
-</div>
-<div class="col-sm-12">
-<div class="custom-control custom-checkbox mb-20">
-<input type="checkbox" class="custom-control-input" id="review1">
-<label class="custom-control-label" for="review1">Save my name and website in this browser for the next time I comment.</label>
-</div>
-</div>
-<div class="col-sm-12 col-md-12 col-lg-12">
-<button class="btn full-width">Post Your Review</button>
-</div>
-</div>
-</div>
-</form>
-</div>
-</div>
-</div>
-</div>
+
 <div class="related-product mt-50">
 <div class="sub-section-title">
 <h3 class="color-white">Related Items</h3>
@@ -538,5 +381,49 @@ Add To Cart
 <script src="assets/js/jquery.meanmenu.min.js"></script>
 
 <script src="assets/js/script.js"></script>
+<script>
+
+FetchData();
+
+       function function_ajax(id) {
+
+$.ajax({
+  url: 'addtocart.php',
+  type: 'POST',
+  data: {
+    cart: 'cart',
+    id: id
+  },
+  success: function (data) {
+    console.log(data);
+    $('#cart').html(data);
+  }
+})}
+
+
+  
+    function FetchData() {
+
+$.ajax({
+  url: 'addtocart.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#cart').html(data);
+  }
+})
+//for navbar count
+$.ajax({
+  url: 'count.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#nav').html(data);
+  }
+})
+}
+</script>
 </body>
 </html>

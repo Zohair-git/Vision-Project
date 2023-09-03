@@ -117,7 +117,7 @@ Deutsch
 </a>
 
 <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-<ul class="navbar-nav ms-auto">
+<ul class="navbar-nav ms-5">
 <li class="nav-item">
 <a href="index.php" class="nav-link ">HOME</a>
 </li>
@@ -125,7 +125,7 @@ Deutsch
 <a href="menu.php" class="nav-link">MENU</a>
 </li>
 <li class="nav-item">
-<a href="#" class="nav-link dropdown-toggle">PAGES</a>
+
 <ul class="dropdown-menu">
 <li class="nav-item">
 <a href="about-us.php" class="nav-link">About Us</a>
@@ -189,13 +189,10 @@ Deutsch
 </div>
 <div class="navbar-option-item navbar-option-cart">
 <a href="#" class="productCart"><i class="flaticon-supermarket-basket"></i></a>
-<span class="option-badge"><?php if (empty($_SESSION['items'])) {
-    echo "0";
-}else{
- $count = count($_SESSION['items']); echo $count;} ?></span>
+<span class="option-badge" id="nav"></span>
 </div>
 <div class="navbar-option-item navbar-option-order">
-<a href="makePizza.php" class="btn text-nowrap">
+<a href="makepizza.php" class="btn text-nowrap">
 Make Your Own Pizza &nbsp;<img width="25px" src="./admin/pictures/pizza.png" alt="">
 
 </a>
@@ -208,4 +205,3 @@ Make Your Own Pizza &nbsp;<img width="25px" src="./admin/pictures/pizza.png" alt
 </div>
 
 </header>
-
