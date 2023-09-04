@@ -72,7 +72,7 @@ include('navbar.php');
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-1-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="menu.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
  </a>
 <p class="header-product-price color-white">$10.99 <del>$18.99</del></p>
 </div>
@@ -102,7 +102,7 @@ include('navbar.php');
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-2-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="menu.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 <p class="header-product-price color-white">$9.99 <del>$15.99</del></p>
 </div>
@@ -132,7 +132,7 @@ include('navbar.php');
 </div>
 
 <div class="tp-caption LandingPage-SubTitle tp-resizeme" id="slide-3-layer-3" data-x="['left','center','center','center']" data-hoffset="none" data-y="['top','top','top','top']" data-voffset="['415','300','270','185']" data-fontsize="['20','20','17','17']" data-lineheight="['30','30','25','25']" data-width="['380','380','380','380']" data-height="none" data-whitespace="normal" data-type="text" data-responsive_offset="on" data-frames='[{"from":"x:-50px;opacity:0;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]' data-textAlign="['left','center','center','center']" style="z-index: 7;white-space: normal;font-style:normal; display: flex;align-items: center; max-width: 300px;">
-<a href="shop-details.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
+<a href="menu.php" class="btn">Order Now <i class="flaticon-shopping-cart-black-shape"></i>
 </a>
 <p class="header-product-price color-white">$10.99 <del>$18.99</del></p>
 </div>
