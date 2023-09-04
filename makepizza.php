@@ -7,8 +7,8 @@ session_start();
 $fetch_cat = "SELECT * FROM `pizza_components` LIMIT 5";
 $fetch_pizza_com = "SELECT * FROM `components_category`";
 
-$query_fetch = mysqli_query($con,$fetch_cat);
-$query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
+$query_fetch = mysqli_query($con, $fetch_cat);
+$query_fetch_pizza = mysqli_query($con, $fetch_pizza_com);
 ?>
 
 <!DOCTYPE html>
@@ -53,17 +53,19 @@ $query_fetch_pizza = mysqli_query($con,$fetch_pizza_com);
   <link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all" />
 
   <link rel="stylesheet" href="assets/css/theme-dark.css" type="text/css" media="all" />
-<style>
-body {
-  background-color: #000000;
-}
-.hover_btn{
-  transition:.2s ease-out;
-}
-.hover_btn:hover{
-  transform:scale(1.2);
-}
-</style>
+  <style>
+    body {
+      background-color: #000000;
+    }
+
+    .hover_btn {
+      transition: .2s ease-out;
+    }
+
+    .hover_btn:hover {
+      transform: scale(1.2);
+    }
+  </style>
 </head>
 
 <body>
@@ -71,7 +73,7 @@ body {
   include('navbar.php')
 
 
-  ?>
+    ?>
 
 
 
@@ -95,189 +97,209 @@ body {
   <div class="checkout-section pt-100 pb-70 bg-black">
     <div class="container">
       <div class="row">
-      
-  <div class="col-lg-8" >
-  <button type="button" class="p-3 me-2 ms-2 ps-4 pe-4 rounded-start text-white hover_btn" style="background-color:red;" onclick="cat_func_default(6)">Dough </button>
-    <?php
 
-    while ($row = mysqli_fetch_array($query_fetch)) { ?>
-  
-      <button type="button" class="p-3 me-2 ms-2 ps-4 pe-4 rounded-start text-white hover_btn" style="background-color:red;" onclick="cat_func(<?php echo $row['c_id'] ?>)"><?php echo $row['c_name'] ?> </button>
-     
+        <div class="col-lg-8">
+          <button type="button" class="p-3 me-2 ms-2 ps-4 pe-4 rounded-start text-white hover_btn"
+            style="background-color:red;" onclick="cat_func_default(6)">Dough </button>
+          <?php
 
-      
-      <?php  } ?>
-<div>
-  <br>
-  <div class="row me-4" id="fetch_cat">
+          while ($row = mysqli_fetch_array($query_fetch)) { ?>
 
-
-  </div>
- 
-</div>
-
-  </div>
+            <button type="button" class="p-3 me-2 ms-2 ps-4 pe-4 rounded-start text-white hover_btn"
+              style="background-color:red;" onclick="cat_func(<?php echo $row['c_id'] ?>)"><?php echo $row['c_name'] ?>
+            </button>
 
 
 
-        <div class="col-sm-12 col-md-5 col-lg-4 pb-30 " id="ID_cartList">
-        
-            
+          <?php } ?>
+          <div>
+            <br>
+            <div class="row me-4" id="fetch_cat">
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="col-sm-12 col-md-5 col-lg-4 pb-30 " >
+          <div class="checkout-item">
+            <div class="checkout-details cart-details mb-30" id="ID_cartList">
+
               <!-- here php cart code -->
 
               <!-- end  -->
- 
 
-         
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
 
-<?php include('modal.php') ?>
-<?php include('footer.php') ?>
+    <?php include('modal.php') ?>
+    <?php include('footer.php') ?>
 
-  <script src="assets/js/jquery-ui.js"></script>
-  <script>
+    <div class="scroll-top" id="scrolltop">
+      <div class="scroll-top-inner">
+        <span><i class="flaticon-up-arrow"></i></span>
+      </div>
+    </div>
+
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <script src="assets/js/jquery.timepicker.min.js"></script>
+
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="assets/js/owl.carousel.min.js"></script>
+
+    <script src="assets/js/slick.min.js"></script>
+
+    <script src="assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="assets/js/jquery.themepunch.tools.min.js"></script>
+
+    <script src="assets/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="assets/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/js/extensions/revolution.extension.video.min.js"></script>
+
+    <script src="assets/js/wow.min.js"></script>
+
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <script src="assets/js/form-validator.min.js"></script>
+
+    <script src="assets/js/contact-form-script.js"></script>
+
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <script>
+    Fetch();
     cat_func_default(6);
-    FetchData();
+      FetchData();
+    function Fetch() {
+
+$.ajax({
+  url: 'addtocart.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#cart').html(data);
+  }
+})
+//for navbar count
+$.ajax({
+  url: 'count.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#nav').html(data);
+  }
+})
+}
+
+     
 
 
 
-//for delete custom cart
-function delete_custom() {
-  $.ajax({
-     url : 'custom_cart.php',
-     type : 'POST',
-     data : {
-      
-      delete: set
-     }
-   })
+
+
+
+
+
+      //for default category dough
+      function cat_func_default(id) {
+
+        $.ajax({
+          url: 'default_cat.php',
+          type: 'POST',
+          data: {
+
+            abc: id
+          },
+          success: function (data) {
+            // console.log(data);
+            $('#fetch_cat').html(data);
+          }
+        })
+
+      }
+
+      //for default category dough
+
+      // for category wise fetch
+
+      function cat_func(catid) {
+
+        $.ajax({
+          url: 'category_custom.php',
+          type: 'POST',
+          data: {
+
+            catid: catid
+          },
+          success: function (data) {
+            // console.log(data);
+            $('#fetch_cat').html(data);
+          }
+        })
+
+      }
+
+      // for category wise fetch
+
+
+
+
+      function btnAddToList(id) {
+
+        $.ajax({
+          url: 'custom_cart.php',
+          type: 'POST',
+          data: {
+            cart: 'cart',
+            id: id
+          },
+          success: function (data) {
+            console.log(data);
+            $('#ID_cartList').html(data);
+          }
+        })
+
+      }
+      function FetchData() {
+
+        $.ajax({
+          url: 'custom_cart.php',
+          type: 'POST',
+
+          success: function (data) {
+            console.log(data);
+            $('#ID_cartList').html(data);
+          }
+        })
+      }
+    </script>
    
- }
-
-//for delete custom cart
-
-
-
-
-//for default category dough
-function cat_func_default(id) {
-
-   $.ajax({
-     url : 'default_cat.php',
-     type : 'POST',
-     data : {
-      
-      abc: id
-     },
-     success : function (data){
-       // console.log(data);
-       $('#fetch_cat').html(data);
-     }
-   })
-   
- }
-
-//for default category dough
-
-// for category wise fetch
-
-function cat_func(catid) {
-   
-      $.ajax({
-        url : 'category_custom.php',
-        type : 'POST',
-        data : {
-         
-          catid : catid
-        },
-        success : function (data){
-          // console.log(data);
-          $('#fetch_cat').html(data);
-        }
-      })
-      
-    }
-
-// for category wise fetch
-
-
-
-
-    function btnAddToList(id) {
-
-      $.ajax({
-        url : 'custom_cart.php',
-        type : 'POST',
-        data : {
-          cart : 'cart',
-          id : id
-        },
-        success : function (data){
-          console.log(data);
-          $('#ID_cartList').html(data);
-        }
-      })
-      
-    }
-    function FetchData(){
-    
-      $.ajax({
-        url : 'custom_cart.php',
-        type : 'POST',
-        
-        success : function (data){
-          console.log(data);
-          $('#ID_cartList').html(data);
-        }
-      })
-    }
-  </script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-
-
-  <script src="assets/js/jquery.timepicker.min.js"></script>
-
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
-
-  <script src="assets/js/owl.carousel.min.js"></script>
-
-  <script src="assets/js/slick.min.js"></script>
-
-  <script src="assets/js/jquery.themepunch.revolution.min.js"></script>
-  <script src="assets/js/jquery.themepunch.tools.min.js"></script>
-
-  <script src="assets/js/extensions/revolution.extension.actions.min.js"></script>
-  <script src="assets/js/extensions/revolution.extension.carousel.min.js"></script>
-  <script src="assets/js/extensions/revolution.extension.kenburn.min.js"></script>
-  <script src="assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
-  <script src="assets/js/extensions/revolution.extension.migration.min.js"></script>
-  <script src="assets/js/extensions/revolution.extension.navigation.min.js"></script>
-  <script src="assets/js/extensions/revolution.extension.parallax.min.js"></script>
-  <script src="assets/js/extensions/revolution.extension.slideanims.min.js"></script>
-  <script src="assets/js/extensions/revolution.extension.video.min.js"></script>
-
-  <script src="assets/js/wow.min.js"></script>
-
-  <script src="assets/js/jquery.ajaxchimp.min.js"></script>
-
-  <script src="assets/js/form-validator.min.js"></script>
-
-  <script src="assets/js/contact-form-script.js"></script>
-
-  <script src="assets/js/jquery.meanmenu.min.js"></script>
-
-  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
-
-
-

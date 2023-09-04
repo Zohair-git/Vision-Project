@@ -67,13 +67,11 @@ if (isset($_POST['cart'])) {
   }
 }
 
+?>
 
-if (isset($_SESSION['customlist'])) {
-  
-  ?>
-  <div class="checkout-item">
-    <div class="checkout-details cart-details mb-30">
-      <h3 class="cart-details-title color-white">Cart Totals</h3>
+<?php if (isset($_SESSION['customlist'])) { ?>
+
+  <h3 class="cart-details-title color-white">Cart Totals</h3>
       <div class="cart-total-box">
         <?php foreach ($_SESSION['customlist'] as $key => $value) { ?>
           <div class="cart-total-item pt-0">
@@ -100,24 +98,27 @@ if (isset($_SESSION['customlist'])) {
         </div>
 
       </div>
-    </div>
-  </div>
+   
   
-      <?php }else{ ?>
+      <?php }
+      else{
+    ?>
 
-        <div class="checkout-item">
-    <div class="checkout-details cart-details mb-30">
-      <h3 class="cart-details-title color-white">Cart Totals</h3>
-      <div class="cart-total-box">
-       
+
+<h3 class="cart-details-title color-white">Cart Totals</h3>
+<div class="cart-total-box">
+    
         <div class="cart-total-item">
           <h4>Sub Total</h4>
           <p>
-           Rs 0
+          Rs. 0
+           
           </p>
         </div>
 
       </div>
-    </div>
-  </div>
-        <?php } ?>
+
+
+
+
+<?php } ?>

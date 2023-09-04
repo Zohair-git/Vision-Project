@@ -16,6 +16,7 @@ $mail = new PHPMailer(true);
     
 // }
 if (isset($_POST['btn_checkout'])) {
+    echo "<script>alert('Please Check Your Mail')</script>";
     $f_name = $_POST['f_name'];
     $l_name = $_POST['l_name'];
     $country = $_POST['country'];
@@ -64,7 +65,7 @@ try {
     $mail->addAddress($email , $l_name); //Add a recipient
 
     if(isset($_GET['total'])){
-        $body = "<p>Hello <b>" . $f_name .$l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Total Amount Of Order:  Rs " .$_GET['totall']. "</h4><br><br><p>Best Regards,<br> <b>Pizza Palace</b></p><h1>Thanks For Shopping</h1>";
+        $body = "<p>Hello <b>" . $f_name .$l_name . "!</b></p><br><p><b>Call: +923362100225</b></p><h4>Your Total Amount Of Order:  Rs " .$_GET['total']. "</h4><br><br><p>Best Regards,<br> <b>Pizza Palace</b></p><h1>Thanks For Shopping</h1>";
 
     //Content
     $mail->isHTML(true);
@@ -129,6 +130,7 @@ $last_row = mysqli_insert_id($con);
     $query_i_items_run = mysqli_query($con,$query_i_items);
     if ($query_i_items_run) {
         unset($_SESSION['customlist']);
+        echo "<script>alert('Please Check Your Mail')</script>";
     }
    
     
@@ -473,9 +475,11 @@ else{
 </div>
 <?php  } ?>
 
-<div class="cart-total-item">
-<h4>Sub Total</h4>
+
+<div class="cart-total-item cart-total-bold">
+<h4 class="color-white">Total</h4>
 <p><?php
+
 if (!empty($_GET['from'])) {
   
       $myitems = array_column($_SESSION['customlist'], 'c_price');
@@ -487,23 +491,8 @@ if (!empty($_GET['from'])) {
 else{
     echo "Rs 0";
 }
-?></p>
-</div>
-<div class="cart-total-item cart-total-bold">
-<h4 class="color-white">Total</h4>
-<p><?php
-if (!empty($_GET['from'])) {
-  
-      $myitems = array_column($_SESSION['customlist'], 'c_price');
-      $sum = array_sum($myitems);
-      echo "Rs " . $sum - 30;
-
-     
-}
-else{
-    echo "Rs 0";
-}
-?></p>
+?>
+</p>
 </div>
 </div>
 </div>
@@ -664,5 +653,30 @@ else{
 <script src="assets/js/jquery.meanmenu.min.js"></script>
 
 <script src="assets/js/script.js"></script>
+<script>
+    FetchData();
+    function FetchData() {
+
+$.ajax({
+  url: 'addtocart.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#cart').html(data);
+  }
+})
+//for navbar count
+$.ajax({
+  url: 'count.php',
+  type: 'POST',
+
+  success: function (data) {
+    console.log(data);
+    $('#nav').html(data);
+  }
+})
+}
+</script>
 </body>
 </html>
